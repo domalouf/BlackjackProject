@@ -56,7 +56,8 @@ namespace BlackJackProject
         {
             StrategyType strategy = new StrategyType();
             // filepath needs to be changed based on which computer is running program
-            string filePath = @"C:\Users\malou\source\repos\BlackjackProject\BlackJackProject";
+            //string filePath = @"C:\Users\malou\source\repos\BlackjackProject\BlackJackProject";
+            string filePath = @"C:\Users\Dominic\source\repos\BlackjackProject\BlackJackProject";
 
             Console.WriteLine("Hello World!");
             Console.WriteLine(strategy.htotals[2, 2]);
