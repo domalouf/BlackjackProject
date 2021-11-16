@@ -11,6 +11,7 @@ namespace BlackJackProject
     /// </summary>
     class StrategyType
     {
+        // arrays to hold values for basic strategy moves
         // first bracket is player hand, second is dealer [p][d]
         public char[,] htotals = new char[21, 12];
         public char[,] stotals = new char[10, 12];
@@ -56,10 +57,12 @@ namespace BlackJackProject
         {
             StrategyType strategy = new StrategyType();
             // filepath needs to be changed based on which computer is running program
-            string filePath = @"C:\Users\malou\source\repos\BlackjackProject\BlackJackProject";
+            string filePath = @"C:\Users\malou\source\repos\BlackjackProject\BlackJackProject\BasicStrategyChart.txt";
 
             Console.WriteLine("Hello World!");
-            Console.WriteLine(strategy.htotals[2, 2]);
+
+            string[] lines = File.ReadAllLines(filePath);
+            Console.WriteLine(lines[5]);
             // stops program from closing
             Console.ReadLine();
         }
