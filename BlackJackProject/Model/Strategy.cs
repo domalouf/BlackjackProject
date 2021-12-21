@@ -14,6 +14,11 @@ namespace BlackJack
         private char[,] stotals = new char[10, 12];
         private char[,] pairs = new char[12, 12];
 
+        public char GetMove(int playerHand, int dealerHand)
+        {
+            return 'A';
+        }
+
         /// <summary>
         /// Initializes arrays with correct basic strategy move
         /// and '?' for every invalid hand
@@ -22,9 +27,19 @@ namespace BlackJack
         public Strategy(string filePath)
         {
             // makes all values '?'
-            InitStrategy();
+            for (int j = 0; j < 21; j++)
+                for (int k = 0; k < 12; k++)
+                    htotals[j, k] = '?';
 
-            // reads in hardtotals, softtotals, and pairs
+            for (int j = 0; j < 10; j++)
+                for (int k = 0; k < 12; k++)
+                    stotals[j, k] = '?';
+
+            for (int j = 0; j < 12; j++)
+                for (int k = 0; k < 12; k++)
+                    pairs[j, k] = '?';
+
+            // reads in hardtotals, softtotals, and pairs from filePath (BasicStrategyChart.txt)
             try
             {
                 // ASCII Values: Space = 13, New Line = 10, Carriage Return = 13
@@ -126,7 +141,7 @@ namespace BlackJack
             }
             catch (Exception e)
             {
-                // Let the user know what went wrong.
+                // Let the user know what went wrong
                 Console.WriteLine("The file could not be read:");
                 Console.WriteLine(e.Message);
             }
@@ -134,29 +149,7 @@ namespace BlackJack
         }
 
         /// <summary>
-        /// Helper method for Strategy constructor,
-        /// makes all array values '?' before file is read in
-        /// </summary>
-        public void InitStrategy()
-        {
-            //initializes hard totals
-            for (int j = 0; j < 21; j++)
-                for (int k = 0; k < 12; k++)
-                    htotals[j, k] = '?';
-
-            //initializes soft totals
-            for (int j = 0; j < 10; j++)
-                for (int k = 0; k < 12; k++)
-                    stotals[j, k] = '?';
-
-            //initializes pairs
-            for (int j = 0; j < 12; j++)
-                for (int k = 0; k < 12; k++)
-                    pairs[j, k] = '?';
-        }
-
-        /// <summary>
-        /// prints out arrays to StrategyTestingChart
+        /// prints out arrays to StrategyTestingChart.txt
         /// for troubleshooting purposes
         /// </summary>
         public void StrategyPrint()
