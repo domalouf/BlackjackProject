@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "lAwFztYrYNKhHOOKibh1iQ0zHFI6gLBGDPMaZJQqS+NBodpNSzYuaHDS891FnZfLYQkn4YdHUd+o8i4ND+2nbw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Dominic\\Source\\Repos\\BlackjackProject\\BlackJackProject\\Controller2\\Controller.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Dominic\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\Dominic\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}
