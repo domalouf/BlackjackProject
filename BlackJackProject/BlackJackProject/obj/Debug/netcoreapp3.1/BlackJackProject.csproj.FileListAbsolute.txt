@@ -12,3 +12,17 @@ C:\Users\malou\source\repos\BlackjackProject\BlackJackProject\BlackJackProject\o
 C:\Users\malou\source\repos\BlackjackProject\BlackJackProject\BlackJackProject\obj\Debug\netcoreapp3.1\BlackJackProject.dll
 C:\Users\malou\source\repos\BlackjackProject\BlackJackProject\BlackJackProject\obj\Debug\netcoreapp3.1\BlackJackProject.pdb
 C:\Users\malou\source\repos\BlackjackProject\BlackJackProject\BlackJackProject\obj\Debug\netcoreapp3.1\BlackJackProject.genruntimeconfig.cache
+C:\Users\Dominic\Source\Repos\BlackjackProject\BlackJackProject\BlackJackProject\bin\Debug\netcoreapp3.1\BlackJackProject.exe
+C:\Users\Dominic\Source\Repos\BlackjackProject\BlackJackProject\BlackJackProject\bin\Debug\netcoreapp3.1\BlackJackProject.deps.json
+C:\Users\Dominic\Source\Repos\BlackjackProject\BlackJackProject\BlackJackProject\bin\Debug\netcoreapp3.1\BlackJackProject.runtimeconfig.json
+C:\Users\Dominic\Source\Repos\BlackjackProject\BlackJackProject\BlackJackProject\bin\Debug\netcoreapp3.1\BlackJackProject.runtimeconfig.dev.json
+C:\Users\Dominic\Source\Repos\BlackjackProject\BlackJackProject\BlackJackProject\bin\Debug\netcoreapp3.1\BlackJackProject.dll
+C:\Users\Dominic\Source\Repos\BlackjackProject\BlackJackProject\BlackJackProject\bin\Debug\netcoreapp3.1\BlackJackProject.pdb
+C:\Users\Dominic\Source\Repos\BlackjackProject\BlackJackProject\BlackJackProject\obj\Debug\netcoreapp3.1\BlackJackProject.csproj.AssemblyReference.cache
+C:\Users\Dominic\Source\Repos\BlackjackProject\BlackJackProject\BlackJackProject\obj\Debug\netcoreapp3.1\BlackJackProject.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Dominic\Source\Repos\BlackjackProject\BlackJackProject\BlackJackProject\obj\Debug\netcoreapp3.1\BlackJackProject.AssemblyInfoInputs.cache
+C:\Users\Dominic\Source\Repos\BlackjackProject\BlackJackProject\BlackJackProject\obj\Debug\netcoreapp3.1\BlackJackProject.AssemblyInfo.cs
+C:\Users\Dominic\Source\Repos\BlackjackProject\BlackJackProject\BlackJackProject\obj\Debug\netcoreapp3.1\BlackJackProject.csproj.CoreCompileInputs.cache
+C:\Users\Dominic\Source\Repos\BlackjackProject\BlackJackProject\BlackJackProject\obj\Debug\netcoreapp3.1\BlackJackProject.dll
+C:\Users\Dominic\Source\Repos\BlackjackProject\BlackJackProject\BlackJackProject\obj\Debug\netcoreapp3.1\BlackJackProject.pdb
+C:\Users\Dominic\Source\Repos\BlackjackProject\BlackJackProject\BlackJackProject\obj\Debug\netcoreapp3.1\BlackJackProject.genruntimeconfig.cache

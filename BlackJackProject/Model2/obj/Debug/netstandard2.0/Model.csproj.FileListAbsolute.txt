@@ -1,0 +1,10 @@
+C:\Users\Dominic\Source\Repos\BlackjackProject\BlackJackProject\Model2\bin\Debug\netstandard2.0\Model.deps.json
+C:\Users\Dominic\Source\Repos\BlackjackProject\BlackJackProject\Model2\bin\Debug\netstandard2.0\Model.dll
+C:\Users\Dominic\Source\Repos\BlackjackProject\BlackJackProject\Model2\bin\Debug\netstandard2.0\Model.pdb
+C:\Users\Dominic\Source\Repos\BlackjackProject\BlackJackProject\Model2\obj\Debug\netstandard2.0\Model.csproj.AssemblyReference.cache
+C:\Users\Dominic\Source\Repos\BlackjackProject\BlackJackProject\Model2\obj\Debug\netstandard2.0\Model.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Dominic\Source\Repos\BlackjackProject\BlackJackProject\Model2\obj\Debug\netstandard2.0\Model.AssemblyInfoInputs.cache
+C:\Users\Dominic\Source\Repos\BlackjackProject\BlackJackProject\Model2\obj\Debug\netstandard2.0\Model.AssemblyInfo.cs
+C:\Users\Dominic\Source\Repos\BlackjackProject\BlackJackProject\Model2\obj\Debug\netstandard2.0\Model.csproj.CoreCompileInputs.cache
+C:\Users\Dominic\Source\Repos\BlackjackProject\BlackJackProject\Model2\obj\Debug\netstandard2.0\Model.dll
+C:\Users\Dominic\Source\Repos\BlackjackProject\BlackJackProject\Model2\obj\Debug\netstandard2.0\Model.pdb
