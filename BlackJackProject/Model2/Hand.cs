@@ -4,17 +4,10 @@ using System.Text;
 
 namespace BlackJack
 {
-    /// <summary>
-    /// Represents the hand someone is playing
-    /// </summary>
-    public class Player
+    class Hand
     {
         public bool pair;
         public bool soft;
-
-        public Player()
-        {
-
-        }
+        public Stack<int> cards;
     }
 }

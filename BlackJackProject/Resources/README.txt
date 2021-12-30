@@ -12,4 +12,5 @@ Controller has a reference to model
 Model is j chillin
 
 TODO:
-make basic view that can take in what cards are in play and give player the correct move to make
+make basic view that can take in what cards are in play and give player the correct move to make (DONE)
+give player ability to hit until 21
