@@ -6,9 +6,9 @@ namespace BlackJack
 {
     public class Table
     {
-        private Dealer dealer;
-        private Dictionary<int, Player> players;
-        private Shoe shoe;
+        public Dealer dealer;
+        public Dictionary<int, Player> players;
+        public Shoe shoe;
 
         public Table()
         {

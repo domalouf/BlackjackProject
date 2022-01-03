@@ -17,6 +17,7 @@ namespace BlackJack
             GetMoveButton.Enabled = false;
             MoveTextBox.Enabled = false;
             theController = ctl;
+            theTable = new Table();
         }
 
 
@@ -63,6 +64,16 @@ namespace BlackJack
             DealerCardTextBox.Enabled = true;
             GetMoveButton.Enabled = true;
             MoveTextBox.Enabled = true;
+        }
+
+        private void HitCardButton_Click(object sender, EventArgs e)
+        {
+            HitCardTextBox.Text = "" + theTable.shoe.DrawCard();
+
+            if (HitCardTextBox.Text == "0")
+            {
+                HitCardTextBox.Text = "boof shmoked";
+            }
         }
     }
 }
