@@ -9,12 +9,12 @@ namespace BlackJack
     /// </summary>
     public class Player
     {
-        public int chips;
+        //public int chips;
         public Hand hand;
 
-        public Player(int numChips)
+        public Player()
         {
-            chips = numChips;
+            //chips = numChips;
             hand = new Hand();
         }
     }

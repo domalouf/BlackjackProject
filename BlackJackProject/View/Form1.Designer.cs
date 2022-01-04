@@ -40,6 +40,10 @@ namespace BlackJack
             this.StartButton = new System.Windows.Forms.Button();
             this.HitCardTextBox = new System.Windows.Forms.TextBox();
             this.HitCardButton = new System.Windows.Forms.Button();
+            this.ShuffleButton = new System.Windows.Forms.Button();
+            this.PlayerHandLabel = new System.Windows.Forms.Label();
+            this.PlayerHandTextBox = new System.Windows.Forms.TextBox();
+            this.GetHandButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // GetMoveButton
@@ -54,14 +58,14 @@ namespace BlackJack
             // 
             // Card1TextBox
             // 
-            this.Card1TextBox.Location = new System.Drawing.Point(15, 226);
+            this.Card1TextBox.Location = new System.Drawing.Point(15, 364);
             this.Card1TextBox.Name = "Card1TextBox";
             this.Card1TextBox.Size = new System.Drawing.Size(100, 20);
             this.Card1TextBox.TabIndex = 1;
             // 
             // DealerCardTextBox
             // 
-            this.DealerCardTextBox.Location = new System.Drawing.Point(134, 226);
+            this.DealerCardTextBox.Location = new System.Drawing.Point(134, 364);
             this.DealerCardTextBox.Name = "DealerCardTextBox";
             this.DealerCardTextBox.Size = new System.Drawing.Size(100, 20);
             this.DealerCardTextBox.TabIndex = 2;
@@ -69,7 +73,7 @@ namespace BlackJack
             // Card1Label
             // 
             this.Card1Label.AutoSize = true;
-            this.Card1Label.Location = new System.Drawing.Point(12, 210);
+            this.Card1Label.Location = new System.Drawing.Point(12, 348);
             this.Card1Label.Name = "Card1Label";
             this.Card1Label.Size = new System.Drawing.Size(51, 13);
             this.Card1Label.TabIndex = 3;
@@ -78,7 +82,7 @@ namespace BlackJack
             // DealerCardLabel
             // 
             this.DealerCardLabel.AutoSize = true;
-            this.DealerCardLabel.Location = new System.Drawing.Point(134, 210);
+            this.DealerCardLabel.Location = new System.Drawing.Point(134, 348);
             this.DealerCardLabel.Name = "DealerCardLabel";
             this.DealerCardLabel.Size = new System.Drawing.Size(63, 13);
             this.DealerCardLabel.TabIndex = 4;
@@ -87,7 +91,7 @@ namespace BlackJack
             // Card2Label
             // 
             this.Card2Label.AutoSize = true;
-            this.Card2Label.Location = new System.Drawing.Point(12, 260);
+            this.Card2Label.Location = new System.Drawing.Point(12, 398);
             this.Card2Label.Name = "Card2Label";
             this.Card2Label.Size = new System.Drawing.Size(69, 13);
             this.Card2Label.TabIndex = 5;
@@ -95,7 +99,7 @@ namespace BlackJack
             // 
             // Card2TextBox
             // 
-            this.Card2TextBox.Location = new System.Drawing.Point(15, 276);
+            this.Card2TextBox.Location = new System.Drawing.Point(15, 414);
             this.Card2TextBox.Name = "Card2TextBox";
             this.Card2TextBox.Size = new System.Drawing.Size(100, 20);
             this.Card2TextBox.TabIndex = 6;
@@ -134,11 +138,51 @@ namespace BlackJack
             this.HitCardButton.UseVisualStyleBackColor = true;
             this.HitCardButton.Click += new System.EventHandler(this.HitCardButton_Click);
             // 
+            // ShuffleButton
+            // 
+            this.ShuffleButton.Location = new System.Drawing.Point(643, 150);
+            this.ShuffleButton.Name = "ShuffleButton";
+            this.ShuffleButton.Size = new System.Drawing.Size(90, 23);
+            this.ShuffleButton.TabIndex = 11;
+            this.ShuffleButton.Text = "shuffle da boof";
+            this.ShuffleButton.UseVisualStyleBackColor = true;
+            this.ShuffleButton.Click += new System.EventHandler(this.ShuffleButton_Click);
+            // 
+            // PlayerHandLabel
+            // 
+            this.PlayerHandLabel.AutoSize = true;
+            this.PlayerHandLabel.Location = new System.Drawing.Point(12, 79);
+            this.PlayerHandLabel.Name = "PlayerHandLabel";
+            this.PlayerHandLabel.Size = new System.Drawing.Size(33, 13);
+            this.PlayerHandLabel.TabIndex = 12;
+            this.PlayerHandLabel.Text = "Hand";
+            // 
+            // PlayerHandTextBox
+            // 
+            this.PlayerHandTextBox.Location = new System.Drawing.Point(15, 96);
+            this.PlayerHandTextBox.Name = "PlayerHandTextBox";
+            this.PlayerHandTextBox.Size = new System.Drawing.Size(227, 20);
+            this.PlayerHandTextBox.TabIndex = 13;
+            // 
+            // GetHandButton
+            // 
+            this.GetHandButton.Location = new System.Drawing.Point(15, 150);
+            this.GetHandButton.Name = "GetHandButton";
+            this.GetHandButton.Size = new System.Drawing.Size(140, 23);
+            this.GetHandButton.TabIndex = 14;
+            this.GetHandButton.Text = "Get New Hand";
+            this.GetHandButton.UseVisualStyleBackColor = true;
+            this.GetHandButton.Click += new System.EventHandler(this.GetHandButton_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.GetHandButton);
+            this.Controls.Add(this.PlayerHandTextBox);
+            this.Controls.Add(this.PlayerHandLabel);
+            this.Controls.Add(this.ShuffleButton);
             this.Controls.Add(this.HitCardButton);
             this.Controls.Add(this.HitCardTextBox);
             this.Controls.Add(this.StartButton);
@@ -170,6 +214,10 @@ namespace BlackJack
         private System.Windows.Forms.Button StartButton;
         private System.Windows.Forms.TextBox HitCardTextBox;
         private System.Windows.Forms.Button HitCardButton;
+        private System.Windows.Forms.Button ShuffleButton;
+        private System.Windows.Forms.Label PlayerHandLabel;
+        private System.Windows.Forms.TextBox PlayerHandTextBox;
+        private System.Windows.Forms.Button GetHandButton;
     }
 }
 

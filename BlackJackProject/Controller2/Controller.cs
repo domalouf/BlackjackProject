@@ -12,5 +12,17 @@ namespace BlackJack
             theTable = new Table();
             strategy = new Strategy();
         }
+
+        public Table GetTable()
+        {
+            return theTable;
+        }
+
+        public void StartSession()
+        {
+            if (theTable.players.ContainsKey(0))
+                return;
+            theTable.players.Add(0, new Player());
+        }
     }
 }

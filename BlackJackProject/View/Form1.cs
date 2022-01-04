@@ -17,7 +17,7 @@ namespace BlackJack
             GetMoveButton.Enabled = false;
             MoveTextBox.Enabled = false;
             theController = ctl;
-            theTable = new Table();
+            theTable = theController.GetTable();
         }
 
 
@@ -59,6 +59,7 @@ namespace BlackJack
 
         private void StartButton_Click(object sender, EventArgs e)
         {
+            theController.StartSession();
             Card1TextBox.Enabled = true;
             Card2TextBox.Enabled = true;
             DealerCardTextBox.Enabled = true;
@@ -73,6 +74,24 @@ namespace BlackJack
             if (HitCardTextBox.Text == "0")
             {
                 HitCardTextBox.Text = "boof shmoked";
+            }
+        }
+
+        private void ShuffleButton_Click(object sender, EventArgs e)
+        {
+            theTable.shoe.ShuffleShoe();
+        }
+
+        private void GetHandButton_Click(object sender, EventArgs e)
+        {
+            theTable.players[0].hand.cards.Clear(); //shouldn't be in view
+            PlayerHandTextBox.Clear();
+
+            theTable.players[0].hand.cards.Push(theTable.shoe.DrawCard());
+            theTable.players[0].hand.cards.Push(theTable.shoe.DrawCard());
+            foreach (int i in theTable.players[0].hand.cards)
+            {
+                PlayerHandTextBox.Text += i + ", ";
             }
         }
     }
