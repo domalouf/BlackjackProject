@@ -1,5 +1,4 @@
 C:\Users\Dominic\Source\Repos\BlackjackProject\BlackJackProject\View\obj\Debug\View.csproj.AssemblyReference.cache
-C:\Users\Dominic\Source\Repos\BlackjackProject\BlackJackProject\View\obj\Debug\BlackJack.Form1.resources
 C:\Users\Dominic\Source\Repos\BlackjackProject\BlackJackProject\View\obj\Debug\View.Properties.Resources.resources
 C:\Users\Dominic\Source\Repos\BlackjackProject\BlackJackProject\View\obj\Debug\View.csproj.GenerateResource.cache
 C:\Users\Dominic\Source\Repos\BlackjackProject\BlackJackProject\View\obj\Debug\View.csproj.CoreCompileInputs.cache
@@ -13,3 +12,6 @@ C:\Users\Dominic\Source\Repos\BlackjackProject\BlackJackProject\View\bin\Debug\M
 C:\Users\Dominic\Source\Repos\BlackjackProject\BlackJackProject\View\obj\Debug\View.csproj.CopyComplete
 C:\Users\Dominic\Source\Repos\BlackjackProject\BlackJackProject\View\obj\Debug\View.exe
 C:\Users\Dominic\Source\Repos\BlackjackProject\BlackJackProject\View\obj\Debug\View.pdb
+C:\Users\Dominic\Source\Repos\BlackjackProject\BlackJackProject\View\obj\Debug\BlackJack.MainMenu.resources
+C:\Users\Dominic\Source\Repos\BlackjackProject\BlackJackProject\View\obj\Debug\BlackJack.StrategyHelper.resources
+C:\Users\Dominic\Source\Repos\BlackjackProject\BlackJackProject\View\obj\Debug\BlackJack.TestForm.resources

@@ -16,8 +16,8 @@ namespace BlackJack
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Controller c = new Controller();
-            Application.Run(new Form1(c));
+            Controller ctl = new Controller();
+            Application.Run(new MainMenu(ctl));
         }
     }
 }

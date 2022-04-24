@@ -12,6 +12,9 @@ namespace BlackJack
         int cardsDrawn;
         Random r = new Random();
 
+        /// <summary>
+        /// creates new shoe with amount of decks specified in Shoe Class
+        /// </summary>
         public Shoe()
         {
             cardsDrawn = 0;

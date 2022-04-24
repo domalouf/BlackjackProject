@@ -3,12 +3,12 @@ using System.Windows.Forms;
 
 namespace BlackJack
 {
-    public partial class Form1 : Form
+    public partial class TestForm : Form
     {
         private Controller theController;
         private Table theTable;
 
-        public Form1(Controller ctl)
+        public TestForm(Controller ctl)
         {
             InitializeComponent();
             Card1TextBox.Enabled = false;

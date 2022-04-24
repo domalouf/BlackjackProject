@@ -1,7 +1,7 @@
 ﻿
 namespace BlackJack
 {
-    partial class Form1
+    partial class TestForm
     {
         /// <summary>
         /// Required designer variable.
@@ -174,11 +174,11 @@ namespace BlackJack
             this.GetHandButton.UseVisualStyleBackColor = true;
             this.GetHandButton.Click += new System.EventHandler(this.GetHandButton_Click);
             // 
-            // Form1
+            // StrategyHelper
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(813, 465);
             this.Controls.Add(this.GetHandButton);
             this.Controls.Add(this.PlayerHandTextBox);
             this.Controls.Add(this.PlayerHandLabel);
@@ -194,8 +194,8 @@ namespace BlackJack
             this.Controls.Add(this.DealerCardTextBox);
             this.Controls.Add(this.Card1TextBox);
             this.Controls.Add(this.GetMoveButton);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.Name = "StrategyHelper";
+            this.Text = "Test Form";
             this.ResumeLayout(false);
             this.PerformLayout();
 

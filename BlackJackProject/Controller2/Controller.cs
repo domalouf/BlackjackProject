@@ -18,6 +18,10 @@ namespace BlackJack
             return theTable;
         }
 
+        /// <summary>
+        /// Adds a player to the tables dictionary at spot 0
+        /// Does nothing if there's already a player in spot 0
+        /// </summary>
         public void StartSession()
         {
             if (theTable.players.ContainsKey(0))
