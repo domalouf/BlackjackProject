@@ -37,13 +37,11 @@ namespace BlackJack
             this.Card2Label = new System.Windows.Forms.Label();
             this.Card2TextBox = new System.Windows.Forms.TextBox();
             this.MoveTextBox = new System.Windows.Forms.TextBox();
-            this.StartButton = new System.Windows.Forms.Button();
             this.HitCardTextBox = new System.Windows.Forms.TextBox();
             this.HitCardButton = new System.Windows.Forms.Button();
             this.ShuffleButton = new System.Windows.Forms.Button();
-            this.PlayerHandLabel = new System.Windows.Forms.Label();
-            this.PlayerHandTextBox = new System.Windows.Forms.TextBox();
-            this.GetHandButton = new System.Windows.Forms.Button();
+            this.ShoeCountLabel = new System.Windows.Forms.Label();
+            this.ShoeCountTextBox = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // GetMoveButton
@@ -111,26 +109,16 @@ namespace BlackJack
             this.MoveTextBox.Size = new System.Drawing.Size(142, 20);
             this.MoveTextBox.TabIndex = 7;
             // 
-            // StartButton
-            // 
-            this.StartButton.Location = new System.Drawing.Point(41, 26);
-            this.StartButton.Name = "StartButton";
-            this.StartButton.Size = new System.Drawing.Size(88, 23);
-            this.StartButton.TabIndex = 8;
-            this.StartButton.Text = "Start Session";
-            this.StartButton.UseVisualStyleBackColor = true;
-            this.StartButton.Click += new System.EventHandler(this.StartButton_Click);
-            // 
             // HitCardTextBox
             // 
-            this.HitCardTextBox.Location = new System.Drawing.Point(643, 98);
+            this.HitCardTextBox.Location = new System.Drawing.Point(260, 99);
             this.HitCardTextBox.Name = "HitCardTextBox";
             this.HitCardTextBox.Size = new System.Drawing.Size(100, 20);
             this.HitCardTextBox.TabIndex = 9;
             // 
             // HitCardButton
             // 
-            this.HitCardButton.Location = new System.Drawing.Point(643, 69);
+            this.HitCardButton.Location = new System.Drawing.Point(260, 58);
             this.HitCardButton.Name = "HitCardButton";
             this.HitCardButton.Size = new System.Drawing.Size(75, 23);
             this.HitCardButton.TabIndex = 10;
@@ -140,7 +128,7 @@ namespace BlackJack
             // 
             // ShuffleButton
             // 
-            this.ShuffleButton.Location = new System.Drawing.Point(643, 150);
+            this.ShuffleButton.Location = new System.Drawing.Point(260, 135);
             this.ShuffleButton.Name = "ShuffleButton";
             this.ShuffleButton.Size = new System.Drawing.Size(90, 23);
             this.ShuffleButton.TabIndex = 11;
@@ -148,44 +136,32 @@ namespace BlackJack
             this.ShuffleButton.UseVisualStyleBackColor = true;
             this.ShuffleButton.Click += new System.EventHandler(this.ShuffleButton_Click);
             // 
-            // PlayerHandLabel
+            // ShoeCountLabel
             // 
-            this.PlayerHandLabel.AutoSize = true;
-            this.PlayerHandLabel.Location = new System.Drawing.Point(12, 79);
-            this.PlayerHandLabel.Name = "PlayerHandLabel";
-            this.PlayerHandLabel.Size = new System.Drawing.Size(33, 13);
-            this.PlayerHandLabel.TabIndex = 12;
-            this.PlayerHandLabel.Text = "Hand";
+            this.ShoeCountLabel.AutoSize = true;
+            this.ShoeCountLabel.Location = new System.Drawing.Point(454, 68);
+            this.ShoeCountLabel.Name = "ShoeCountLabel";
+            this.ShoeCountLabel.Size = new System.Drawing.Size(95, 13);
+            this.ShoeCountLabel.TabIndex = 12;
+            this.ShoeCountLabel.Text = "Cards Left In Shoe";
             // 
-            // PlayerHandTextBox
+            // ShoeCountTextBox
             // 
-            this.PlayerHandTextBox.Location = new System.Drawing.Point(15, 96);
-            this.PlayerHandTextBox.Name = "PlayerHandTextBox";
-            this.PlayerHandTextBox.Size = new System.Drawing.Size(227, 20);
-            this.PlayerHandTextBox.TabIndex = 13;
+            this.ShoeCountTextBox.Location = new System.Drawing.Point(461, 101);
+            this.ShoeCountTextBox.Name = "ShoeCountTextBox";
+            this.ShoeCountTextBox.Size = new System.Drawing.Size(96, 20);
+            this.ShoeCountTextBox.TabIndex = 13;
             // 
-            // GetHandButton
-            // 
-            this.GetHandButton.Location = new System.Drawing.Point(15, 150);
-            this.GetHandButton.Name = "GetHandButton";
-            this.GetHandButton.Size = new System.Drawing.Size(140, 23);
-            this.GetHandButton.TabIndex = 14;
-            this.GetHandButton.Text = "Get New Hand";
-            this.GetHandButton.UseVisualStyleBackColor = true;
-            this.GetHandButton.Click += new System.EventHandler(this.GetHandButton_Click);
-            // 
-            // StrategyHelper
+            // TestForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(813, 465);
-            this.Controls.Add(this.GetHandButton);
-            this.Controls.Add(this.PlayerHandTextBox);
-            this.Controls.Add(this.PlayerHandLabel);
+            this.Controls.Add(this.ShoeCountTextBox);
+            this.Controls.Add(this.ShoeCountLabel);
             this.Controls.Add(this.ShuffleButton);
             this.Controls.Add(this.HitCardButton);
             this.Controls.Add(this.HitCardTextBox);
-            this.Controls.Add(this.StartButton);
             this.Controls.Add(this.MoveTextBox);
             this.Controls.Add(this.Card2TextBox);
             this.Controls.Add(this.Card2Label);
@@ -194,8 +170,9 @@ namespace BlackJack
             this.Controls.Add(this.DealerCardTextBox);
             this.Controls.Add(this.Card1TextBox);
             this.Controls.Add(this.GetMoveButton);
-            this.Name = "StrategyHelper";
+            this.Name = "TestForm";
             this.Text = "Test Form";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.TestForm_FormClosed);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -211,13 +188,11 @@ namespace BlackJack
         private System.Windows.Forms.Label Card2Label;
         private System.Windows.Forms.TextBox Card2TextBox;
         private System.Windows.Forms.TextBox MoveTextBox;
-        private System.Windows.Forms.Button StartButton;
         private System.Windows.Forms.TextBox HitCardTextBox;
         private System.Windows.Forms.Button HitCardButton;
         private System.Windows.Forms.Button ShuffleButton;
-        private System.Windows.Forms.Label PlayerHandLabel;
-        private System.Windows.Forms.TextBox PlayerHandTextBox;
-        private System.Windows.Forms.Button GetHandButton;
+        private System.Windows.Forms.Label ShoeCountLabel;
+        private System.Windows.Forms.TextBox ShoeCountTextBox;
     }
 }
 

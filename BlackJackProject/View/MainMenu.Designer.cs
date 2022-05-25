@@ -83,6 +83,7 @@ namespace BlackJack
             this.PlayButton.TabIndex = 4;
             this.PlayButton.Text = "Play BlackJack";
             this.PlayButton.UseVisualStyleBackColor = true;
+            this.PlayButton.Click += new System.EventHandler(this.PlayButton_Click);
             // 
             // TestFormLabel
             // 
@@ -101,6 +102,7 @@ namespace BlackJack
             this.TestFormButton.TabIndex = 6;
             this.TestFormButton.Text = "Penis Butt";
             this.TestFormButton.UseVisualStyleBackColor = true;
+            this.TestFormButton.Click += new System.EventHandler(this.TestFormButton_Click);
             // 
             // MainMenu
             // 

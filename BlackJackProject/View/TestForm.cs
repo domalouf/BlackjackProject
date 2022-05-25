@@ -7,16 +7,13 @@ namespace BlackJack
     {
         private Controller theController;
         private Table theTable;
+        private Strategy strategy;
 
         public TestForm(Controller ctl)
         {
             InitializeComponent();
-            Card1TextBox.Enabled = false;
-            Card2TextBox.Enabled = false;
-            DealerCardTextBox.Enabled = false;
-            GetMoveButton.Enabled = false;
-            MoveTextBox.Enabled = false;
             theController = ctl;
+            strategy = new Strategy();
             theTable = theController.GetTable();
         }
 
@@ -31,7 +28,7 @@ namespace BlackJack
 
                 try
                 {
-                    MoveTextBox.Text = "" + theController.strategy.GetMove((int)card1val, (int)card2val, (int)dCardVal);
+                    MoveTextBox.Text = "" + strategy.GetMove((int)card1val, (int)card2val, (int)dCardVal);
                     if (MoveTextBox.Text == "?")
                     {
                         MoveTextBox.Clear();
@@ -57,16 +54,6 @@ namespace BlackJack
             }
         }
 
-        private void StartButton_Click(object sender, EventArgs e)
-        {
-            theController.StartSession();
-            Card1TextBox.Enabled = true;
-            Card2TextBox.Enabled = true;
-            DealerCardTextBox.Enabled = true;
-            GetMoveButton.Enabled = true;
-            MoveTextBox.Enabled = true;
-        }
-
         private void HitCardButton_Click(object sender, EventArgs e)
         {
             HitCardTextBox.Text = "" + theTable.shoe.DrawCard();
@@ -75,24 +62,19 @@ namespace BlackJack
             {
                 HitCardTextBox.Text = "boof shmoked";
             }
+
+            ShoeCountTextBox.Text = "" + theTable.shoe.ShoeCount();
         }
 
         private void ShuffleButton_Click(object sender, EventArgs e)
         {
             theTable.shoe.ShuffleShoe();
+            ShoeCountTextBox.Text = "" + theTable.shoe.ShoeCount();
         }
 
-        private void GetHandButton_Click(object sender, EventArgs e)
+        private void TestForm_FormClosed(object sender, FormClosedEventArgs e)
         {
-            theTable.players[0].hand.cards.Clear(); //shouldn't be in view
-            PlayerHandTextBox.Clear();
-
-            theTable.players[0].hand.cards.Push(theTable.shoe.DrawCard());
-            theTable.players[0].hand.cards.Push(theTable.shoe.DrawCard());
-            foreach (int i in theTable.players[0].hand.cards)
-            {
-                PlayerHandTextBox.Text += i + ", ";
-            }
+            Application.Exit();
         }
     }
 }

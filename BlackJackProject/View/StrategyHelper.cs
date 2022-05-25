@@ -13,11 +13,13 @@ namespace BlackJack
     public partial class StrategyHelper : Form
     {
         private Controller theController;
+        private Strategy strategy;
 
         public StrategyHelper(Controller ctl)
         {
             InitializeComponent();
             theController = ctl;
+            strategy = new Strategy();
         }
 
         private void GetMoveButton_Click(object sender, EventArgs e)
@@ -30,7 +32,7 @@ namespace BlackJack
 
                 try
                 {
-                    GetMoveTextBox.Text = "" + theController.strategy.GetMove((int)FirstCardval, (int)SecondCardval, (int)dCardVal);
+                    GetMoveTextBox.Text = "" + strategy.GetMove((int)FirstCardval, (int)SecondCardval, (int)dCardVal);
                     if (GetMoveTextBox.Text == "?")
                     {
                         GetMoveTextBox.Clear();

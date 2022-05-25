@@ -17,7 +17,7 @@ namespace BlackJack
         public char GetMove(int card1, int card2, int dcard)
         {
             if (card1 == card2)
-                return pairs[card1 + card2, dcard];
+                return pairs[card1, dcard];
             if (card1 == 11 || card2 == 11)
             {
                 if (card1 == 11)

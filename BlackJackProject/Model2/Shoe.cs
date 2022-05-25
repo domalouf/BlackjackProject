@@ -6,9 +6,18 @@ namespace BlackJack
 {
     public class Shoe
     {
+        /// <summary>
+        /// Number of decks in each shoe
+        /// </summary>
         static int numDecks = 1;
-        int[] deck = new int[numDecks * 52];
-        bool[] checkdeck = new bool[numDecks * 52];
+        /// <summary>
+        /// an array containing the n
+        /// </summary>
+        int[] shoe = new int[numDecks * 52];
+        /// <summary>
+        /// 
+        /// </summary>
+        bool[] checkShoe = new bool[numDecks * 52];
         int cardsDrawn;
         Random r = new Random();
 
@@ -18,8 +27,8 @@ namespace BlackJack
         public Shoe()
         {
             cardsDrawn = 0;
-            for (int p = 0; p < checkdeck.Length; p++)
-                checkdeck[p] = true;
+            for (int p = 0; p < checkShoe.Length; p++)
+                checkShoe[p] = true;
 
             int i = 0;
             for (int n = 0; n < numDecks; n++)
@@ -28,15 +37,15 @@ namespace BlackJack
                 {
                     for (int j = 2; j < 10; j++)
                     {
-                        deck[i] = j;
+                        shoe[i] = j;
                         i++;
                     }
                     for (int k = 0; k < 4; k++)
                     {
-                        deck[i] = 10;
+                        shoe[i] = 10;
                         i++;
                     }
-                    deck[i] = 11;
+                    shoe[i] = 11;
                     i++;
                 }
             }
@@ -48,8 +57,8 @@ namespace BlackJack
         public void ShuffleShoe()
         {
             cardsDrawn = 0;
-            for (int p = 0; p < checkdeck.Length; p++)
-                checkdeck[p] = true;
+            for (int p = 0; p < checkShoe.Length; p++)
+                checkShoe[p] = true;
         }
 
         /// <summary>
@@ -59,18 +68,27 @@ namespace BlackJack
         /// <returns></returns>
         public int DrawCard()
         {
-            if (cardsDrawn >= deck.Length - 1)
+            if (cardsDrawn >= shoe.Length - 1)
                 return 0;
 
-            int rInt = r.Next(0, checkdeck.Length - 1);
-            if (checkdeck[rInt])
+            int rInt = r.Next(0, checkShoe.Length - 1);
+            if (checkShoe[rInt])
             {
                 cardsDrawn++;
-                checkdeck[rInt] = false;
-                return deck[rInt];
+                checkShoe[rInt] = false;
+                return shoe[rInt];
             }
             else
                 return DrawCard();
+        }
+
+        /// <summary>
+        /// returns amount of cards left in shoe
+        /// </summary>
+        /// <returns></returns>
+        public int ShoeCount()
+        {
+            return shoe.Length - cardsDrawn;
         }
     }
 }
