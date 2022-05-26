@@ -39,9 +39,9 @@ namespace BlackJack
         /// <param name="e"></param>
         private void PlayButton_Click(object sender, EventArgs e)
         {
-            //StrategyHelper sh = new StrategyHelper(theController);
-            //this.Hide();
-            //sh.ShowDialog();
+            GameForm game = new GameForm(theController);
+            this.Hide();
+            game.ShowDialog();
         }
 
         /// <summary>

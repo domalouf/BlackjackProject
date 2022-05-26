@@ -15,3 +15,4 @@ C:\Users\Dominic\Source\Repos\BlackjackProject\BlackJackProject\View\obj\Debug\V
 C:\Users\Dominic\Source\Repos\BlackjackProject\BlackJackProject\View\obj\Debug\BlackJack.MainMenu.resources
 C:\Users\Dominic\Source\Repos\BlackjackProject\BlackJackProject\View\obj\Debug\BlackJack.StrategyHelper.resources
 C:\Users\Dominic\Source\Repos\BlackjackProject\BlackJackProject\View\obj\Debug\BlackJack.TestForm.resources
+C:\Users\Dominic\Source\Repos\BlackjackProject\BlackJackProject\View\obj\Debug\BlackJack.GameForm.resources

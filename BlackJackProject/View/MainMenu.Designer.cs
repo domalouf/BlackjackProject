@@ -33,7 +33,7 @@ namespace BlackJack
             this.HelperLabel = new System.Windows.Forms.Label();
             this.PlayLabel = new System.Windows.Forms.Label();
             this.HelperButton = new System.Windows.Forms.Button();
-            this.PlayButton = new System.Windows.Forms.Button();
+            this.StartButton = new System.Windows.Forms.Button();
             this.TestFormLabel = new System.Windows.Forms.Label();
             this.TestFormButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -75,15 +75,15 @@ namespace BlackJack
             this.HelperButton.UseVisualStyleBackColor = true;
             this.HelperButton.Click += new System.EventHandler(this.HelperButton_Click);
             // 
-            // PlayButton
+            // StartButton
             // 
-            this.PlayButton.Location = new System.Drawing.Point(584, 224);
-            this.PlayButton.Name = "PlayButton";
-            this.PlayButton.Size = new System.Drawing.Size(100, 23);
-            this.PlayButton.TabIndex = 4;
-            this.PlayButton.Text = "Play BlackJack";
-            this.PlayButton.UseVisualStyleBackColor = true;
-            this.PlayButton.Click += new System.EventHandler(this.PlayButton_Click);
+            this.StartButton.Location = new System.Drawing.Point(584, 224);
+            this.StartButton.Name = "StartButton";
+            this.StartButton.Size = new System.Drawing.Size(100, 23);
+            this.StartButton.TabIndex = 4;
+            this.StartButton.Text = "Start Game";
+            this.StartButton.UseVisualStyleBackColor = true;
+            this.StartButton.Click += new System.EventHandler(this.PlayButton_Click);
             // 
             // TestFormLabel
             // 
@@ -111,7 +111,7 @@ namespace BlackJack
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.TestFormButton);
             this.Controls.Add(this.TestFormLabel);
-            this.Controls.Add(this.PlayButton);
+            this.Controls.Add(this.StartButton);
             this.Controls.Add(this.HelperButton);
             this.Controls.Add(this.PlayLabel);
             this.Controls.Add(this.HelperLabel);
@@ -129,7 +129,7 @@ namespace BlackJack
         private System.Windows.Forms.Label HelperLabel;
         private System.Windows.Forms.Label PlayLabel;
         private System.Windows.Forms.Button HelperButton;
-        private System.Windows.Forms.Button PlayButton;
+        private System.Windows.Forms.Button StartButton;
         private System.Windows.Forms.Label TestFormLabel;
         private System.Windows.Forms.Button TestFormButton;
     }

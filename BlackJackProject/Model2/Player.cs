@@ -5,17 +5,18 @@ using System.Text;
 namespace BlackJack
 {
     /// <summary>
-    /// Represents the hand someone is playing
+    /// Represents the player
     /// </summary>
     public class Player
     {
-        //public int chips;
-        public Hand hand;
+        public Dictionary<int, Hand> hands;
+        private int chips;
 
-        public Player()
+        public Player(int _numChips)
         {
-            //chips = numChips;
-            hand = new Hand();
+            chips = _numChips;
+            hands = new Dictionary<int, Hand>();
+
         }
     }
 }
