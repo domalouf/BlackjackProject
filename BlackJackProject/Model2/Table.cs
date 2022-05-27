@@ -16,5 +16,10 @@ namespace BlackJack
             players = new Dictionary<int, Player>();
             shoe = new Shoe();
         }
+
+        public void AddPlayer(int numChips)
+        {
+            players.Add(players.Count, new Player(numChips));
+        }
     }
 }

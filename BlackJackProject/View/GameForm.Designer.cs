@@ -30,49 +30,52 @@ namespace BlackJack
         private void InitializeComponent()
         {
             this.WelcomeLabel = new System.Windows.Forms.Label();
-            this.CashierLabel = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.cashierLabel = new System.Windows.Forms.Label();
+            this.buyChipsLabel = new System.Windows.Forms.Label();
+            this.buyChipsTextBox = new System.Windows.Forms.TextBox();
             this.buyButton = new System.Windows.Forms.Button();
+            this.playerInfoLabel = new System.Windows.Forms.Label();
+            this.chipCountLabel = new System.Windows.Forms.Label();
+            this.chipCountTextBox = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // WelcomeLabel
             // 
             this.WelcomeLabel.AutoSize = true;
-            this.WelcomeLabel.Location = new System.Drawing.Point(301, 55);
+            this.WelcomeLabel.Location = new System.Drawing.Point(322, 9);
             this.WelcomeLabel.Name = "WelcomeLabel";
             this.WelcomeLabel.Size = new System.Drawing.Size(153, 13);
             this.WelcomeLabel.TabIndex = 0;
             this.WelcomeLabel.Text = "Welcome to the Casino Homes";
             // 
-            // CashierLabel
+            // cashierLabel
             // 
-            this.CashierLabel.AutoSize = true;
-            this.CashierLabel.Location = new System.Drawing.Point(85, 180);
-            this.CashierLabel.Name = "CashierLabel";
-            this.CashierLabel.Size = new System.Drawing.Size(42, 13);
-            this.CashierLabel.TabIndex = 1;
-            this.CashierLabel.Text = "Cashier";
+            this.cashierLabel.AutoSize = true;
+            this.cashierLabel.Location = new System.Drawing.Point(83, 55);
+            this.cashierLabel.Name = "cashierLabel";
+            this.cashierLabel.Size = new System.Drawing.Size(42, 13);
+            this.cashierLabel.TabIndex = 1;
+            this.cashierLabel.Text = "Cashier";
             // 
-            // label1
+            // buyChipsLabel
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 218);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(193, 13);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "How many chips would you like to buy?";
+            this.buyChipsLabel.AutoSize = true;
+            this.buyChipsLabel.Location = new System.Drawing.Point(10, 93);
+            this.buyChipsLabel.Name = "buyChipsLabel";
+            this.buyChipsLabel.Size = new System.Drawing.Size(193, 13);
+            this.buyChipsLabel.TabIndex = 2;
+            this.buyChipsLabel.Text = "How many chips would you like to buy?";
             // 
-            // textBox1
+            // buyChipsTextBox
             // 
-            this.textBox1.Location = new System.Drawing.Point(16, 254);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(110, 20);
-            this.textBox1.TabIndex = 3;
+            this.buyChipsTextBox.Location = new System.Drawing.Point(14, 129);
+            this.buyChipsTextBox.Name = "buyChipsTextBox";
+            this.buyChipsTextBox.Size = new System.Drawing.Size(110, 20);
+            this.buyChipsTextBox.TabIndex = 3;
             // 
             // buyButton
             // 
-            this.buyButton.Location = new System.Drawing.Point(152, 254);
+            this.buyButton.Location = new System.Drawing.Point(150, 129);
             this.buyButton.Name = "buyButton";
             this.buyButton.Size = new System.Drawing.Size(52, 19);
             this.buyButton.TabIndex = 4;
@@ -80,15 +83,44 @@ namespace BlackJack
             this.buyButton.UseVisualStyleBackColor = true;
             this.buyButton.Click += new System.EventHandler(this.buyButton_Click);
             // 
+            // playerInfoLabel
+            // 
+            this.playerInfoLabel.AutoSize = true;
+            this.playerInfoLabel.Location = new System.Drawing.Point(632, 96);
+            this.playerInfoLabel.Name = "playerInfoLabel";
+            this.playerInfoLabel.Size = new System.Drawing.Size(57, 13);
+            this.playerInfoLabel.TabIndex = 5;
+            this.playerInfoLabel.Text = "Player Info";
+            // 
+            // chipCountLabel
+            // 
+            this.chipCountLabel.AutoSize = true;
+            this.chipCountLabel.Location = new System.Drawing.Point(609, 129);
+            this.chipCountLabel.Name = "chipCountLabel";
+            this.chipCountLabel.Size = new System.Drawing.Size(62, 13);
+            this.chipCountLabel.TabIndex = 6;
+            this.chipCountLabel.Text = "Chip Count:";
+            // 
+            // chipCountTextBox
+            // 
+            this.chipCountTextBox.Enabled = false;
+            this.chipCountTextBox.Location = new System.Drawing.Point(677, 126);
+            this.chipCountTextBox.Name = "chipCountTextBox";
+            this.chipCountTextBox.Size = new System.Drawing.Size(100, 20);
+            this.chipCountTextBox.TabIndex = 7;
+            // 
             // GameForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.chipCountTextBox);
+            this.Controls.Add(this.chipCountLabel);
+            this.Controls.Add(this.playerInfoLabel);
             this.Controls.Add(this.buyButton);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.CashierLabel);
+            this.Controls.Add(this.buyChipsTextBox);
+            this.Controls.Add(this.buyChipsLabel);
+            this.Controls.Add(this.cashierLabel);
             this.Controls.Add(this.WelcomeLabel);
             this.Name = "GameForm";
             this.Text = "BlackJack Game";
@@ -101,9 +133,12 @@ namespace BlackJack
         #endregion
 
         private System.Windows.Forms.Label WelcomeLabel;
-        private System.Windows.Forms.Label CashierLabel;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label cashierLabel;
+        private System.Windows.Forms.Label buyChipsLabel;
+        private System.Windows.Forms.TextBox buyChipsTextBox;
         private System.Windows.Forms.Button buyButton;
+        private System.Windows.Forms.Label playerInfoLabel;
+        private System.Windows.Forms.Label chipCountLabel;
+        private System.Windows.Forms.TextBox chipCountTextBox;
     }
 }

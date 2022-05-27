@@ -12,7 +12,7 @@ This program uses Model View Controller to handle seperation of concerns for the
 
 View has a reference to model and controller.
 The controller owns the model, but the view has a reference.
-It displays all information to the user and 
+It displays all information to the user
 
 Controller has a reference to model.
 The model object is contained in the controller
