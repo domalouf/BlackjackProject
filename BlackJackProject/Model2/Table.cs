@@ -21,5 +21,22 @@ namespace BlackJack
         {
             players.Add(players.Count, new Player(numChips));
         }
+
+        public void GiveChips(int numChips)
+        {
+            players[0].AddChips(numChips);
+        }
+
+        public void StartHand()
+        {
+            foreach (Player p in players.Values)
+            {
+                p.StartHand(shoe.DrawCard(), shoe.DrawCard());
+            }
+
+            dealer.GiveFirstCard(shoe.DrawCard());
+        }
+
+
     }
 }

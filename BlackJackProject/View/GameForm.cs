@@ -39,6 +39,7 @@ namespace BlackJack
             {
                 if (numChips > 0)
                 {
+                    // first time buying chips
                     if (theTable.players.Count == 0)
                     {
                         theTable.AddPlayer(numChips);
@@ -46,12 +47,47 @@ namespace BlackJack
                         buyButton.Enabled = false;
                         buyChipsTextBox.Enabled = false;
                     }
+
+                    // buying more chips
+                    else
+                    {
+                        theTable.GiveChips(numChips);
+                    }
                 }
             }
             else
             {
                 string message = "Please enter a valid amount of chips to start with.";
                 string caption = "Invalid Chip Amount";
+                MessageBox.Show(message, caption,
+                            MessageBoxButtons.OK,
+                            MessageBoxIcon.Error);
+            }
+        }
+
+        private void DealButton_Click(object sender, EventArgs e)
+        {
+            if (int.TryParse(BetSizeTextBox.Text, out int betSize))
+            {
+                if ((betSize <= 0) || (betSize > theTable.players[0].GetChips()))
+                {
+                    string message = "Please enter a valid amount of chips to bet.";
+                    string caption = "Invalid Bet Size";
+                    MessageBox.Show(message, caption,
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Error);
+                }
+                else
+                {
+                    theTable.StartHand();
+                    PlayerHandTextBox.Text = "" + theTable.players[0].GetHand().cards;
+                    DealerHandTextBox.Text = "" + theTable.dealer.getCards();
+                }
+            }
+            else
+            {
+                string message = "Please enter a valid amount of chips to bet.";
+                string caption = "Invalid Bet Size";
                 MessageBox.Show(message, caption,
                             MessageBoxButtons.OK,
                             MessageBoxIcon.Error);

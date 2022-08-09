@@ -10,6 +10,10 @@ I hope there is a better way of reading in charts to 2D arrays because my method
 MVC Architecture:
 This program uses Model View Controller to handle seperation of concerns for the different projects.
 
+Model contains all information about players and physical parts of Blackjack.
+It contains information on basic strategy.
+It is manipulated by the controller and looked at by the view.
+
 View has a reference to model and controller.
 The controller owns the model, but the view has a reference.
 It displays all information to the user
@@ -18,9 +22,12 @@ Controller has a reference to model.
 The model object is contained in the controller
 It is simple before a connection to a server is required.
 
-Model contains all information about players and physical parts of Blackjack.
-It contains information on basic strategy.
-It is manipulated by the controller and looked at by the view.
+In English:
+Model - doesn't see or touch view and controller
+View - View only sees model, can use controller
+Controller - handles input, updates model and view
+
+Helpful Link about MVC - https://www.cs.cornell.edu/courses/cs2112/2020fa/recitations/08patterns/Recitation8.pdf
 
 TODO:
 make basic view that can take in what cards are in play and give player the correct move to make (DONE)

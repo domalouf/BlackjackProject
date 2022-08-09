@@ -10,11 +10,13 @@ namespace BlackJack
         public bool soft;
         public Stack<int> cards;
 
-        public Hand()
+        public Hand(int firstCard, int secondCard)
         {
             pair = false;
             soft = false;
             cards = new Stack<int>();
+            cards.Push(firstCard);
+            cards.Push(secondCard);
         }
 
         public void newHand()

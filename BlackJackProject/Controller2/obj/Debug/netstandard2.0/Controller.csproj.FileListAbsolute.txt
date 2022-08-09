@@ -11,3 +11,16 @@ C:\Users\Dominic\Source\Repos\BlackjackProject\BlackJackProject\Controller2\obj\
 C:\Users\Dominic\Source\Repos\BlackjackProject\BlackJackProject\Controller2\obj\Debug\netstandard2.0\Controller.csproj.CopyComplete
 C:\Users\Dominic\Source\Repos\BlackjackProject\BlackJackProject\Controller2\obj\Debug\netstandard2.0\Controller.dll
 C:\Users\Dominic\Source\Repos\BlackjackProject\BlackJackProject\Controller2\obj\Debug\netstandard2.0\Controller.pdb
+C:\Users\malou\Source\Repos\BlackjackProject\BlackJackProject\Controller2\bin\Debug\netstandard2.0\Controller.deps.json
+C:\Users\malou\Source\Repos\BlackjackProject\BlackJackProject\Controller2\bin\Debug\netstandard2.0\Controller.dll
+C:\Users\malou\Source\Repos\BlackjackProject\BlackJackProject\Controller2\bin\Debug\netstandard2.0\Controller.pdb
+C:\Users\malou\Source\Repos\BlackjackProject\BlackJackProject\Controller2\bin\Debug\netstandard2.0\Model.dll
+C:\Users\malou\Source\Repos\BlackjackProject\BlackJackProject\Controller2\bin\Debug\netstandard2.0\Model.pdb
+C:\Users\malou\Source\Repos\BlackjackProject\BlackJackProject\Controller2\obj\Debug\netstandard2.0\Controller.csproj.AssemblyReference.cache
+C:\Users\malou\Source\Repos\BlackjackProject\BlackJackProject\Controller2\obj\Debug\netstandard2.0\Controller.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\malou\Source\Repos\BlackjackProject\BlackJackProject\Controller2\obj\Debug\netstandard2.0\Controller.AssemblyInfoInputs.cache
+C:\Users\malou\Source\Repos\BlackjackProject\BlackJackProject\Controller2\obj\Debug\netstandard2.0\Controller.AssemblyInfo.cs
+C:\Users\malou\Source\Repos\BlackjackProject\BlackJackProject\Controller2\obj\Debug\netstandard2.0\Controller.csproj.CoreCompileInputs.cache
+C:\Users\malou\Source\Repos\BlackjackProject\BlackJackProject\Controller2\obj\Debug\netstandard2.0\Controller.csproj.CopyComplete
+C:\Users\malou\Source\Repos\BlackjackProject\BlackJackProject\Controller2\obj\Debug\netstandard2.0\Controller.dll
+C:\Users\malou\Source\Repos\BlackjackProject\BlackJackProject\Controller2\obj\Debug\netstandard2.0\Controller.pdb
