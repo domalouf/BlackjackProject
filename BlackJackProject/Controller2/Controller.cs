@@ -6,6 +6,7 @@ namespace BlackJack
     public class Controller
     {
         public Table theTable;
+        public bool inHand;
 
         // Controller events that the view can subscribe to
         public delegate void ErrorHandler(string err);
@@ -52,8 +53,7 @@ namespace BlackJack
 
         public void DealHand(int betSize)
         {
-                theTable.StartHand();
-
+            theTable.StartHand();
         }
     }
 }

@@ -35,3 +35,4 @@ C:\Users\malou\Source\Repos\BlackjackProject\BlackJackProject\View\obj\Debug\Vie
 C:\Users\malou\Source\Repos\BlackjackProject\BlackJackProject\View\obj\Debug\View.csproj.CopyComplete
 C:\Users\malou\Source\Repos\BlackjackProject\BlackJackProject\View\obj\Debug\View.exe
 C:\Users\malou\Source\Repos\BlackjackProject\BlackJackProject\View\obj\Debug\View.pdb
+C:\Users\malou\source\repos\BlackjackProject\BlackJackProject\View\obj\Debug\BlackJack.GameLobby.resources

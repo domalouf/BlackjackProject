@@ -1,5 +1,4 @@
-﻿
-namespace BlackJack
+﻿namespace BlackJack
 {
     partial class GameForm
     {
@@ -29,99 +28,28 @@ namespace BlackJack
         /// </summary>
         private void InitializeComponent()
         {
-            this.WelcomeLabel = new System.Windows.Forms.Label();
-            this.cashierLabel = new System.Windows.Forms.Label();
-            this.buyChipsLabel = new System.Windows.Forms.Label();
-            this.buyChipsTextBox = new System.Windows.Forms.TextBox();
-            this.buyButton = new System.Windows.Forms.Button();
-            this.playerInfoLabel = new System.Windows.Forms.Label();
-            this.chipCountLabel = new System.Windows.Forms.Label();
-            this.chipCountTextBox = new System.Windows.Forms.TextBox();
+            this.Hit17Label = new System.Windows.Forms.Label();
             this.PlayerLabel = new System.Windows.Forms.Label();
             this.DealerLabel = new System.Windows.Forms.Label();
-            this.PlayerHandTextBox = new System.Windows.Forms.TextBox();
-            this.DealerHandTextBox = new System.Windows.Forms.TextBox();
-            this.DealButton = new System.Windows.Forms.Button();
-            this.BetLabel = new System.Windows.Forms.Label();
-            this.BetSizeTextBox = new System.Windows.Forms.TextBox();
             this.HitButton = new System.Windows.Forms.Button();
             this.StandButton = new System.Windows.Forms.Button();
+            this.PlayerHandTextBox = new System.Windows.Forms.TextBox();
+            this.DealerHandTextBox = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
-            // WelcomeLabel
+            // Hit17Label
             // 
-            this.WelcomeLabel.AutoSize = true;
-            this.WelcomeLabel.Location = new System.Drawing.Point(322, 9);
-            this.WelcomeLabel.Name = "WelcomeLabel";
-            this.WelcomeLabel.Size = new System.Drawing.Size(153, 13);
-            this.WelcomeLabel.TabIndex = 0;
-            this.WelcomeLabel.Text = "Welcome to the Casino Homes";
-            // 
-            // cashierLabel
-            // 
-            this.cashierLabel.AutoSize = true;
-            this.cashierLabel.Location = new System.Drawing.Point(83, 55);
-            this.cashierLabel.Name = "cashierLabel";
-            this.cashierLabel.Size = new System.Drawing.Size(42, 13);
-            this.cashierLabel.TabIndex = 1;
-            this.cashierLabel.Text = "Cashier";
-            // 
-            // buyChipsLabel
-            // 
-            this.buyChipsLabel.AutoSize = true;
-            this.buyChipsLabel.Location = new System.Drawing.Point(10, 93);
-            this.buyChipsLabel.Name = "buyChipsLabel";
-            this.buyChipsLabel.Size = new System.Drawing.Size(193, 13);
-            this.buyChipsLabel.TabIndex = 2;
-            this.buyChipsLabel.Text = "How many chips would you like to buy?";
-            // 
-            // buyChipsTextBox
-            // 
-            this.buyChipsTextBox.Location = new System.Drawing.Point(14, 129);
-            this.buyChipsTextBox.Name = "buyChipsTextBox";
-            this.buyChipsTextBox.Size = new System.Drawing.Size(110, 20);
-            this.buyChipsTextBox.TabIndex = 3;
-            // 
-            // buyButton
-            // 
-            this.buyButton.Location = new System.Drawing.Point(150, 129);
-            this.buyButton.Name = "buyButton";
-            this.buyButton.Size = new System.Drawing.Size(52, 19);
-            this.buyButton.TabIndex = 4;
-            this.buyButton.Text = "Buy";
-            this.buyButton.UseVisualStyleBackColor = true;
-            this.buyButton.Click += new System.EventHandler(this.buyButton_Click);
-            // 
-            // playerInfoLabel
-            // 
-            this.playerInfoLabel.AutoSize = true;
-            this.playerInfoLabel.Location = new System.Drawing.Point(632, 96);
-            this.playerInfoLabel.Name = "playerInfoLabel";
-            this.playerInfoLabel.Size = new System.Drawing.Size(57, 13);
-            this.playerInfoLabel.TabIndex = 5;
-            this.playerInfoLabel.Text = "Player Info";
-            // 
-            // chipCountLabel
-            // 
-            this.chipCountLabel.AutoSize = true;
-            this.chipCountLabel.Location = new System.Drawing.Point(609, 129);
-            this.chipCountLabel.Name = "chipCountLabel";
-            this.chipCountLabel.Size = new System.Drawing.Size(62, 13);
-            this.chipCountLabel.TabIndex = 6;
-            this.chipCountLabel.Text = "Chip Count:";
-            // 
-            // chipCountTextBox
-            // 
-            this.chipCountTextBox.Enabled = false;
-            this.chipCountTextBox.Location = new System.Drawing.Point(677, 126);
-            this.chipCountTextBox.Name = "chipCountTextBox";
-            this.chipCountTextBox.Size = new System.Drawing.Size(100, 20);
-            this.chipCountTextBox.TabIndex = 7;
+            this.Hit17Label.AutoSize = true;
+            this.Hit17Label.Location = new System.Drawing.Point(347, 9);
+            this.Hit17Label.Name = "Hit17Label";
+            this.Hit17Label.Size = new System.Drawing.Size(96, 13);
+            this.Hit17Label.TabIndex = 0;
+            this.Hit17Label.Text = "Dealer Hits Soft 17";
             // 
             // PlayerLabel
             // 
             this.PlayerLabel.AutoSize = true;
-            this.PlayerLabel.Location = new System.Drawing.Point(322, 240);
+            this.PlayerLabel.Location = new System.Drawing.Point(358, 267);
             this.PlayerLabel.Name = "PlayerLabel";
             this.PlayerLabel.Size = new System.Drawing.Size(72, 13);
             this.PlayerLabel.TabIndex = 8;
@@ -130,97 +58,60 @@ namespace BlackJack
             // DealerLabel
             // 
             this.DealerLabel.AutoSize = true;
-            this.DealerLabel.Location = new System.Drawing.Point(520, 240);
+            this.DealerLabel.Location = new System.Drawing.Point(358, 46);
             this.DealerLabel.Name = "DealerLabel";
             this.DealerLabel.Size = new System.Drawing.Size(74, 13);
             this.DealerLabel.TabIndex = 9;
             this.DealerLabel.Text = "Dealer\'s Hand";
             // 
-            // PlayerHandTextBox
-            // 
-            this.PlayerHandTextBox.Enabled = false;
-            this.PlayerHandTextBox.Location = new System.Drawing.Point(325, 256);
-            this.PlayerHandTextBox.Name = "PlayerHandTextBox";
-            this.PlayerHandTextBox.Size = new System.Drawing.Size(100, 20);
-            this.PlayerHandTextBox.TabIndex = 10;
-            // 
-            // DealerHandTextBox
-            // 
-            this.DealerHandTextBox.Enabled = false;
-            this.DealerHandTextBox.Location = new System.Drawing.Point(523, 257);
-            this.DealerHandTextBox.Name = "DealerHandTextBox";
-            this.DealerHandTextBox.Size = new System.Drawing.Size(100, 20);
-            this.DealerHandTextBox.TabIndex = 11;
-            // 
-            // DealButton
-            // 
-            this.DealButton.Location = new System.Drawing.Point(128, 245);
-            this.DealButton.Name = "DealButton";
-            this.DealButton.Size = new System.Drawing.Size(75, 23);
-            this.DealButton.TabIndex = 12;
-            this.DealButton.Text = "Deal Cards";
-            this.DealButton.UseVisualStyleBackColor = true;
-            this.DealButton.Click += new System.EventHandler(this.DealButton_Click);
-            // 
-            // BetLabel
-            // 
-            this.BetLabel.AutoSize = true;
-            this.BetLabel.Location = new System.Drawing.Point(32, 232);
-            this.BetLabel.Name = "BetLabel";
-            this.BetLabel.Size = new System.Drawing.Size(46, 13);
-            this.BetLabel.TabIndex = 13;
-            this.BetLabel.Text = "Bet Size";
-            // 
-            // BetSizeTextBox
-            // 
-            this.BetSizeTextBox.Location = new System.Drawing.Point(12, 248);
-            this.BetSizeTextBox.Name = "BetSizeTextBox";
-            this.BetSizeTextBox.Size = new System.Drawing.Size(100, 20);
-            this.BetSizeTextBox.TabIndex = 14;
-            // 
             // HitButton
             // 
-            this.HitButton.Location = new System.Drawing.Point(435, 294);
+            this.HitButton.Location = new System.Drawing.Point(271, 402);
             this.HitButton.Name = "HitButton";
             this.HitButton.Size = new System.Drawing.Size(75, 23);
-            this.HitButton.TabIndex = 15;
+            this.HitButton.TabIndex = 10;
             this.HitButton.Text = "Hit";
             this.HitButton.UseVisualStyleBackColor = true;
             // 
             // StandButton
             // 
-            this.StandButton.Location = new System.Drawing.Point(435, 323);
+            this.StandButton.Location = new System.Drawing.Point(432, 402);
             this.StandButton.Name = "StandButton";
             this.StandButton.Size = new System.Drawing.Size(75, 23);
-            this.StandButton.TabIndex = 16;
+            this.StandButton.TabIndex = 11;
             this.StandButton.Text = "Stand";
             this.StandButton.UseVisualStyleBackColor = true;
+            // 
+            // PlayerHandTextBox
+            // 
+            this.PlayerHandTextBox.Enabled = false;
+            this.PlayerHandTextBox.Location = new System.Drawing.Point(350, 316);
+            this.PlayerHandTextBox.Name = "PlayerHandTextBox";
+            this.PlayerHandTextBox.Size = new System.Drawing.Size(100, 20);
+            this.PlayerHandTextBox.TabIndex = 12;
+            // 
+            // DealerHandTextBox
+            // 
+            this.DealerHandTextBox.Enabled = false;
+            this.DealerHandTextBox.Location = new System.Drawing.Point(350, 102);
+            this.DealerHandTextBox.Name = "DealerHandTextBox";
+            this.DealerHandTextBox.Size = new System.Drawing.Size(100, 20);
+            this.DealerHandTextBox.TabIndex = 13;
             // 
             // GameForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.StandButton);
-            this.Controls.Add(this.HitButton);
-            this.Controls.Add(this.BetSizeTextBox);
-            this.Controls.Add(this.BetLabel);
-            this.Controls.Add(this.DealButton);
             this.Controls.Add(this.DealerHandTextBox);
             this.Controls.Add(this.PlayerHandTextBox);
+            this.Controls.Add(this.StandButton);
+            this.Controls.Add(this.HitButton);
+            this.Controls.Add(this.Hit17Label);
             this.Controls.Add(this.DealerLabel);
             this.Controls.Add(this.PlayerLabel);
-            this.Controls.Add(this.chipCountTextBox);
-            this.Controls.Add(this.chipCountLabel);
-            this.Controls.Add(this.playerInfoLabel);
-            this.Controls.Add(this.buyButton);
-            this.Controls.Add(this.buyChipsTextBox);
-            this.Controls.Add(this.buyChipsLabel);
-            this.Controls.Add(this.cashierLabel);
-            this.Controls.Add(this.WelcomeLabel);
             this.Name = "GameForm";
-            this.Text = "BlackJack Game";
-            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.GameForm_FormClosed);
+            this.Text = "Blackjack";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -228,22 +119,12 @@ namespace BlackJack
 
         #endregion
 
-        private System.Windows.Forms.Label WelcomeLabel;
-        private System.Windows.Forms.Label cashierLabel;
-        private System.Windows.Forms.Label buyChipsLabel;
-        private System.Windows.Forms.TextBox buyChipsTextBox;
-        private System.Windows.Forms.Button buyButton;
-        private System.Windows.Forms.Label playerInfoLabel;
-        private System.Windows.Forms.Label chipCountLabel;
-        private System.Windows.Forms.TextBox chipCountTextBox;
+        private System.Windows.Forms.Label Hit17Label;
         private System.Windows.Forms.Label PlayerLabel;
         private System.Windows.Forms.Label DealerLabel;
-        private System.Windows.Forms.TextBox PlayerHandTextBox;
-        private System.Windows.Forms.TextBox DealerHandTextBox;
-        private System.Windows.Forms.Button DealButton;
-        private System.Windows.Forms.Label BetLabel;
-        private System.Windows.Forms.TextBox BetSizeTextBox;
         private System.Windows.Forms.Button HitButton;
         private System.Windows.Forms.Button StandButton;
+        private System.Windows.Forms.TextBox PlayerHandTextBox;
+        private System.Windows.Forms.TextBox DealerHandTextBox;
     }
 }

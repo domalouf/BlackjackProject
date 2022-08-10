@@ -39,7 +39,7 @@ namespace BlackJack
         /// <param name="e"></param>
         private void PlayButton_Click(object sender, EventArgs e)
         {
-            GameForm game = new GameForm(theController);
+            GameLobby game = new GameLobby(theController);
             this.Hide();
             game.ShowDialog();
         }

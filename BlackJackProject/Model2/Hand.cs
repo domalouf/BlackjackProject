@@ -28,5 +28,15 @@ namespace BlackJack
             soft = false;
             cards.Clear();
         }
+
+        public override string ToString()
+        {
+            string ans = "";
+            foreach (int card in cards)
+            {
+                ans += card.ToString() + " ";
+            }
+            return ans;
+        }
     }
 }
