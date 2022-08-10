@@ -17,16 +17,27 @@ namespace BlackJack
             shoe = new Shoe();
         }
 
+        /// <summary>
+        /// Adds a new player to the table
+        /// </summary>
+        /// <param name="numChips"></param>
         public void AddPlayer(int numChips)
         {
             players.Add(players.Count, new Player(numChips));
         }
 
+        /// <summary>
+        /// Adds amount of chips to a player's count
+        /// </summary>
+        /// <param name="numChips"></param>
         public void GiveChips(int numChips)
         {
             players[0].AddChips(numChips);
         }
 
+        /// <summary>
+        /// Gives all players 2 cards and the dealer 1 card
+        /// </summary>
         public void StartHand()
         {
             foreach (Player p in players.Values)
@@ -36,7 +47,5 @@ namespace BlackJack
 
             dealer.GiveFirstCard(shoe.DrawCard());
         }
-
-
     }
 }

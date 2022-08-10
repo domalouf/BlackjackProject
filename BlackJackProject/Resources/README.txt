@@ -21,17 +21,15 @@ It displays all information to the user
 Controller has a reference to model.
 The model object is contained in the controller
 It is simple before a connection to a server is required.
+Ivokes methods in the view using events
 
 In English:
 Model - doesn't see or touch view and controller
-View - View only sees model, can use controller
+View - View only sees model, can use controller (owns controller)
 Controller - handles input, updates model and view
 
 Helpful Link about MVC - https://www.cs.cornell.edu/courses/cs2112/2020fa/recitations/08patterns/Recitation8.pdf
 
 TODO:
-make basic view that can take in what cards are in play and give player the correct move to make (DONE)
-give player ability to hit until 21
-
-have different tools in different windows, so not all crammed in the same designer
-different tools like deal cards or get basic strategy
+make playing one complete hand possible
+finish dealHand function in controller

@@ -20,6 +20,8 @@ namespace BlackJack
             InitializeComponent();
             theController = _theController;
             theTable = theController.GetTable();
+            theController.NewPlayerJoined += NewPlayerJoined;
+            theController.AddChips += UpdatePlayerChips;
         }
 
         private void GameForm_FormClosed(object sender, FormClosedEventArgs e)
@@ -37,23 +39,7 @@ namespace BlackJack
         {
             if (int.TryParse(buyChipsTextBox.Text, out int numChips))
             {
-                if (numChips > 0)
-                {
-                    // first time buying chips
-                    if (theTable.players.Count == 0)
-                    {
-                        theTable.AddPlayer(numChips);
-                        chipCountTextBox.Text = "" + numChips;
-                        buyButton.Enabled = false;
-                        buyChipsTextBox.Enabled = false;
-                    }
-
-                    // buying more chips
-                    else
-                    {
-                        theTable.GiveChips(numChips);
-                    }
-                }
+                theController.GiveChips(numChips);
             }
             else
             {
@@ -65,6 +51,13 @@ namespace BlackJack
             }
         }
 
+        /// <summary>
+        /// Checks that bet size is valid,
+        /// Calls method in controller to start hand,
+        /// Updates text boxes to show dealt cards
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void DealButton_Click(object sender, EventArgs e)
         {
             if (int.TryParse(BetSizeTextBox.Text, out int betSize))
@@ -79,7 +72,7 @@ namespace BlackJack
                 }
                 else
                 {
-                    theTable.StartHand();
+                    theController.DealHand(betSize);
                     PlayerHandTextBox.Text = "" + theTable.players[0].GetHand().cards;
                     DealerHandTextBox.Text = "" + theTable.dealer.getCards();
                 }
@@ -92,6 +85,24 @@ namespace BlackJack
                             MessageBoxButtons.OK,
                             MessageBoxIcon.Error);
             }
+        }
+
+        /// <summary>
+        /// event handler for when a new player buys in,
+        /// changes text box to show new chip amount
+        /// </summary>
+        public void NewPlayerJoined()
+        {
+            chipCountTextBox.Text = "" + theTable.players[0].GetChips();
+        }
+
+        /// <summary>
+        /// event handler for when a player adds chips,
+        /// changes text box to show new amount
+        /// </summary>
+        public void UpdatePlayerChips()
+        {
+            chipCountTextBox.Text = "" + theTable.players[0].GetChips();
         }
     }
 }

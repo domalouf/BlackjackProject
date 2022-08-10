@@ -10,15 +10,19 @@ namespace BlackJack
         /// Number of decks in each shoe
         /// </summary>
         static int numDecks = 1;
+
         /// <summary>
-        /// an array containing the n
+        /// an array containing all of the cards
         /// </summary>
         int[] shoe = new int[numDecks * 52];
+
         /// <summary>
-        /// 
+        /// an array to see which cards are still in the shoe
         /// </summary>
         bool[] checkShoe = new bool[numDecks * 52];
+
         int cardsDrawn;
+
         Random r = new Random();
 
         /// <summary>

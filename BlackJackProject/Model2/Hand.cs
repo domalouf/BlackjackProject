@@ -19,6 +19,9 @@ namespace BlackJack
             cards.Push(secondCard);
         }
 
+        /// <summary>
+        /// Clears all cards in hand
+        /// </summary>
         public void newHand()
         {
             pair = false;
