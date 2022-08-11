@@ -24,5 +24,10 @@ namespace BlackJack
             DealerHandTextBox.Text = "" + theTable.dealer.getCards().Peek();
             PlayerHandTextBox.Text = "" + theTable.players[0].GetHand().ToString();
         }
+
+        private void HitButton_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

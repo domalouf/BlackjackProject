@@ -48,6 +48,14 @@ namespace BlackJack
         }
 
         /// <summary>
+        /// adds a card to a player's stack, checks for bust
+        /// </summary>
+        public void Hit(int hitCard)
+        {
+            hands[0].Hit(hitCard);
+        }
+
+        /// <summary>
         /// Returns the player's hand,
         /// just one hand rn
         /// </summary>

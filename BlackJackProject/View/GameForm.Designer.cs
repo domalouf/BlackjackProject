@@ -40,44 +40,50 @@
             // Hit17Label
             // 
             this.Hit17Label.AutoSize = true;
-            this.Hit17Label.Location = new System.Drawing.Point(347, 9);
+            this.Hit17Label.Location = new System.Drawing.Point(463, 11);
+            this.Hit17Label.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Hit17Label.Name = "Hit17Label";
-            this.Hit17Label.Size = new System.Drawing.Size(96, 13);
+            this.Hit17Label.Size = new System.Drawing.Size(117, 16);
             this.Hit17Label.TabIndex = 0;
             this.Hit17Label.Text = "Dealer Hits Soft 17";
             // 
             // PlayerLabel
             // 
             this.PlayerLabel.AutoSize = true;
-            this.PlayerLabel.Location = new System.Drawing.Point(358, 267);
+            this.PlayerLabel.Location = new System.Drawing.Point(477, 329);
+            this.PlayerLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.PlayerLabel.Name = "PlayerLabel";
-            this.PlayerLabel.Size = new System.Drawing.Size(72, 13);
+            this.PlayerLabel.Size = new System.Drawing.Size(92, 16);
             this.PlayerLabel.TabIndex = 8;
             this.PlayerLabel.Text = "Player\'s Hand";
             // 
             // DealerLabel
             // 
             this.DealerLabel.AutoSize = true;
-            this.DealerLabel.Location = new System.Drawing.Point(358, 46);
+            this.DealerLabel.Location = new System.Drawing.Point(477, 57);
+            this.DealerLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.DealerLabel.Name = "DealerLabel";
-            this.DealerLabel.Size = new System.Drawing.Size(74, 13);
+            this.DealerLabel.Size = new System.Drawing.Size(94, 16);
             this.DealerLabel.TabIndex = 9;
             this.DealerLabel.Text = "Dealer\'s Hand";
             // 
             // HitButton
             // 
-            this.HitButton.Location = new System.Drawing.Point(271, 402);
+            this.HitButton.Location = new System.Drawing.Point(361, 495);
+            this.HitButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.HitButton.Name = "HitButton";
-            this.HitButton.Size = new System.Drawing.Size(75, 23);
+            this.HitButton.Size = new System.Drawing.Size(100, 28);
             this.HitButton.TabIndex = 10;
             this.HitButton.Text = "Hit";
             this.HitButton.UseVisualStyleBackColor = true;
+            this.HitButton.Click += new System.EventHandler(this.HitButton_Click);
             // 
             // StandButton
             // 
-            this.StandButton.Location = new System.Drawing.Point(432, 402);
+            this.StandButton.Location = new System.Drawing.Point(576, 495);
+            this.StandButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.StandButton.Name = "StandButton";
-            this.StandButton.Size = new System.Drawing.Size(75, 23);
+            this.StandButton.Size = new System.Drawing.Size(100, 28);
             this.StandButton.TabIndex = 11;
             this.StandButton.Text = "Stand";
             this.StandButton.UseVisualStyleBackColor = true;
@@ -85,24 +91,26 @@
             // PlayerHandTextBox
             // 
             this.PlayerHandTextBox.Enabled = false;
-            this.PlayerHandTextBox.Location = new System.Drawing.Point(350, 316);
+            this.PlayerHandTextBox.Location = new System.Drawing.Point(467, 389);
+            this.PlayerHandTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.PlayerHandTextBox.Name = "PlayerHandTextBox";
-            this.PlayerHandTextBox.Size = new System.Drawing.Size(100, 20);
+            this.PlayerHandTextBox.Size = new System.Drawing.Size(132, 22);
             this.PlayerHandTextBox.TabIndex = 12;
             // 
             // DealerHandTextBox
             // 
             this.DealerHandTextBox.Enabled = false;
-            this.DealerHandTextBox.Location = new System.Drawing.Point(350, 102);
+            this.DealerHandTextBox.Location = new System.Drawing.Point(467, 126);
+            this.DealerHandTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.DealerHandTextBox.Name = "DealerHandTextBox";
-            this.DealerHandTextBox.Size = new System.Drawing.Size(100, 20);
+            this.DealerHandTextBox.Size = new System.Drawing.Size(132, 22);
             this.DealerHandTextBox.TabIndex = 13;
             // 
             // GameForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1067, 554);
             this.Controls.Add(this.DealerHandTextBox);
             this.Controls.Add(this.PlayerHandTextBox);
             this.Controls.Add(this.StandButton);
@@ -110,6 +118,7 @@
             this.Controls.Add(this.Hit17Label);
             this.Controls.Add(this.DealerLabel);
             this.Controls.Add(this.PlayerLabel);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "GameForm";
             this.Text = "Blackjack";
             this.ResumeLayout(false);

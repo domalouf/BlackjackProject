@@ -105,5 +105,15 @@ namespace BlackJack
         {
             chipCountTextBox.Text = "" + theTable.players[0].GetChips();
         }
+
+        /// <summary>
+        /// double tapping the screen calls this (while coding)
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void GameLobby_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\malou\\source\\repos\\BlackjackProject\\BlackJackProject\\Controller2\\Controller.csproj": {}
+    "C:\\Users\\malou\\Source\\Repos\\BlackjackProject\\BlackJackProject\\Controller2\\Controller.csproj": {}
   },
   "projects": {
-    "C:\\Users\\malou\\source\\repos\\BlackjackProject\\BlackJackProject\\Controller2\\Controller.csproj": {
+    "C:\\Users\\malou\\Source\\Repos\\BlackjackProject\\BlackJackProject\\Controller2\\Controller.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\malou\\source\\repos\\BlackjackProject\\BlackJackProject\\Controller2\\Controller.csproj",
+        "projectUniqueName": "C:\\Users\\malou\\Source\\Repos\\BlackjackProject\\BlackJackProject\\Controller2\\Controller.csproj",
         "projectName": "Controller",
-        "projectPath": "C:\\Users\\malou\\source\\repos\\BlackjackProject\\BlackJackProject\\Controller2\\Controller.csproj",
+        "projectPath": "C:\\Users\\malou\\Source\\Repos\\BlackjackProject\\BlackJackProject\\Controller2\\Controller.csproj",
         "packagesPath": "C:\\Users\\malou\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\malou\\source\\repos\\BlackjackProject\\BlackJackProject\\Controller2\\obj\\",
+        "outputPath": "C:\\Users\\malou\\Source\\Repos\\BlackjackProject\\BlackJackProject\\Controller2\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\malou\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -28,8 +28,8 @@
           "netstandard2.0": {
             "targetAlias": "netstandard2.0",
             "projectReferences": {
-              "C:\\Users\\malou\\source\\repos\\BlackjackProject\\BlackJackProject\\Model2\\Model.csproj": {
-                "projectPath": "C:\\Users\\malou\\source\\repos\\BlackjackProject\\BlackJackProject\\Model2\\Model.csproj"
+              "C:\\Users\\malou\\Source\\Repos\\BlackjackProject\\BlackJackProject\\Model2\\Model.csproj": {
+                "projectPath": "C:\\Users\\malou\\Source\\Repos\\BlackjackProject\\BlackJackProject\\Model2\\Model.csproj"
               }
             }
           }
@@ -57,22 +57,23 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.302\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\malou\\source\\repos\\BlackjackProject\\BlackJackProject\\Model2\\Model.csproj": {
+    "C:\\Users\\malou\\Source\\Repos\\BlackjackProject\\BlackJackProject\\Model2\\Model.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\malou\\source\\repos\\BlackjackProject\\BlackJackProject\\Model2\\Model.csproj",
+        "projectUniqueName": "C:\\Users\\malou\\Source\\Repos\\BlackjackProject\\BlackJackProject\\Model2\\Model.csproj",
         "projectName": "Model",
-        "projectPath": "C:\\Users\\malou\\source\\repos\\BlackjackProject\\BlackJackProject\\Model2\\Model.csproj",
+        "projectPath": "C:\\Users\\malou\\Source\\Repos\\BlackjackProject\\BlackJackProject\\Model2\\Model.csproj",
         "packagesPath": "C:\\Users\\malou\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\malou\\source\\repos\\BlackjackProject\\BlackJackProject\\Model2\\obj\\",
+        "outputPath": "C:\\Users\\malou\\Source\\Repos\\BlackjackProject\\BlackJackProject\\Model2\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\malou\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -114,11 +115,12 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.302\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     }

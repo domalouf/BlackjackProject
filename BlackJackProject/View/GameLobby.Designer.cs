@@ -44,42 +44,47 @@
             // WelcomeLabel
             // 
             this.WelcomeLabel.AutoSize = true;
-            this.WelcomeLabel.Location = new System.Drawing.Point(322, 9);
+            this.WelcomeLabel.Location = new System.Drawing.Point(429, 11);
+            this.WelcomeLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.WelcomeLabel.Name = "WelcomeLabel";
-            this.WelcomeLabel.Size = new System.Drawing.Size(153, 13);
+            this.WelcomeLabel.Size = new System.Drawing.Size(192, 16);
             this.WelcomeLabel.TabIndex = 0;
             this.WelcomeLabel.Text = "Welcome to the Casino Homes";
             // 
             // cashierLabel
             // 
             this.cashierLabel.AutoSize = true;
-            this.cashierLabel.Location = new System.Drawing.Point(83, 55);
+            this.cashierLabel.Location = new System.Drawing.Point(111, 68);
+            this.cashierLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.cashierLabel.Name = "cashierLabel";
-            this.cashierLabel.Size = new System.Drawing.Size(42, 13);
+            this.cashierLabel.Size = new System.Drawing.Size(53, 16);
             this.cashierLabel.TabIndex = 1;
             this.cashierLabel.Text = "Cashier";
             // 
             // buyChipsLabel
             // 
             this.buyChipsLabel.AutoSize = true;
-            this.buyChipsLabel.Location = new System.Drawing.Point(10, 93);
+            this.buyChipsLabel.Location = new System.Drawing.Point(13, 114);
+            this.buyChipsLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.buyChipsLabel.Name = "buyChipsLabel";
-            this.buyChipsLabel.Size = new System.Drawing.Size(193, 13);
+            this.buyChipsLabel.Size = new System.Drawing.Size(238, 16);
             this.buyChipsLabel.TabIndex = 2;
             this.buyChipsLabel.Text = "How many chips would you like to buy?";
             // 
             // buyChipsTextBox
             // 
-            this.buyChipsTextBox.Location = new System.Drawing.Point(14, 129);
+            this.buyChipsTextBox.Location = new System.Drawing.Point(19, 159);
+            this.buyChipsTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.buyChipsTextBox.Name = "buyChipsTextBox";
-            this.buyChipsTextBox.Size = new System.Drawing.Size(110, 20);
+            this.buyChipsTextBox.Size = new System.Drawing.Size(145, 22);
             this.buyChipsTextBox.TabIndex = 3;
             // 
             // buyButton
             // 
-            this.buyButton.Location = new System.Drawing.Point(150, 129);
+            this.buyButton.Location = new System.Drawing.Point(200, 159);
+            this.buyButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.buyButton.Name = "buyButton";
-            this.buyButton.Size = new System.Drawing.Size(52, 19);
+            this.buyButton.Size = new System.Drawing.Size(69, 23);
             this.buyButton.TabIndex = 4;
             this.buyButton.Text = "Buy";
             this.buyButton.UseVisualStyleBackColor = true;
@@ -88,34 +93,38 @@
             // playerInfoLabel
             // 
             this.playerInfoLabel.AutoSize = true;
-            this.playerInfoLabel.Location = new System.Drawing.Point(632, 96);
+            this.playerInfoLabel.Location = new System.Drawing.Point(843, 118);
+            this.playerInfoLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.playerInfoLabel.Name = "playerInfoLabel";
-            this.playerInfoLabel.Size = new System.Drawing.Size(57, 13);
+            this.playerInfoLabel.Size = new System.Drawing.Size(70, 16);
             this.playerInfoLabel.TabIndex = 5;
             this.playerInfoLabel.Text = "Player Info";
             // 
             // chipCountLabel
             // 
             this.chipCountLabel.AutoSize = true;
-            this.chipCountLabel.Location = new System.Drawing.Point(609, 129);
+            this.chipCountLabel.Location = new System.Drawing.Point(812, 159);
+            this.chipCountLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.chipCountLabel.Name = "chipCountLabel";
-            this.chipCountLabel.Size = new System.Drawing.Size(62, 13);
+            this.chipCountLabel.Size = new System.Drawing.Size(74, 16);
             this.chipCountLabel.TabIndex = 6;
             this.chipCountLabel.Text = "Chip Count:";
             // 
             // chipCountTextBox
             // 
             this.chipCountTextBox.Enabled = false;
-            this.chipCountTextBox.Location = new System.Drawing.Point(677, 126);
+            this.chipCountTextBox.Location = new System.Drawing.Point(903, 155);
+            this.chipCountTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.chipCountTextBox.Name = "chipCountTextBox";
-            this.chipCountTextBox.Size = new System.Drawing.Size(100, 20);
+            this.chipCountTextBox.Size = new System.Drawing.Size(132, 22);
             this.chipCountTextBox.TabIndex = 7;
             // 
             // DealButton
             // 
-            this.DealButton.Location = new System.Drawing.Point(442, 293);
+            this.DealButton.Location = new System.Drawing.Point(589, 361);
+            this.DealButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.DealButton.Name = "DealButton";
-            this.DealButton.Size = new System.Drawing.Size(75, 23);
+            this.DealButton.Size = new System.Drawing.Size(100, 28);
             this.DealButton.TabIndex = 12;
             this.DealButton.Text = "Deal Cards";
             this.DealButton.UseVisualStyleBackColor = true;
@@ -124,24 +133,26 @@
             // BetLabel
             // 
             this.BetLabel.AutoSize = true;
-            this.BetLabel.Location = new System.Drawing.Point(324, 277);
+            this.BetLabel.Location = new System.Drawing.Point(432, 341);
+            this.BetLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.BetLabel.Name = "BetLabel";
-            this.BetLabel.Size = new System.Drawing.Size(46, 13);
+            this.BetLabel.Size = new System.Drawing.Size(56, 16);
             this.BetLabel.TabIndex = 13;
             this.BetLabel.Text = "Bet Size";
             // 
             // BetSizeTextBox
             // 
-            this.BetSizeTextBox.Location = new System.Drawing.Point(304, 293);
+            this.BetSizeTextBox.Location = new System.Drawing.Point(405, 361);
+            this.BetSizeTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.BetSizeTextBox.Name = "BetSizeTextBox";
-            this.BetSizeTextBox.Size = new System.Drawing.Size(100, 20);
+            this.BetSizeTextBox.Size = new System.Drawing.Size(132, 22);
             this.BetSizeTextBox.TabIndex = 14;
             // 
             // GameLobby
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1067, 554);
             this.Controls.Add(this.BetSizeTextBox);
             this.Controls.Add(this.BetLabel);
             this.Controls.Add(this.DealButton);
@@ -153,9 +164,11 @@
             this.Controls.Add(this.buyChipsLabel);
             this.Controls.Add(this.cashierLabel);
             this.Controls.Add(this.WelcomeLabel);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "GameLobby";
             this.Text = "BlackJack Lobby";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.GameForm_FormClosed);
+            this.Load += new System.EventHandler(this.GameLobby_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

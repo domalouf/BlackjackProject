@@ -47,5 +47,10 @@ namespace BlackJack
 
             dealer.GiveFirstCard(shoe.DrawCard());
         }
+
+        public void HitPlayer()
+        {
+            players[0].Hit
+        }
     }
 }
