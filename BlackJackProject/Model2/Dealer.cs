@@ -6,11 +6,10 @@ namespace BlackJack
 {
     public class Dealer
     {
-        public Stack<int> cards;
+        public Hand hand;
 
         public Dealer()
         {
-            cards = new Stack<int>();
         }
 
         /// <summary>
@@ -19,7 +18,7 @@ namespace BlackJack
         /// <param name="firstCard"></param>
         public void GiveFirstCard(int firstCard)
         {
-            cards.Push(firstCard);
+            hand = new Hand(firstCard, secondCard);
         }
 
         /// <summary>

@@ -36,21 +36,26 @@ namespace BlackJack
         }
 
         /// <summary>
-        /// Gives all players 2 cards and the dealer 1 card
+        /// Gives the players and dealer 2 cards
         /// </summary>
         public void StartHand()
         {
             foreach (Player p in players.Values)
             {
                 p.StartHand(shoe.DrawCard(), shoe.DrawCard());
+                p.hands[0].CheckHand();
             }
 
             dealer.GiveFirstCard(shoe.DrawCard());
         }
 
+        /// <summary>
+        /// Gives player a card and updates hand attributes
+        /// </summary>
         public void HitPlayer()
         {
-            players[0].Hit
+            players[0].Hit(shoe.DrawCard());
+            players[0].hands[0].CheckHand();
         }
     }
 }

@@ -10,7 +10,9 @@ namespace BlackJack
     public class Player
     {
         public Dictionary<int, Hand> hands;
-        private int chips;
+        public int chips;
+        public int bet;
+        
 
         public Player(int _numChips)
         {
@@ -37,6 +39,15 @@ namespace BlackJack
         }
 
         /// <summary>
+        /// Removes chips from player's stack
+        /// </summary>
+        /// <param name="_numChips"></param>
+        public void RemoveChips(int _numChips)
+        {
+            chips -= _numChips;
+        }
+
+        /// <summary>
         /// Adds a hand to a player's list of hands,
         /// Just one hand at the moment
         /// </summary>
@@ -53,6 +64,7 @@ namespace BlackJack
         public void Hit(int hitCard)
         {
             hands[0].Hit(hitCard);
+            hands[0].CheckHand();
         }
 
         /// <summary>

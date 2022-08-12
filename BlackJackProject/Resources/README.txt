@@ -5,8 +5,6 @@ This class holds the moves that come from the basic strategy table.
 
 Its constructor is very specific to read in the file given by BasicStrategyChart.txt in Resources.
 
-I hope there is a better way of reading in charts to 2D arrays because my method was very arduous to implement.
-
 MVC Architecture:
 This program uses Model View Controller to handle seperation of concerns for the different projects.
 

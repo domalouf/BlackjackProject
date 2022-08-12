@@ -20,6 +20,7 @@ namespace BlackJack
             InitializeComponent();
             theController = _theController;
             theTable = theController.GetTable();
+            // methods that the controller can cause with event
             theController.NewPlayerJoined += NewPlayerJoined;
             theController.AddChips += AddChips;
         }
@@ -72,10 +73,15 @@ namespace BlackJack
                 }
                 else
                 {
+                    DealButton.Enabled = false;
                     theController.DealHand(betSize);
-                    GameForm game = new GameForm(theController);
-                    this.Hide();
-                    game.ShowDialog();
+                    HitButton.Enabled = true;
+                    if (theTable.players[0].GetHand().pair)
+                    {
+                        //split button enabled
+                    }
+                    if (theTable)
+
                 }
             }
             else
@@ -114,6 +120,11 @@ namespace BlackJack
         private void GameLobby_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void HitButton_Click(object sender, EventArgs e)
+        {
+            theController.HitPlayer();
         }
     }
 }
