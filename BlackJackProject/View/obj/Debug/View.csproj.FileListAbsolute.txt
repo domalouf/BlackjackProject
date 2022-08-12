@@ -25,7 +25,6 @@ C:\Users\malou\Source\Repos\BlackjackProject\BlackJackProject\View\bin\Debug\Con
 C:\Users\malou\Source\Repos\BlackjackProject\BlackJackProject\View\bin\Debug\Model.pdb
 C:\Users\malou\Source\Repos\BlackjackProject\BlackJackProject\View\obj\Debug\View.csproj.AssemblyReference.cache
 C:\Users\malou\Source\Repos\BlackjackProject\BlackJackProject\View\obj\Debug\View.csproj.SuggestedBindingRedirects.cache
-C:\Users\malou\Source\Repos\BlackjackProject\BlackJackProject\View\obj\Debug\BlackJack.GameForm.resources
 C:\Users\malou\Source\Repos\BlackjackProject\BlackJackProject\View\obj\Debug\BlackJack.MainMenu.resources
 C:\Users\malou\Source\Repos\BlackjackProject\BlackJackProject\View\obj\Debug\BlackJack.StrategyHelper.resources
 C:\Users\malou\Source\Repos\BlackjackProject\BlackJackProject\View\obj\Debug\BlackJack.TestForm.resources

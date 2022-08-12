@@ -54,6 +54,8 @@ namespace BlackJack
         {
             pair = false;
             soft = false;
+            bust = false;
+            blackjack = false;
             cards.Clear();
         }
 
@@ -103,6 +105,10 @@ namespace BlackJack
             else if (total > 21 && !soft) bust = true;
         }
 
+        /// <summary>
+        /// Shows cards in the hand
+        /// </summary>
+        /// <returns></returns>
         public override string ToString()
         {
             string ans = "";

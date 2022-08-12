@@ -23,6 +23,11 @@ namespace BlackJack
             // methods that the controller can cause with event
             theController.NewPlayerJoined += NewPlayerJoined;
             theController.AddChips += AddChips;
+            theController.PlayerWin += PlayerWin;
+            theController.PlayerBust += PlayerBust;
+            theController.PlayerBlackJack += PlayerBlackJack;
+            theController.PushBet += PushBet;
+            theController.PlayerAction += PlayerAction;
         }
 
         private void GameForm_FormClosed(object sender, FormClosedEventArgs e)
@@ -75,16 +80,8 @@ namespace BlackJack
                 {
                     DealButton.Enabled = false;
                     theController.DealHand(betSize);
-                    HitButton.Enabled = true;
-                    if (theTable.players[0].GetHand().pair)
-                    {
-                        //split button enabled
-                    }
-                    if (theTable.players[0].GetHand().blackjack)
-                    {
-                        //TODO, here or maybe in controller
-                    }
-
+                    PlayerHandTextBox.Text = "" + theTable.players[0].GetHand().ToString();
+                    DealerHandTextBox.Text = "" + theTable.dealer.GetHand().ToString();
                 }
             }
             else
@@ -107,12 +104,59 @@ namespace BlackJack
         }
 
         /// <summary>
-        /// event handler for when a player adds chips,
+        /// Event handler for when a player adds chips,
         /// changes text box to show new amount
         /// </summary>
         public void AddChips()
         {
             chipCountTextBox.Text = "" + theTable.players[0].GetChips();
+        }
+
+        /// <summary>
+        /// Event handler for when a player wins
+        /// </summary>
+        public void PlayerWin()
+        {
+            DealerHandTextBox.Text = "" + theTable.dealer.GetHand().ToString();
+            ResultTextBox.Text = "You Win!!!";
+            PlayAgainButton.Enabled = true;
+        }
+
+        /// <summary>
+        /// Event Handler for when a player loses
+        /// </summary>
+        public void PlayerBust()
+        {
+            DealerHandTextBox.Text = "" + theTable.dealer.GetHand().ToString();
+            ResultTextBox.Text = "You Lose!!!";
+            PlayAgainButton.Enabled = true;
+        }
+
+        /// <summary>
+        /// Event handler for when a player gets a blackjack
+        /// </summary>
+        public void PlayerBlackJack()
+        {
+            ResultTextBox.Text = "BlackJack!!!";
+            PlayAgainButton.Enabled = true;
+        }
+
+        /// <summary>
+        /// Event handler for when a player ties with dealer
+        /// </summary>
+        public void PushBet()
+        {
+            ResultTextBox.Text = "You Tie.";
+            PlayAgainButton.Enabled = true;
+        }
+
+        /// <summary>
+        /// Event handler for when a player must act
+        /// </summary>
+        public void PlayerAction()
+        {
+            HitButton.Enabled = true;
+            StandButton.Enabled = true;
         }
 
         /// <summary>
@@ -128,6 +172,20 @@ namespace BlackJack
         private void HitButton_Click(object sender, EventArgs e)
         {
             theController.HitPlayer();
+            PlayerHandTextBox.Text = "" + theTable.players[0].GetHand().ToString();
+        }
+
+        private void StandButton_Click(object sender, EventArgs e)
+        {
+            theController.StandPlayer();
+        }
+
+        private void PlayAgainButton_Click(object sender, EventArgs e)
+        {
+            theController.ResetHand();
+            PlayerHandTextBox.Clear();
+            DealerHandTextBox.Clear();
+            DealButton.Enabled = true;
         }
     }
 }

@@ -41,12 +41,19 @@ namespace BlackJack
         public void StartHand()
         {
             dealer.StartHand(shoe.DrawCard(), shoe.DrawCard());
-            dealer.Get
             foreach (Player p in players.Values)
             {
                 p.StartHand(shoe.DrawCard(), shoe.DrawCard());
-                p.hands[0].CheckHand();
             }
+        }
+
+        /// <summary>
+        /// Sets all hands to empty
+        /// </summary>
+        public void ResetHand()
+        {
+            players[0].hands.Clear();
+            dealer.hand.newHand();
         }
 
         /// <summary>
@@ -56,6 +63,17 @@ namespace BlackJack
         {
             players[0].Hit(shoe.DrawCard());
             players[0].hands[0].CheckHand();
+        }
+
+        /// <summary>
+        /// Hits dealer until they have 17+ (hits soft 17)
+        /// </summary>
+        public void HitDealer()
+        {
+            if (dealer.GetHand().total < 17)
+            {
+                dealer.HitHand(shoe.DrawCard());
+            }
         }
     }
 }

@@ -16,7 +16,28 @@ namespace BlackJack
         public event NewPlayerHandler NewPlayerJoined;
 
         public delegate void AddChipsHandler();
-        public event NewPlayerHandler AddChips;
+        public event AddChipsHandler AddChips;
+
+        public delegate void PlayerWinHandler();
+        public event PlayerWinHandler PlayerWin;
+
+        public delegate void PlayerBustHandler();
+        public event PlayerBustHandler PlayerBust;
+
+        public delegate void PlayerBlackJackHandler();
+        public event PlayerBlackJackHandler PlayerBlackJack;
+
+        public delegate void PushBetHandler();
+        public event PushBetHandler PushBet;
+
+        public delegate void PlayerActionHandler();
+        public event PlayerActionHandler PlayerAction;
+
+        public delegate void ResetViewHandler();
+        public event ResetViewHandler ResetView;
+
+        //public delegate void EnableSplitHandler();
+        //public event EnableSplitHandler EnableSplit;
 
         public Controller()
         {
@@ -33,22 +54,22 @@ namespace BlackJack
         /// </summary>
         public void GiveChips(int numChips)
         {
-                if (numChips > 0)
+            if (numChips > 0)
+            {
+                // first time buying chips
+                if (theTable.players.Count == 0)
                 {
-                    // first time buying chips
-                    if (theTable.players.Count == 0)
-                    {
-                        theTable.AddPlayer(numChips);
-                        NewPlayerJoined();
-                    }
-
-                    // buying more chips
-                    else
-                    {
-                        theTable.GiveChips(numChips);
-                        AddChips();
-                    }
+                    theTable.AddPlayer(numChips);
+                    NewPlayerJoined();
                 }
+
+                // buying more chips
+                else
+                {
+                    theTable.GiveChips(numChips);
+                    AddChips();
+                }
+            }
         }
 
         /// <summary>
@@ -65,17 +86,36 @@ namespace BlackJack
             {
                 if (theTable.players[0].GetHand().blackjack)
                 {
-                    //TODO
+                    PushBet();
                 }
                 else
                 {
-                    //TODO
+                    PlayerBust();
                 }
             }
+            // if player has a blackjack
             if (theTable.players[0].GetHand().blackjack)
             {
+                PlayerBlackJack();
                 theTable.players[0].AddChips(betSize * 2);
             }
+            // checks for a pair and tells player to act
+            else
+            {
+                if (theTable.players[0].GetHand().pair)
+                {
+                    //TODO: EnableSplit();
+                }
+                PlayerAction();
+            }
+        }
+
+        /// <summary>
+        /// Sets all hands to blank
+        /// </summary>
+        public void ResetHand()
+        {
+            theTable.ResetHand();
         }
 
         /// <summary>
@@ -86,12 +126,34 @@ namespace BlackJack
             theTable.HitPlayer();
             if (theTable.players[0].GetHand().bust)
             {
-
+                PlayerBust();
             }
             else if (theTable.players[0].hands[0].blackjack)
             {
-                //TODO
+                PlayerBlackJack();
             }
+        }
+
+        /// <summary>
+        /// When a player stands,
+        /// Check dealer hand and hit until 17+,
+        /// (hits soft 17)
+        /// </summary>
+        public void StandPlayer()
+        {
+            // while dealer is below 17 or at soft 17 they hit
+            while (theTable.dealer.GetHand().total < 17 ||
+                (theTable.dealer.GetHand().soft && theTable.dealer.GetHand().total < 17))
+            {
+                theTable.HitDealer();
+            }
+            // dealer stands and hand is checked against player's
+            if (theTable.dealer.GetHand().total <= 21 &&
+                theTable.dealer.GetHand().total > theTable.players[0].GetHand().total)
+            {
+                PlayerBust();
+            }
+            else PlayerWin();
         }
     }
 }

@@ -23,10 +23,19 @@ namespace BlackJack
         }
 
         /// <summary>
+        /// Gives dealer a card
+        /// </summary>
+        public void HitHand(int hitCard)
+        {
+            hand.Hit(hitCard);
+            hand.CheckHand();
+        }
+
+        /// <summary>
         /// Returns dealer's cards
         /// </summary>
         /// <returns></returns>
-        public Hand getHand()
+        public Hand GetHand()
         {
             return hand;
         }
