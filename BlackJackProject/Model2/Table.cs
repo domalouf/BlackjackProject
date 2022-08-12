@@ -40,13 +40,13 @@ namespace BlackJack
         /// </summary>
         public void StartHand()
         {
+            dealer.StartHand(shoe.DrawCard(), shoe.DrawCard());
+            dealer.Get
             foreach (Player p in players.Values)
             {
                 p.StartHand(shoe.DrawCard(), shoe.DrawCard());
                 p.hands[0].CheckHand();
             }
-
-            dealer.GiveFirstCard(shoe.DrawCard());
         }
 
         /// <summary>

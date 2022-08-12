@@ -16,18 +16,19 @@ namespace BlackJack
         /// Adds first card to dealer's hand (stack of cards)
         /// </summary>
         /// <param name="firstCard"></param>
-        public void GiveFirstCard(int firstCard)
+        public void StartHand(int firstCard, int secondCard)
         {
             hand = new Hand(firstCard, secondCard);
+            hand.CheckHand();
         }
 
         /// <summary>
         /// Returns dealer's cards
         /// </summary>
         /// <returns></returns>
-        public Stack<int> getCards()
+        public Hand getHand()
         {
-            return cards;
+            return hand;
         }
     }
 }

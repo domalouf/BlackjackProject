@@ -60,6 +60,18 @@ namespace BlackJack
         {
             theTable.StartHand();
             theTable.players[0].RemoveChips(betSize);
+            // if dealer has blackjack
+            if (theTable.dealer.hand.blackjack)
+            {
+                if (theTable.players[0].GetHand().blackjack)
+                {
+                    //TODO
+                }
+                else
+                {
+                    //TODO
+                }
+            }
             if (theTable.players[0].GetHand().blackjack)
             {
                 theTable.players[0].AddChips(betSize * 2);

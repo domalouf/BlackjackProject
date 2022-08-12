@@ -80,7 +80,10 @@ namespace BlackJack
                     {
                         //split button enabled
                     }
-                    if (theTable)
+                    if (theTable.players[0].GetHand().blackjack)
+                    {
+                        //TODO, here or maybe in controller
+                    }
 
                 }
             }
