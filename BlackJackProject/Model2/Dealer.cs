@@ -39,5 +39,14 @@ namespace BlackJack
         {
             return hand;
         }
+        
+        /// <summary>
+        /// Returns dealer's first card
+        /// </summary>
+        /// <returns></returns>
+        public int GetFirstCard()
+        {
+            return hand.cards[0];
+        }
     }
 }

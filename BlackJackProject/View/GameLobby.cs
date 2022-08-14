@@ -22,7 +22,7 @@ namespace BlackJack
             theTable = theController.GetTable();
             // methods that the controller can cause with event
             theController.NewPlayerJoined += NewPlayerJoined;
-            theController.AddChips += AddChips;
+            theController.UpdateChips += UpdateChips;
             theController.PlayerWin += PlayerWin;
             theController.PlayerBust += PlayerBust;
             theController.PlayerBlackJack += PlayerBlackJack;
@@ -81,7 +81,7 @@ namespace BlackJack
                     DealButton.Enabled = false;
                     theController.DealHand(betSize);
                     PlayerHandTextBox.Text = "" + theTable.players[0].GetHand().ToString();
-                    DealerHandTextBox.Text = "" + theTable.dealer.GetHand().ToString();
+                    DealerHandTextBox.Text = "" + theTable.dealer.GetFirstCard();
                 }
             }
             else
@@ -100,58 +100,85 @@ namespace BlackJack
         /// </summary>
         public void NewPlayerJoined()
         {
-            chipCountTextBox.Text = "" + theTable.players[0].GetChips();
+            UpdateChips();
+            DealButton.Enabled = true;
+            BetSizeTextBox.Enabled = true;
         }
 
         /// <summary>
         /// Event handler for when a player adds chips,
         /// changes text box to show new amount
         /// </summary>
-        public void AddChips()
+        public void UpdateChips()
         {
             chipCountTextBox.Text = "" + theTable.players[0].GetChips();
         }
 
         /// <summary>
-        /// Event handler for when a player wins
+        /// Event handler for when a player wins,
+        /// Displays new chip count,
+        /// Disables hit and stand button,
+        /// Enables play again button
         /// </summary>
         public void PlayerWin()
         {
             DealerHandTextBox.Text = "" + theTable.dealer.GetHand().ToString();
             ResultTextBox.Text = "You Win!!!";
+            chipCountTextBox.Text = "" + theTable.players[0].GetChips();
             PlayAgainButton.Enabled = true;
+            HitButton.Enabled = false;
+            StandButton.Enabled = false;
         }
 
         /// <summary>
-        /// Event Handler for when a player loses
+        /// Event Handler for when a player loses,
+        /// Displays new chip count,
+        /// Disables hit and stand button,
+        /// Enables play again button
         /// </summary>
         public void PlayerBust()
         {
             DealerHandTextBox.Text = "" + theTable.dealer.GetHand().ToString();
             ResultTextBox.Text = "You Lose!!!";
             PlayAgainButton.Enabled = true;
+            chipCountTextBox.Text = "" + theTable.players[0].GetChips();
+            HitButton.Enabled = false;
+            StandButton.Enabled = false;
         }
 
         /// <summary>
-        /// Event handler for when a player gets a blackjack
+        /// Event handler for when a player gets a blackjack,
+        /// Displays new chip count,
+        /// Disables hit and stand button,
+        /// Enables play again button
         /// </summary>
         public void PlayerBlackJack()
         {
             ResultTextBox.Text = "BlackJack!!!";
+            chipCountTextBox.Text = "" + theTable.players[0].GetChips();
             PlayAgainButton.Enabled = true;
+            HitButton.Enabled = false;
+            StandButton.Enabled = false;
         }
 
         /// <summary>
-        /// Event handler for when a player ties with dealer
+        /// Event handler for when a player ties with dealer,
+        /// Displays new chip count,
+        /// Disables hit and stand button,
+        /// Enables play again button
         /// </summary>
         public void PushBet()
         {
             ResultTextBox.Text = "You Tie.";
+            chipCountTextBox.Text = "" + theTable.players[0].GetChips();
             PlayAgainButton.Enabled = true;
+            HitButton.Enabled = false;
+            StandButton.Enabled = false;
         }
 
         /// <summary>
-        /// Event handler for when a player must act
+        /// Event handler for when a player must act,
+        /// enables hit and stand buttons
         /// </summary>
         public void PlayerAction()
         {
@@ -185,7 +212,11 @@ namespace BlackJack
             theController.ResetHand();
             PlayerHandTextBox.Clear();
             DealerHandTextBox.Clear();
+            ResultTextBox.Clear();
             DealButton.Enabled = true;
+            HitButton.Enabled = false;
+            StandButton.Enabled = false;
+            PlayAgainButton.Enabled = false;
         }
     }
 }

@@ -16,7 +16,7 @@ namespace BlackJack
         public event NewPlayerHandler NewPlayerJoined;
 
         public delegate void AddChipsHandler();
-        public event AddChipsHandler AddChips;
+        public event AddChipsHandler UpdateChips;
 
         public delegate void PlayerWinHandler();
         public event PlayerWinHandler PlayerWin;
@@ -67,7 +67,7 @@ namespace BlackJack
                 else
                 {
                     theTable.GiveChips(numChips);
-                    AddChips();
+                    UpdateChips();
                 }
             }
         }
@@ -79,13 +79,14 @@ namespace BlackJack
         /// <param name="betSize"></param>
         public void DealHand(int betSize)
         {
-            theTable.StartHand();
+            theTable.StartHand(betSize);
             theTable.players[0].RemoveChips(betSize);
             // if dealer has blackjack
             if (theTable.dealer.hand.blackjack)
             {
                 if (theTable.players[0].GetHand().blackjack)
                 {
+                    theTable.players[0].AddChips(betSize);
                     PushBet();
                 }
                 else
@@ -96,8 +97,8 @@ namespace BlackJack
             // if player has a blackjack
             if (theTable.players[0].GetHand().blackjack)
             {
+                theTable.players[0].AddChips(betSize * 5 / 2);
                 PlayerBlackJack();
-                theTable.players[0].AddChips(betSize * 2);
             }
             // checks for a pair and tells player to act
             else
@@ -119,7 +120,8 @@ namespace BlackJack
         }
 
         /// <summary>
-        /// Calls the table to hit a player
+        /// Calls the table to hit a player,
+        /// checks for bust or 21
         /// </summary>
         public void HitPlayer()
         {
@@ -128,14 +130,14 @@ namespace BlackJack
             {
                 PlayerBust();
             }
-            else if (theTable.players[0].hands[0].blackjack)
+            else if (theTable.players[0].hands[0].total == 21)
             {
-                PlayerBlackJack();
+                StandPlayer();
             }
         }
 
         /// <summary>
-        /// When a player stands,
+        /// When a player stands or hits a 21,
         /// Check dealer hand and hit until 17+,
         /// (hits soft 17)
         /// </summary>
@@ -153,7 +155,16 @@ namespace BlackJack
             {
                 PlayerBust();
             }
-            else PlayerWin();
+            else if (theTable.dealer.GetHand().total == theTable.players[0].GetHand().total)
+            {
+                theTable.GiveChips(theTable.players[0].bet);
+                PushBet();
+            }
+            else
+            {
+                theTable.GiveChips(theTable.players[0].bet * 2);
+                PlayerWin();
+            }
         }
     }
 }

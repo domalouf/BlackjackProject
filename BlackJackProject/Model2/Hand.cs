@@ -102,7 +102,8 @@ namespace BlackJack
                 soft = false;
                 total -= 10;
             }
-            else if (total > 21 && !soft) bust = true;
+            // if total ends above 21 hand busts
+            if (total > 21 && !soft) bust = true;
         }
 
         /// <summary>
@@ -114,7 +115,7 @@ namespace BlackJack
             string ans = "";
             foreach (int card in cards)
             {
-                ans += card.ToString() + ", ";
+                ans += card.ToString() + " ";
             }
             return ans;
         }

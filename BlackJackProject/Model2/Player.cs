@@ -12,12 +12,12 @@ namespace BlackJack
         public Dictionary<int, Hand> hands;
         public int chips;
         public int bet;
-        
 
         public Player(int _numChips)
         {
             chips = _numChips;
             hands = new Dictionary<int, Hand>();
+            bet = 0;
         }
 
         /// <summary>
@@ -53,10 +53,11 @@ namespace BlackJack
         /// </summary>
         /// <param name="firstCard"></param>
         /// <param name="secondCard"></param>
-        public void StartHand(int firstCard, int secondCard)
+        public void StartHand(int firstCard, int secondCard, int betSize)
         {
             hands.Add(0, new Hand(firstCard, secondCard));
             hands[0].CheckHand();
+            bet = betSize;
         }
 
         /// <summary>
@@ -76,6 +77,14 @@ namespace BlackJack
         public Hand GetHand()
         {
             return hands[0];
+        }
+
+        /// <summary>
+        /// Clears hand dictionary
+        /// </summary>
+        public void ClearHand()
+        {
+            hands.Clear();
         }
     }
 }

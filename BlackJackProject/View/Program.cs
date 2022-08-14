@@ -17,7 +17,7 @@ namespace BlackJack
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Controller ctl = new Controller();
-            Application.Run(new MainMenu(ctl));
+            Application.Run(new GameLobby(ctl));
         }
     }
 }

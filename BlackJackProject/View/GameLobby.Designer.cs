@@ -40,6 +40,11 @@
             this.BetLabel = new System.Windows.Forms.Label();
             this.BetSizeTextBox = new System.Windows.Forms.TextBox();
             this.GamePanel = new System.Windows.Forms.Panel();
+            this.PlayerLabel = new System.Windows.Forms.Label();
+            this.HandLabel = new System.Windows.Forms.Label();
+            this.HandTextBox = new System.Windows.Forms.TextBox();
+            this.PlayerTextBox = new System.Windows.Forms.TextBox();
+            this.PlayAgainButton = new System.Windows.Forms.Button();
             this.ResultTextBox = new System.Windows.Forms.TextBox();
             this.StandButton = new System.Windows.Forms.Button();
             this.HitButton = new System.Windows.Forms.Button();
@@ -47,7 +52,10 @@
             this.PlayerHandTextBox = new System.Windows.Forms.TextBox();
             this.DealerHandLabel = new System.Windows.Forms.Label();
             this.PlayerHandLabel = new System.Windows.Forms.Label();
-            this.PlayAgainButton = new System.Windows.Forms.Button();
+            this.PlayerNumberLabel = new System.Windows.Forms.Label();
+            this.OnePlayerCheckBox = new System.Windows.Forms.CheckBox();
+            this.TwoPlayerCheckBox = new System.Windows.Forms.CheckBox();
+            this.ThreePlayersCheckBox = new System.Windows.Forms.CheckBox();
             this.GamePanel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -113,7 +121,7 @@
             // chipCountLabel
             // 
             this.chipCountLabel.AutoSize = true;
-            this.chipCountLabel.Location = new System.Drawing.Point(811, 70);
+            this.chipCountLabel.Location = new System.Drawing.Point(814, 75);
             this.chipCountLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.chipCountLabel.Name = "chipCountLabel";
             this.chipCountLabel.Size = new System.Drawing.Size(74, 16);
@@ -123,7 +131,7 @@
             // chipCountTextBox
             // 
             this.chipCountTextBox.Enabled = false;
-            this.chipCountTextBox.Location = new System.Drawing.Point(901, 66);
+            this.chipCountTextBox.Location = new System.Drawing.Point(904, 71);
             this.chipCountTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.chipCountTextBox.Name = "chipCountTextBox";
             this.chipCountTextBox.Size = new System.Drawing.Size(132, 22);
@@ -131,6 +139,7 @@
             // 
             // DealButton
             // 
+            this.DealButton.Enabled = false;
             this.DealButton.Location = new System.Drawing.Point(230, 315);
             this.DealButton.Margin = new System.Windows.Forms.Padding(4);
             this.DealButton.Name = "DealButton";
@@ -152,6 +161,7 @@
             // 
             // BetSizeTextBox
             // 
+            this.BetSizeTextBox.Enabled = false;
             this.BetSizeTextBox.Location = new System.Drawing.Point(75, 318);
             this.BetSizeTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.BetSizeTextBox.Name = "BetSizeTextBox";
@@ -160,6 +170,10 @@
             // 
             // GamePanel
             // 
+            this.GamePanel.Controls.Add(this.PlayerLabel);
+            this.GamePanel.Controls.Add(this.HandLabel);
+            this.GamePanel.Controls.Add(this.HandTextBox);
+            this.GamePanel.Controls.Add(this.PlayerTextBox);
             this.GamePanel.Controls.Add(this.PlayAgainButton);
             this.GamePanel.Controls.Add(this.ResultTextBox);
             this.GamePanel.Controls.Add(this.StandButton);
@@ -176,6 +190,51 @@
             this.GamePanel.Name = "GamePanel";
             this.GamePanel.Size = new System.Drawing.Size(457, 382);
             this.GamePanel.TabIndex = 15;
+            // 
+            // PlayerLabel
+            // 
+            this.PlayerLabel.AutoSize = true;
+            this.PlayerLabel.Location = new System.Drawing.Point(85, 10);
+            this.PlayerLabel.Name = "PlayerLabel";
+            this.PlayerLabel.Size = new System.Drawing.Size(46, 16);
+            this.PlayerLabel.TabIndex = 26;
+            this.PlayerLabel.Text = "Player";
+            // 
+            // HandLabel
+            // 
+            this.HandLabel.AutoSize = true;
+            this.HandLabel.Location = new System.Drawing.Point(301, 10);
+            this.HandLabel.Name = "HandLabel";
+            this.HandLabel.Size = new System.Drawing.Size(40, 16);
+            this.HandLabel.TabIndex = 25;
+            this.HandLabel.Text = "Hand";
+            // 
+            // HandTextBox
+            // 
+            this.HandTextBox.Enabled = false;
+            this.HandTextBox.Location = new System.Drawing.Point(296, 28);
+            this.HandTextBox.Name = "HandTextBox";
+            this.HandTextBox.Size = new System.Drawing.Size(100, 22);
+            this.HandTextBox.TabIndex = 24;
+            // 
+            // PlayerTextBox
+            // 
+            this.PlayerTextBox.Enabled = false;
+            this.PlayerTextBox.Location = new System.Drawing.Point(84, 32);
+            this.PlayerTextBox.Name = "PlayerTextBox";
+            this.PlayerTextBox.Size = new System.Drawing.Size(100, 22);
+            this.PlayerTextBox.TabIndex = 23;
+            // 
+            // PlayAgainButton
+            // 
+            this.PlayAgainButton.Enabled = false;
+            this.PlayAgainButton.Location = new System.Drawing.Point(362, 308);
+            this.PlayAgainButton.Name = "PlayAgainButton";
+            this.PlayAgainButton.Size = new System.Drawing.Size(75, 42);
+            this.PlayAgainButton.TabIndex = 22;
+            this.PlayAgainButton.Text = "Play Again";
+            this.PlayAgainButton.UseVisualStyleBackColor = true;
+            this.PlayAgainButton.Click += new System.EventHandler(this.PlayAgainButton_Click);
             // 
             // ResultTextBox
             // 
@@ -231,7 +290,7 @@
             // DealerHandLabel
             // 
             this.DealerHandLabel.AutoSize = true;
-            this.DealerHandLabel.Location = new System.Drawing.Point(301, 39);
+            this.DealerHandLabel.Location = new System.Drawing.Point(301, 77);
             this.DealerHandLabel.Name = "DealerHandLabel";
             this.DealerHandLabel.Size = new System.Drawing.Size(94, 16);
             this.DealerHandLabel.TabIndex = 16;
@@ -240,28 +299,63 @@
             // PlayerHandLabel
             // 
             this.PlayerHandLabel.AutoSize = true;
-            this.PlayerHandLabel.Location = new System.Drawing.Point(81, 39);
+            this.PlayerHandLabel.Location = new System.Drawing.Point(81, 77);
             this.PlayerHandLabel.Name = "PlayerHandLabel";
             this.PlayerHandLabel.Size = new System.Drawing.Size(92, 16);
             this.PlayerHandLabel.TabIndex = 15;
             this.PlayerHandLabel.Text = "Player\'s Hand";
             // 
-            // PlayAgainButton
+            // PlayerNumberLabel
             // 
-            this.PlayAgainButton.Enabled = false;
-            this.PlayAgainButton.Location = new System.Drawing.Point(362, 308);
-            this.PlayAgainButton.Name = "PlayAgainButton";
-            this.PlayAgainButton.Size = new System.Drawing.Size(75, 42);
-            this.PlayAgainButton.TabIndex = 22;
-            this.PlayAgainButton.Text = "Play Again";
-            this.PlayAgainButton.UseVisualStyleBackColor = true;
-            this.PlayAgainButton.Click += new System.EventHandler(this.PlayAgainButton_Click);
+            this.PlayerNumberLabel.AutoSize = true;
+            this.PlayerNumberLabel.Location = new System.Drawing.Point(30, 333);
+            this.PlayerNumberLabel.Name = "PlayerNumberLabel";
+            this.PlayerNumberLabel.Size = new System.Drawing.Size(242, 16);
+            this.PlayerNumberLabel.TabIndex = 16;
+            this.PlayerNumberLabel.Text = "How Many Players? (single player only)";
+            // 
+            // OnePlayerCheckBox
+            // 
+            this.OnePlayerCheckBox.AutoSize = true;
+            this.OnePlayerCheckBox.Enabled = false;
+            this.OnePlayerCheckBox.Location = new System.Drawing.Point(78, 364);
+            this.OnePlayerCheckBox.Name = "OnePlayerCheckBox";
+            this.OnePlayerCheckBox.Size = new System.Drawing.Size(36, 20);
+            this.OnePlayerCheckBox.TabIndex = 17;
+            this.OnePlayerCheckBox.Text = "1";
+            this.OnePlayerCheckBox.UseVisualStyleBackColor = true;
+            // 
+            // TwoPlayerCheckBox
+            // 
+            this.TwoPlayerCheckBox.AutoSize = true;
+            this.TwoPlayerCheckBox.Enabled = false;
+            this.TwoPlayerCheckBox.Location = new System.Drawing.Point(78, 390);
+            this.TwoPlayerCheckBox.Name = "TwoPlayerCheckBox";
+            this.TwoPlayerCheckBox.Size = new System.Drawing.Size(36, 20);
+            this.TwoPlayerCheckBox.TabIndex = 18;
+            this.TwoPlayerCheckBox.Text = "2";
+            this.TwoPlayerCheckBox.UseVisualStyleBackColor = true;
+            // 
+            // ThreePlayersCheckBox
+            // 
+            this.ThreePlayersCheckBox.AutoSize = true;
+            this.ThreePlayersCheckBox.Enabled = false;
+            this.ThreePlayersCheckBox.Location = new System.Drawing.Point(78, 416);
+            this.ThreePlayersCheckBox.Name = "ThreePlayersCheckBox";
+            this.ThreePlayersCheckBox.Size = new System.Drawing.Size(36, 20);
+            this.ThreePlayersCheckBox.TabIndex = 19;
+            this.ThreePlayersCheckBox.Text = "3";
+            this.ThreePlayersCheckBox.UseVisualStyleBackColor = true;
             // 
             // GameLobby
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1067, 554);
+            this.Controls.Add(this.ThreePlayersCheckBox);
+            this.Controls.Add(this.TwoPlayerCheckBox);
+            this.Controls.Add(this.OnePlayerCheckBox);
+            this.Controls.Add(this.PlayerNumberLabel);
             this.Controls.Add(this.GamePanel);
             this.Controls.Add(this.chipCountTextBox);
             this.Controls.Add(this.chipCountLabel);
@@ -305,5 +399,13 @@
         private System.Windows.Forms.Label PlayerHandLabel;
         private System.Windows.Forms.TextBox ResultTextBox;
         private System.Windows.Forms.Button PlayAgainButton;
+        private System.Windows.Forms.Label PlayerLabel;
+        private System.Windows.Forms.Label HandLabel;
+        private System.Windows.Forms.TextBox HandTextBox;
+        private System.Windows.Forms.TextBox PlayerTextBox;
+        private System.Windows.Forms.Label PlayerNumberLabel;
+        private System.Windows.Forms.CheckBox OnePlayerCheckBox;
+        private System.Windows.Forms.CheckBox TwoPlayerCheckBox;
+        private System.Windows.Forms.CheckBox ThreePlayersCheckBox;
     }
 }

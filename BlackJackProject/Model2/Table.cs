@@ -38,12 +38,12 @@ namespace BlackJack
         /// <summary>
         /// Gives the players and dealer 2 cards
         /// </summary>
-        public void StartHand()
+        public void StartHand(int betSize)
         {
             dealer.StartHand(shoe.DrawCard(), shoe.DrawCard());
             foreach (Player p in players.Values)
             {
-                p.StartHand(shoe.DrawCard(), shoe.DrawCard());
+                p.StartHand(shoe.DrawCard(), shoe.DrawCard(), betSize);
             }
         }
 
