@@ -56,6 +56,7 @@
             this.OnePlayerCheckBox = new System.Windows.Forms.CheckBox();
             this.TwoPlayerCheckBox = new System.Windows.Forms.CheckBox();
             this.ThreePlayersCheckBox = new System.Windows.Forms.CheckBox();
+            this.DoubleButton = new System.Windows.Forms.Button();
             this.GamePanel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -170,6 +171,7 @@
             // 
             // GamePanel
             // 
+            this.GamePanel.Controls.Add(this.DoubleButton);
             this.GamePanel.Controls.Add(this.PlayerLabel);
             this.GamePanel.Controls.Add(this.HandLabel);
             this.GamePanel.Controls.Add(this.HandTextBox);
@@ -347,6 +349,17 @@
             this.ThreePlayersCheckBox.Text = "3";
             this.ThreePlayersCheckBox.UseVisualStyleBackColor = true;
             // 
+            // DoubleButton
+            // 
+            this.DoubleButton.Enabled = false;
+            this.DoubleButton.Location = new System.Drawing.Point(245, 198);
+            this.DoubleButton.Name = "DoubleButton";
+            this.DoubleButton.Size = new System.Drawing.Size(75, 40);
+            this.DoubleButton.TabIndex = 27;
+            this.DoubleButton.Text = "Double Down";
+            this.DoubleButton.UseVisualStyleBackColor = true;
+            this.DoubleButton.Click += new System.EventHandler(this.DoubleButton_Click);
+            // 
             // GameLobby
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -407,5 +420,6 @@
         private System.Windows.Forms.CheckBox OnePlayerCheckBox;
         private System.Windows.Forms.CheckBox TwoPlayerCheckBox;
         private System.Windows.Forms.CheckBox ThreePlayersCheckBox;
+        private System.Windows.Forms.Button DoubleButton;
     }
 }

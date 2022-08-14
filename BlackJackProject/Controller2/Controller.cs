@@ -137,6 +137,22 @@ namespace BlackJack
         }
 
         /// <summary>
+        /// Calls table to double down on a hand,
+        /// checks for bust or 21
+        /// </summary>
+        public void DoublePlayer()
+        {
+            theTable.players[0].RemoveChips(theTable.players[0].bet);
+            theTable.players[0].bet *= 2;
+            theTable.HitPlayer();
+            if (theTable.players[0].GetHand().bust)
+            {
+                PlayerBust();
+            }
+            else StandPlayer();
+        }
+
+        /// <summary>
         /// When a player stands or hits a 21,
         /// Check dealer hand and hit until 17+,
         /// (hits soft 17)

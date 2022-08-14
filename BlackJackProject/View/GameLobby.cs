@@ -82,6 +82,7 @@ namespace BlackJack
                     theController.DealHand(betSize);
                     PlayerHandTextBox.Text = "" + theTable.players[0].GetHand().ToString();
                     DealerHandTextBox.Text = "" + theTable.dealer.GetFirstCard();
+                    UpdateChips();
                 }
             }
             else
@@ -117,23 +118,24 @@ namespace BlackJack
         /// <summary>
         /// Event handler for when a player wins,
         /// Displays new chip count,
-        /// Disables hit and stand button,
+        /// Disables hit, double, and stand button,
         /// Enables play again button
         /// </summary>
         public void PlayerWin()
         {
             DealerHandTextBox.Text = "" + theTable.dealer.GetHand().ToString();
             ResultTextBox.Text = "You Win!!!";
-            chipCountTextBox.Text = "" + theTable.players[0].GetChips();
+            UpdateChips();
             PlayAgainButton.Enabled = true;
             HitButton.Enabled = false;
             StandButton.Enabled = false;
+            DoubleButton.Enabled = false;
         }
 
         /// <summary>
         /// Event Handler for when a player loses,
         /// Displays new chip count,
-        /// Disables hit and stand button,
+        /// Disables hit, double, and stand button,
         /// Enables play again button
         /// </summary>
         public void PlayerBust()
@@ -141,49 +143,56 @@ namespace BlackJack
             DealerHandTextBox.Text = "" + theTable.dealer.GetHand().ToString();
             ResultTextBox.Text = "You Lose!!!";
             PlayAgainButton.Enabled = true;
-            chipCountTextBox.Text = "" + theTable.players[0].GetChips();
+            UpdateChips();
             HitButton.Enabled = false;
             StandButton.Enabled = false;
+            DoubleButton.Enabled = false;
         }
 
         /// <summary>
         /// Event handler for when a player gets a blackjack,
         /// Displays new chip count,
-        /// Disables hit and stand button,
+        /// Disables hit, double, and stand button,
         /// Enables play again button
         /// </summary>
         public void PlayerBlackJack()
         {
+            DealerHandTextBox.Text = "" + theTable.dealer.GetHand().ToString();
             ResultTextBox.Text = "BlackJack!!!";
-            chipCountTextBox.Text = "" + theTable.players[0].GetChips();
+            UpdateChips();
             PlayAgainButton.Enabled = true;
             HitButton.Enabled = false;
             StandButton.Enabled = false;
+            DoubleButton.Enabled = false;
         }
 
         /// <summary>
         /// Event handler for when a player ties with dealer,
         /// Displays new chip count,
-        /// Disables hit and stand button,
+        /// Disables hit, double, and stand button,
         /// Enables play again button
         /// </summary>
         public void PushBet()
         {
+            DealerHandTextBox.Text = "" + theTable.dealer.GetHand().ToString();
             ResultTextBox.Text = "You Tie.";
-            chipCountTextBox.Text = "" + theTable.players[0].GetChips();
+            UpdateChips();
             PlayAgainButton.Enabled = true;
             HitButton.Enabled = false;
             StandButton.Enabled = false;
+            DoubleButton.Enabled = false;
         }
 
         /// <summary>
         /// Event handler for when a player must act,
-        /// enables hit and stand buttons
+        /// enables hit and stand buttons,
+        /// double is enabled if player can afford
         /// </summary>
         public void PlayerAction()
         {
             HitButton.Enabled = true;
             StandButton.Enabled = true;
+            if (theTable.players[0].chips >= theTable.players[0].bet) DoubleButton.Enabled = true;
         }
 
         /// <summary>
@@ -217,6 +226,12 @@ namespace BlackJack
             HitButton.Enabled = false;
             StandButton.Enabled = false;
             PlayAgainButton.Enabled = false;
+        }
+
+        private void DoubleButton_Click(object sender, EventArgs e)
+        {
+            theController.DoublePlayer();
+            PlayerHandTextBox.Text = "" + theTable.players[0].GetHand().ToString();
         }
     }
 }

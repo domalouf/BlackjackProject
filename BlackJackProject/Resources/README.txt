@@ -31,5 +31,5 @@ Controller - handles input, updates model and view
 Helpful Link about MVC - https://www.cs.cornell.edu/courses/cs2112/2020fa/recitations/08patterns/Recitation8.pdf
 
 TODO:
-make playing one complete hand possible
-finish dealHand function in controller
+double down and split
+play many hands to start an option
