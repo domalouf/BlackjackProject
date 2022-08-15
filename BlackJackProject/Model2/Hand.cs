@@ -36,6 +36,25 @@ namespace BlackJack
         /// </summary>
         public List<int> cards;
 
+        /// <summary>
+        /// Constructor with 1 card, after split
+        /// </summary>
+        /// <param name="firstCard"></param>
+        public Hand(int firstCard)
+        {
+            pair = false;
+            soft = false;
+            bust = false;
+            blackjack = false;
+            cards = new List<int>();
+            cards.Add(firstCard);
+        }
+
+        /// <summary>
+        /// Constructor with 2 cards, from dealer
+        /// </summary>
+        /// <param name="firstCard"></param>
+        /// <param name="secondCard"></param>
         public Hand(int firstCard, int secondCard)
         {
             pair = false;

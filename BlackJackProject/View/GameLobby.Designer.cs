@@ -40,9 +40,10 @@
             this.BetLabel = new System.Windows.Forms.Label();
             this.BetSizeTextBox = new System.Windows.Forms.TextBox();
             this.GamePanel = new System.Windows.Forms.Panel();
+            this.DoubleButton = new System.Windows.Forms.Button();
             this.PlayerLabel = new System.Windows.Forms.Label();
             this.HandLabel = new System.Windows.Forms.Label();
-            this.HandTextBox = new System.Windows.Forms.TextBox();
+            this.HandCountTextBox = new System.Windows.Forms.TextBox();
             this.PlayerTextBox = new System.Windows.Forms.TextBox();
             this.PlayAgainButton = new System.Windows.Forms.Button();
             this.ResultTextBox = new System.Windows.Forms.TextBox();
@@ -56,7 +57,7 @@
             this.OnePlayerCheckBox = new System.Windows.Forms.CheckBox();
             this.TwoPlayerCheckBox = new System.Windows.Forms.CheckBox();
             this.ThreePlayersCheckBox = new System.Windows.Forms.CheckBox();
-            this.DoubleButton = new System.Windows.Forms.Button();
+            this.SplitButton = new System.Windows.Forms.Button();
             this.GamePanel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -171,10 +172,11 @@
             // 
             // GamePanel
             // 
+            this.GamePanel.Controls.Add(this.SplitButton);
             this.GamePanel.Controls.Add(this.DoubleButton);
             this.GamePanel.Controls.Add(this.PlayerLabel);
             this.GamePanel.Controls.Add(this.HandLabel);
-            this.GamePanel.Controls.Add(this.HandTextBox);
+            this.GamePanel.Controls.Add(this.HandCountTextBox);
             this.GamePanel.Controls.Add(this.PlayerTextBox);
             this.GamePanel.Controls.Add(this.PlayAgainButton);
             this.GamePanel.Controls.Add(this.ResultTextBox);
@@ -192,6 +194,17 @@
             this.GamePanel.Name = "GamePanel";
             this.GamePanel.Size = new System.Drawing.Size(457, 382);
             this.GamePanel.TabIndex = 15;
+            // 
+            // DoubleButton
+            // 
+            this.DoubleButton.Enabled = false;
+            this.DoubleButton.Location = new System.Drawing.Point(245, 198);
+            this.DoubleButton.Name = "DoubleButton";
+            this.DoubleButton.Size = new System.Drawing.Size(75, 49);
+            this.DoubleButton.TabIndex = 27;
+            this.DoubleButton.Text = "Double Down";
+            this.DoubleButton.UseVisualStyleBackColor = true;
+            this.DoubleButton.Click += new System.EventHandler(this.DoubleButton_Click);
             // 
             // PlayerLabel
             // 
@@ -211,13 +224,13 @@
             this.HandLabel.TabIndex = 25;
             this.HandLabel.Text = "Hand";
             // 
-            // HandTextBox
+            // HandCountTextBox
             // 
-            this.HandTextBox.Enabled = false;
-            this.HandTextBox.Location = new System.Drawing.Point(296, 28);
-            this.HandTextBox.Name = "HandTextBox";
-            this.HandTextBox.Size = new System.Drawing.Size(100, 22);
-            this.HandTextBox.TabIndex = 24;
+            this.HandCountTextBox.Enabled = false;
+            this.HandCountTextBox.Location = new System.Drawing.Point(296, 28);
+            this.HandCountTextBox.Name = "HandCountTextBox";
+            this.HandCountTextBox.Size = new System.Drawing.Size(100, 22);
+            this.HandCountTextBox.TabIndex = 24;
             // 
             // PlayerTextBox
             // 
@@ -349,16 +362,15 @@
             this.ThreePlayersCheckBox.Text = "3";
             this.ThreePlayersCheckBox.UseVisualStyleBackColor = true;
             // 
-            // DoubleButton
+            // SplitButton
             // 
-            this.DoubleButton.Enabled = false;
-            this.DoubleButton.Location = new System.Drawing.Point(245, 198);
-            this.DoubleButton.Name = "DoubleButton";
-            this.DoubleButton.Size = new System.Drawing.Size(75, 40);
-            this.DoubleButton.TabIndex = 27;
-            this.DoubleButton.Text = "Double Down";
-            this.DoubleButton.UseVisualStyleBackColor = true;
-            this.DoubleButton.Click += new System.EventHandler(this.DoubleButton_Click);
+            this.SplitButton.Location = new System.Drawing.Point(350, 207);
+            this.SplitButton.Name = "SplitButton";
+            this.SplitButton.Size = new System.Drawing.Size(75, 23);
+            this.SplitButton.TabIndex = 28;
+            this.SplitButton.Text = "Split";
+            this.SplitButton.UseVisualStyleBackColor = true;
+            this.SplitButton.Click += new System.EventHandler(this.SplitButton_Click);
             // 
             // GameLobby
             // 
@@ -414,12 +426,13 @@
         private System.Windows.Forms.Button PlayAgainButton;
         private System.Windows.Forms.Label PlayerLabel;
         private System.Windows.Forms.Label HandLabel;
-        private System.Windows.Forms.TextBox HandTextBox;
+        private System.Windows.Forms.TextBox HandCountTextBox;
         private System.Windows.Forms.TextBox PlayerTextBox;
         private System.Windows.Forms.Label PlayerNumberLabel;
         private System.Windows.Forms.CheckBox OnePlayerCheckBox;
         private System.Windows.Forms.CheckBox TwoPlayerCheckBox;
         private System.Windows.Forms.CheckBox ThreePlayersCheckBox;
         private System.Windows.Forms.Button DoubleButton;
+        private System.Windows.Forms.Button SplitButton;
     }
 }

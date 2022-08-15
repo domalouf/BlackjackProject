@@ -75,5 +75,16 @@ namespace BlackJack
                 dealer.HitHand(shoe.DrawCard());
             }
         }
+
+        /// <summary>
+        /// Splits player's hand in two,
+        /// creates it 1 after in dictionary,
+        /// </summary>
+        public void SplitPlayer()
+        {
+            int temp = players[0].GetHand().cards[0];
+            players[0].hands[0] = new Hand(temp);
+            players[0].hands[1] = new Hand(temp);
+        }
     }
 }

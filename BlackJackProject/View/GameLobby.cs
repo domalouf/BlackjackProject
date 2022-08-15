@@ -28,6 +28,7 @@ namespace BlackJack
             theController.PlayerBlackJack += PlayerBlackJack;
             theController.PushBet += PushBet;
             theController.PlayerAction += PlayerAction;
+            theController.EnableSplit += EnableSplit;
         }
 
         private void GameForm_FormClosed(object sender, FormClosedEventArgs e)
@@ -104,6 +105,7 @@ namespace BlackJack
             UpdateChips();
             DealButton.Enabled = true;
             BetSizeTextBox.Enabled = true;
+            PlayerTextBox.Text += "<b>1<\b>";
         }
 
         /// <summary>
@@ -195,6 +197,11 @@ namespace BlackJack
             if (theTable.players[0].chips >= theTable.players[0].bet) DoubleButton.Enabled = true;
         }
 
+        public void EnableSplit()
+        {
+            SplitButton.Enabled = true;
+        }
+
         /// <summary>
         /// double tapping the screen calls this (while coding)
         /// </summary>
@@ -232,6 +239,11 @@ namespace BlackJack
         {
             theController.DoublePlayer();
             PlayerHandTextBox.Text = "" + theTable.players[0].GetHand().ToString();
+        }
+
+        private void SplitButton_Click(object sender, EventArgs e)
+        {
+            theController.SplitHand();
         }
     }
 }

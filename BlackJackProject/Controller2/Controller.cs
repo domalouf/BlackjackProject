@@ -36,8 +36,8 @@ namespace BlackJack
         public delegate void ResetViewHandler();
         public event ResetViewHandler ResetView;
 
-        //public delegate void EnableSplitHandler();
-        //public event EnableSplitHandler EnableSplit;
+        public delegate void EnableSplitHandler();
+        public event EnableSplitHandler EnableSplit;
 
         public Controller()
         {
@@ -105,7 +105,7 @@ namespace BlackJack
             {
                 if (theTable.players[0].GetHand().pair)
                 {
-                    //TODO: EnableSplit();
+                    EnableSplit();
                 }
                 PlayerAction();
             }
@@ -115,6 +115,16 @@ namespace BlackJack
         /// Sets all hands to blank
         /// </summary>
         public void ResetHand()
+        {
+            theTable.ResetHand();
+        }
+
+        /// <summary>
+        /// Splits hand for a pair, 
+        /// adds a hand to players list,
+        /// makes current hand and other have 1 card,
+        /// </summary>
+        public void SplitHand()
         {
             theTable.ResetHand();
         }
