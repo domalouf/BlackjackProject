@@ -27,9 +27,8 @@ View - View sees model but can't change it, uses controller to change model
 Controller - handles input, updates model and view
 
 
-
 Helpful Link about MVC - https://www.cs.cornell.edu/courses/cs2112/2020fa/recitations/08patterns/Recitation8.pdf
 
 TODO:
-double down and split
+split
 play many hands to start an option

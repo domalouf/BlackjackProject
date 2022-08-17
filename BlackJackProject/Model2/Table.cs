@@ -23,7 +23,8 @@ namespace BlackJack
         /// <param name="numChips"></param>
         public void AddPlayer(int numChips)
         {
-            players.Add(players.Count, new Player(numChips));
+            // key is 1 for player1
+            players.Add(players.Count + 1, new Player(numChips));
         }
 
         /// <summary>
@@ -36,13 +37,15 @@ namespace BlackJack
         }
 
         /// <summary>
-        /// Gives the players and dealer 2 cards
+        /// Gives the dealer 2 cards,
+        /// gives each player 2 cards for each hand
         /// </summary>
-        public void StartHand(int betSize)
+        public void StartHands(int numHands, int betSize)
         {
             dealer.StartHand(shoe.DrawCard(), shoe.DrawCard());
             foreach (Player p in players.Values)
             {
+                for (int i = 0; i < numHands; i++)
                 p.StartHand(shoe.DrawCard(), shoe.DrawCard(), betSize);
             }
         }
@@ -59,10 +62,9 @@ namespace BlackJack
         /// <summary>
         /// Gives player a card and updates hand attributes
         /// </summary>
-        public void HitPlayer()
+        public void HitHand(int currentHand)
         {
-            players[0].Hit(shoe.DrawCard());
-            players[0].hands[0].CheckHand();
+            players[0].Hit(currentHand, shoe.DrawCard());
         }
 
         /// <summary>
@@ -80,11 +82,20 @@ namespace BlackJack
         /// Splits player's hand in two,
         /// creates it 1 after in dictionary,
         /// </summary>
-        public void SplitPlayer()
+        public void SplitPlayer(int numHand)
         {
-            int temp = players[0].GetHand().cards[0];
-            players[0].hands[0] = new Hand(temp);
-            players[0].hands[1] = new Hand(temp);
+            int temp = players[0].GetHand(numHand).cards[0];
+            players[0].hands[numHand] = new Hand(temp);
+            
+            // moves all hands above in dictionary up one
+            // done so split hands play consecutively
+            for (int i = players[0].hands.Count; i > numHand; i--)
+            {
+                players[0].hands[i + 1] = players[0].hands[i];
+
+            }
+            players[0].hands[numHand + 1] = new Hand(temp);
+            HitHand(numHand);
         }
     }
 }

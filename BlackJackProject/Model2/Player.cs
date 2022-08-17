@@ -55,28 +55,26 @@ namespace BlackJack
         /// <param name="secondCard"></param>
         public void StartHand(int firstCard, int secondCard, int betSize)
         {
-            hands.Add(0, new Hand(firstCard, secondCard));
-            hands[0].CheckHand();
+            hands.Add(hands.Count + 1, new Hand(firstCard, secondCard));
+            hands[hands.Count].CheckHand();
             bet = betSize;
         }
 
         /// <summary>
         /// adds a card to a player's stack, checks for bust
         /// </summary>
-        public void Hit(int hitCard)
+        public void Hit(int activeHand, int hitCard)
         {
-            hands[0].Hit(hitCard);
-            hands[0].CheckHand();
+            hands[activeHand].Hit(hitCard);
         }
 
         /// <summary>
-        /// Returns the player's hand,
-        /// just one hand rn
+        /// Returns the player's hand
         /// </summary>
         /// <returns></returns>
-        public Hand GetHand()
+        public Hand GetHand(int hand)
         {
-            return hands[0];
+            return hands[hand];
         }
 
         /// <summary>

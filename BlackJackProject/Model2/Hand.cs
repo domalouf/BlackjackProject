@@ -85,6 +85,7 @@ namespace BlackJack
         public void Hit(int hitCard)
         {
             cards.Add(hitCard);
+            CheckHand();
         }
 
         /// <summary>
