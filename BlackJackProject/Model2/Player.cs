@@ -84,5 +84,15 @@ namespace BlackJack
         {
             hands.Clear();
         }
+
+        /// <summary>
+        /// gives amount of hands player has,
+        /// may increase with splits
+        /// </summary>
+        /// <returns></returns>
+        public int GetNumHands()
+        {
+            return hands.Count;
+        }
     }
 }

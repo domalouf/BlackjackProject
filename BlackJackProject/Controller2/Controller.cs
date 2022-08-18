@@ -79,22 +79,23 @@ namespace BlackJack
 
             // How many hands
             theTable.StartHands(numHands, betSize);
-            theTable.players[0].RemoveChips(betSize * numHands);
+            theTable.players[1].RemoveChips(betSize * numHands);
             chipPayout -= betSize * numHands;
 
             // if dealer has blackjack
             if (theTable.dealer.hand.blackjack)
             {
                 // check each of player's hands for blackjack
-                foreach (Hand hand in theTable.players[0].hands.Values)
+                foreach (Hand hand in theTable.players[1].hands.Values)
                     // if player also has blackjack, bet is pushed
                     if (hand.blackjack)
                     {
-                        theTable.players[0].AddChips(betSize);
+                        theTable.players[1].AddChips(betSize);
                         chipPayout += betSize;
                     }
-                FinishedRound();
+                NextHand("dealer blackjack");
             }
+
             else PlayerAction();
         }
 
@@ -113,21 +114,22 @@ namespace BlackJack
         /// </summary>
         public void SplitHand()
         {
-            theTable.SplitPlayer(currentHand);
+            theTable.SplitHand(currentHand);
         }
 
         /// <summary>
         /// Calls the table to hit current hand,
-        /// checks for bust or 21
+        /// checks for bust or 21,
+        /// 
         /// </summary>
         public void HitHand()
         {
             theTable.HitHand(currentHand);
             // if player busts after hitting
-            if (theTable.players[0].GetHand(currentHand).bust)
+            if (theTable.players[1].GetHand(currentHand).bust)
             {
                 // if there are more hands still to play
-                if (theTable.players[0].hands.Count > currentHand)
+                if (theTable.players[1].hands.Count > currentHand)
                 {
                     currentHand++;
                     NextHand("bust");
@@ -135,12 +137,23 @@ namespace BlackJack
                 // if that is the last hand
                 else
                 {
-                    FinishedRound();
+                    HitDealer();
                 }
             }
-            else if (theTable.players[0].hands[0].total == 21)
+            // if player hits a 21
+            else if (theTable.players[1].hands[currentHand].total == 21)
             {
-                currentHand++;
+                // if there are more hands still to play
+                if (theTable.players[1].hands.Count > currentHand)
+                {
+                    currentHand++;
+                    NextHand("hit 21");
+                }
+                // if that is the last hand
+                else
+                {
+                    HitDealer();
+                }
             }
         }
 
@@ -150,44 +163,50 @@ namespace BlackJack
         /// </summary>
         public void DoubleHand()
         {
-            theTable.players[0].RemoveChips(theTable.players[0].bet);
-            theTable.players[0].bet *= 2;
+            theTable.players[1].RemoveChips(theTable.players[1].bet);
+            chipPayout -= theTable.players[1].bet;
+            theTable.players[1].bet *= 2;
             theTable.HitHand(currentHand);
-            if (theTable.players[0].GetHand(currentHand).bust)
+            if (theTable.players[1].GetHand(currentHand).bust)
             {
-                //PlayerBust();
+                NextHand("bust");
             }
-            //else //StandPlayer();
+            else NextHand("double");
         }
 
         /// <summary>
-        /// When a player stands or hits a 21,
         /// Check dealer hand and hit until 17+,
+        /// moves to next hand and
         /// (hits soft 17)
         /// </summary>
-        public void StandHand()
+        public void HitDealer()
         {
             // while dealer is below 17 or at soft 17 they hit
             while (theTable.dealer.GetHand().total < 17 ||
-                (theTable.dealer.GetHand().soft && theTable.dealer.GetHand().total < 17))
+                (theTable.dealer.GetHand().soft && theTable.dealer.GetHand().total == 17))
             {
                 theTable.HitDealer();
             }
-            // dealer stands and hand is checked against player's
-            if (theTable.dealer.GetHand().total <= 21 &&
-                theTable.dealer.GetHand().total > theTable.players[0].GetHand(currentHand).total)
+            // each of player's hands compared to dealer
+            // money is already taken, so only checks for player beating the dealer
+            for (int i = 1; i <= theTable.players[currentPlayer].hands.Count; i++)
             {
-                //PlayerBust();
-            }
-            else if (theTable.dealer.GetHand().total == theTable.players[0].GetHand(currentHand).total)
-            {
-                theTable.GiveChips(theTable.players[0].bet);
-                //PushBet();
-            }
-            else
-            {
-                theTable.GiveChips(theTable.players[0].bet * 2);
-                //PlayerWin();
+                // player is closer to 21 than dealer
+                if ((theTable.players[1].GetHand(i).total <= 21 &&
+                    theTable.players[1].GetHand(i).total > theTable.dealer.GetHand().total)
+                    || theTable.dealer.GetHand().total > 21)
+                {
+                    theTable.GiveChips(theTable.players[1].bet * 2);
+                    chipPayout += theTable.players[1].bet * 2;
+                }
+                // same hand as dealer
+                else if (theTable.dealer.GetHand().total == theTable.players[1].GetHand(i).total)
+                {
+                    theTable.GiveChips(theTable.players[1].bet);
+                    chipPayout += theTable.players[1].bet;
+                }
+                // here after Player is paid or they lose
+                FinishedRound();
             }
         }
     }

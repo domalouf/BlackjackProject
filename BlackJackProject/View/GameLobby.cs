@@ -21,12 +21,12 @@ namespace BlackJack
             InitializeComponent();
             theController = _theController;
             theTable = theController.GetTable();
-            // methods that the controller can cause with event
+            // methods that the controller can cause with an event
             theController.NewPlayerJoined += NewPlayerJoined;
             theController.UpdateChips += UpdateChips;
             theController.PlayerAction += PlayerAction;
-            theController.FinishedRound += FinishedRound;
             theController.NextHand += NextHand;
+            theController.FinishedRound += FinishRound;
         }
 
         private void GameForm_FormClosed(object sender, FormClosedEventArgs e)
@@ -140,11 +140,6 @@ namespace BlackJack
             else SplitButton.Enabled = false;
         }
 
-        public void FinishedRound()
-        {
-
-        }
-
         private void HitButton_Click(object sender, EventArgs e)
         {
             theController.HitHand();
@@ -154,7 +149,7 @@ namespace BlackJack
 
         private void StandButton_Click(object sender, EventArgs e)
         {
-            theController.StandHand();
+            NextHand("stand");
         }
 
         private void PlayAgainButton_Click(object sender, EventArgs e)
@@ -167,7 +162,6 @@ namespace BlackJack
             HitButton.Enabled = false;
             StandButton.Enabled = false;
             PlayAgainButton.Enabled = false;
-            
         }
 
         private void DoubleButton_Click(object sender, EventArgs e)
@@ -180,14 +174,56 @@ namespace BlackJack
         private void SplitButton_Click(object sender, EventArgs e)
         {
             theController.SplitHand();
+            PlayerHandTextBox.Text = "" +
+                theTable.players[1].GetHand(theController.currentHand).ToString();
+            numHands++;
         }
 
         /// <summary>
-        /// Event Handler that moves current hand to the next
+        /// Event Handler for when a hand ends,
+        /// shows result of hand for a short time,
+        /// moves on to next hand for player,
+        /// if all hands are done shows net loss/gain,
+        /// play again starts new loop
         /// </summary>
         public void NextHand(string result)
         {
-            
+            // if there are more hands to play
+            if (theController.currentHand < numHands)
+            {
+                theController.currentHand++;
+                PlayerHandTextBox.Text = "" +
+                        theTable.players[theController.currentPlayer].
+                        GetHand(theController.currentHand).ToString();
+                HandCountTextBox.Text = "" + theController.currentHand;
+                DealerHandTextBox.Text = "" + theTable.dealer.GetFirstCard();
+                PlayerAction();
+            }
+            // if there are no more hands
+            else
+            {
+                theController.HitDealer();
+            }
+        }
+
+        /// <summary>
+        /// called once hands are all played out,
+        /// shows result to player,
+        /// opens play again button
+        /// </summary>
+        public void FinishRound()
+        {
+            DealerHandTextBox.Text = "" + theTable.dealer.GetHand().ToString();
+            if (theController.chipPayout >= 0)
+                ResultTextBox.Text = "You Won" + theController.chipPayout + " Chips!";
+            else
+                ResultTextBox.Text = "You Lost " + Math.Abs(theController.chipPayout) + " Chips!";
+            UpdateChips();
+            PlayAgainButton.Enabled = true;
+            HitButton.Enabled = false;
+            StandButton.Enabled = false;
+            DoubleButton.Enabled = false;
+            SplitButton.Enabled = false;
         }
 
         private void OnePlayerCheckBox_CheckedChanged(object sender, EventArgs e)

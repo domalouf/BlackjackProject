@@ -28,7 +28,6 @@ namespace BlackJack
         public void HitHand(int hitCard)
         {
             hand.Hit(hitCard);
-            hand.CheckHand();
         }
 
         /// <summary>

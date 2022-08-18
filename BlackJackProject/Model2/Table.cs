@@ -33,7 +33,7 @@ namespace BlackJack
         /// <param name="numChips"></param>
         public void GiveChips(int numChips)
         {
-            players[0].AddChips(numChips);
+            players[1].AddChips(numChips);
         }
 
         /// <summary>
@@ -55,7 +55,7 @@ namespace BlackJack
         /// </summary>
         public void ResetHand()
         {
-            players[0].hands.Clear();
+            players[1].hands.Clear();
             dealer.hand.newHand();
         }
 
@@ -64,7 +64,7 @@ namespace BlackJack
         /// </summary>
         public void HitHand(int currentHand)
         {
-            players[0].Hit(currentHand, shoe.DrawCard());
+            players[1].Hit(currentHand, shoe.DrawCard());
         }
 
         /// <summary>
@@ -82,19 +82,18 @@ namespace BlackJack
         /// Splits player's hand in two,
         /// creates it 1 after in dictionary,
         /// </summary>
-        public void SplitPlayer(int numHand)
+        public void SplitHand(int numHand)
         {
-            int temp = players[0].GetHand(numHand).cards[0];
-            players[0].hands[numHand] = new Hand(temp);
+            int temp = players[1].GetHand(numHand).cards[0];
+            players[1].hands[numHand] = new Hand(temp);
             
             // moves all hands above in dictionary up one
             // done so split hands play consecutively
-            for (int i = players[0].hands.Count; i > numHand; i--)
+            for (int i = players[1].hands.Count; i > numHand; i--)
             {
-                players[0].hands[i + 1] = players[0].hands[i];
-
+                players[1].hands[i + 1] = players[1].hands[i];
             }
-            players[0].hands[numHand + 1] = new Hand(temp);
+            players[1].hands[numHand + 1] = new Hand(temp);
             HitHand(numHand);
         }
     }

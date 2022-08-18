@@ -186,6 +186,7 @@
             // 
             // SplitButton
             // 
+            this.SplitButton.Enabled = false;
             this.SplitButton.Location = new System.Drawing.Point(262, 168);
             this.SplitButton.Margin = new System.Windows.Forms.Padding(2);
             this.SplitButton.Name = "SplitButton";
