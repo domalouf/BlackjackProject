@@ -134,7 +134,7 @@
             // DealButton
             // 
             this.DealButton.Enabled = false;
-            this.DealButton.Location = new System.Drawing.Point(167, 242);
+            this.DealButton.Location = new System.Drawing.Point(211, 268);
             this.DealButton.Name = "DealButton";
             this.DealButton.Size = new System.Drawing.Size(75, 51);
             this.DealButton.TabIndex = 12;
@@ -145,7 +145,7 @@
             // BetLabel
             // 
             this.BetLabel.AutoSize = true;
-            this.BetLabel.Location = new System.Drawing.Point(76, 242);
+            this.BetLabel.Location = new System.Drawing.Point(120, 268);
             this.BetLabel.Name = "BetLabel";
             this.BetLabel.Size = new System.Drawing.Size(52, 15);
             this.BetLabel.TabIndex = 13;
@@ -154,7 +154,7 @@
             // BetSizeTextBox
             // 
             this.BetSizeTextBox.Enabled = false;
-            this.BetSizeTextBox.Location = new System.Drawing.Point(56, 258);
+            this.BetSizeTextBox.Location = new System.Drawing.Point(100, 284);
             this.BetSizeTextBox.Name = "BetSizeTextBox";
             this.BetSizeTextBox.Size = new System.Drawing.Size(100, 20);
             this.BetSizeTextBox.TabIndex = 14;
@@ -181,13 +181,13 @@
             this.GamePanel.Location = new System.Drawing.Point(292, 117);
             this.GamePanel.Margin = new System.Windows.Forms.Padding(2);
             this.GamePanel.Name = "GamePanel";
-            this.GamePanel.Size = new System.Drawing.Size(343, 310);
+            this.GamePanel.Size = new System.Drawing.Size(440, 361);
             this.GamePanel.TabIndex = 15;
             // 
             // SplitButton
             // 
             this.SplitButton.Enabled = false;
-            this.SplitButton.Location = new System.Drawing.Point(262, 168);
+            this.SplitButton.Location = new System.Drawing.Point(306, 194);
             this.SplitButton.Margin = new System.Windows.Forms.Padding(2);
             this.SplitButton.Name = "SplitButton";
             this.SplitButton.Size = new System.Drawing.Size(56, 35);
@@ -199,7 +199,7 @@
             // DoubleButton
             // 
             this.DoubleButton.Enabled = false;
-            this.DoubleButton.Location = new System.Drawing.Point(186, 168);
+            this.DoubleButton.Location = new System.Drawing.Point(230, 194);
             this.DoubleButton.Margin = new System.Windows.Forms.Padding(2);
             this.DoubleButton.Name = "DoubleButton";
             this.DoubleButton.Size = new System.Drawing.Size(56, 40);
@@ -211,7 +211,7 @@
             // PlayerLabel
             // 
             this.PlayerLabel.AutoSize = true;
-            this.PlayerLabel.Location = new System.Drawing.Point(64, 8);
+            this.PlayerLabel.Location = new System.Drawing.Point(108, 34);
             this.PlayerLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.PlayerLabel.Name = "PlayerLabel";
             this.PlayerLabel.Size = new System.Drawing.Size(41, 15);
@@ -221,7 +221,7 @@
             // HandLabel
             // 
             this.HandLabel.AutoSize = true;
-            this.HandLabel.Location = new System.Drawing.Point(226, 8);
+            this.HandLabel.Location = new System.Drawing.Point(270, 34);
             this.HandLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.HandLabel.Name = "HandLabel";
             this.HandLabel.Size = new System.Drawing.Size(37, 15);
@@ -231,7 +231,7 @@
             // HandCountTextBox
             // 
             this.HandCountTextBox.Enabled = false;
-            this.HandCountTextBox.Location = new System.Drawing.Point(222, 23);
+            this.HandCountTextBox.Location = new System.Drawing.Point(266, 49);
             this.HandCountTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.HandCountTextBox.Name = "HandCountTextBox";
             this.HandCountTextBox.Size = new System.Drawing.Size(76, 20);
@@ -240,7 +240,7 @@
             // PlayerTextBox
             // 
             this.PlayerTextBox.Enabled = false;
-            this.PlayerTextBox.Location = new System.Drawing.Point(63, 26);
+            this.PlayerTextBox.Location = new System.Drawing.Point(107, 52);
             this.PlayerTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.PlayerTextBox.Name = "PlayerTextBox";
             this.PlayerTextBox.Size = new System.Drawing.Size(76, 20);
@@ -249,7 +249,7 @@
             // PlayAgainButton
             // 
             this.PlayAgainButton.Enabled = false;
-            this.PlayAgainButton.Location = new System.Drawing.Point(272, 250);
+            this.PlayAgainButton.Location = new System.Drawing.Point(316, 276);
             this.PlayAgainButton.Margin = new System.Windows.Forms.Padding(2);
             this.PlayAgainButton.Name = "PlayAgainButton";
             this.PlayAgainButton.Size = new System.Drawing.Size(56, 40);
@@ -261,7 +261,7 @@
             // ResultTextBox
             // 
             this.ResultTextBox.Enabled = false;
-            this.ResultTextBox.Location = new System.Drawing.Point(143, 130);
+            this.ResultTextBox.Location = new System.Drawing.Point(187, 156);
             this.ResultTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.ResultTextBox.Name = "ResultTextBox";
             this.ResultTextBox.Size = new System.Drawing.Size(76, 20);
@@ -270,7 +270,7 @@
             // StandButton
             // 
             this.StandButton.Enabled = false;
-            this.StandButton.Location = new System.Drawing.Point(112, 168);
+            this.StandButton.Location = new System.Drawing.Point(156, 194);
             this.StandButton.Margin = new System.Windows.Forms.Padding(2);
             this.StandButton.Name = "StandButton";
             this.StandButton.Size = new System.Drawing.Size(56, 35);
@@ -282,7 +282,7 @@
             // HitButton
             // 
             this.HitButton.Enabled = false;
-            this.HitButton.Location = new System.Drawing.Point(42, 168);
+            this.HitButton.Location = new System.Drawing.Point(86, 194);
             this.HitButton.Margin = new System.Windows.Forms.Padding(2);
             this.HitButton.Name = "HitButton";
             this.HitButton.Size = new System.Drawing.Size(56, 33);
@@ -294,7 +294,7 @@
             // DealerHandTextBox
             // 
             this.DealerHandTextBox.Enabled = false;
-            this.DealerHandTextBox.Location = new System.Drawing.Point(222, 77);
+            this.DealerHandTextBox.Location = new System.Drawing.Point(266, 103);
             this.DealerHandTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.DealerHandTextBox.Name = "DealerHandTextBox";
             this.DealerHandTextBox.Size = new System.Drawing.Size(76, 20);
@@ -303,7 +303,7 @@
             // PlayerHandTextBox
             // 
             this.PlayerHandTextBox.Enabled = false;
-            this.PlayerHandTextBox.Location = new System.Drawing.Point(63, 77);
+            this.PlayerHandTextBox.Location = new System.Drawing.Point(107, 103);
             this.PlayerHandTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.PlayerHandTextBox.Name = "PlayerHandTextBox";
             this.PlayerHandTextBox.Size = new System.Drawing.Size(76, 20);
@@ -312,7 +312,7 @@
             // DealerHandLabel
             // 
             this.DealerHandLabel.AutoSize = true;
-            this.DealerHandLabel.Location = new System.Drawing.Point(226, 63);
+            this.DealerHandLabel.Location = new System.Drawing.Point(270, 89);
             this.DealerHandLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.DealerHandLabel.Name = "DealerHandLabel";
             this.DealerHandLabel.Size = new System.Drawing.Size(86, 15);
@@ -322,7 +322,7 @@
             // PlayerHandLabel
             // 
             this.PlayerHandLabel.AutoSize = true;
-            this.PlayerHandLabel.Location = new System.Drawing.Point(61, 63);
+            this.PlayerHandLabel.Location = new System.Drawing.Point(105, 89);
             this.PlayerHandLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.PlayerHandLabel.Name = "PlayerHandLabel";
             this.PlayerHandLabel.Size = new System.Drawing.Size(83, 15);

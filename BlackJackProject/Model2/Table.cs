@@ -95,6 +95,7 @@ namespace BlackJack
             }
             players[1].hands[numHand + 1] = new Hand(temp);
             HitHand(numHand);
+            HitHand(numHand + 1);
         }
     }
 }

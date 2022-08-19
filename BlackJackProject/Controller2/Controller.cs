@@ -93,9 +93,15 @@ namespace BlackJack
                         theTable.players[1].AddChips(betSize);
                         chipPayout += betSize;
                     }
-                NextHand("dealer blackjack");
+                FinishedRound();
             }
-
+            // check for player blackjack first hand before asking for action
+            else if (theTable.players[1].hands[currentHand].blackjack)
+            {
+                theTable.players[1].AddChips(betSize * 5/2);
+                chipPayout += betSize * 5/2;
+                NextHand("blackjack");
+            }
             else PlayerAction();
         }
 
@@ -115,6 +121,9 @@ namespace BlackJack
         public void SplitHand()
         {
             theTable.SplitHand(currentHand);
+            theTable.players[1].RemoveChips(theTable.players[1].bet);
+            chipPayout -= theTable.players[1].bet;
+            PlayerAction();
         }
 
         /// <summary>
@@ -192,9 +201,15 @@ namespace BlackJack
             for (int i = 1; i <= theTable.players[currentPlayer].hands.Count; i++)
             {
                 // player is closer to 21 than dealer
-                if ((theTable.players[1].GetHand(i).total <= 21 &&
+                if (theTable.players[1].GetHand(i).total <= 21 &&
                     theTable.players[1].GetHand(i).total > theTable.dealer.GetHand().total)
-                    || theTable.dealer.GetHand().total > 21)
+                {
+                    theTable.GiveChips(theTable.players[1].bet * 2);
+                    chipPayout += theTable.players[1].bet * 2;
+                }
+                // dealer busts and player doesn't
+                if (!theTable.players[1].GetHand(i).bust &&
+                    theTable.dealer.GetHand().bust)
                 {
                     theTable.GiveChips(theTable.players[1].bet * 2);
                     chipPayout += theTable.players[1].bet * 2;
