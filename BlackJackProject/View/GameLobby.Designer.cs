@@ -356,7 +356,6 @@
             // TwoHandsCheckBox
             // 
             this.TwoHandsCheckBox.AutoSize = true;
-            this.TwoHandsCheckBox.Enabled = false;
             this.TwoHandsCheckBox.Location = new System.Drawing.Point(94, 351);
             this.TwoHandsCheckBox.Margin = new System.Windows.Forms.Padding(2);
             this.TwoHandsCheckBox.Name = "TwoHandsCheckBox";
@@ -369,7 +368,6 @@
             // ThreeHandsCheckBox
             // 
             this.ThreeHandsCheckBox.AutoSize = true;
-            this.ThreeHandsCheckBox.Enabled = false;
             this.ThreeHandsCheckBox.Location = new System.Drawing.Point(94, 372);
             this.ThreeHandsCheckBox.Margin = new System.Windows.Forms.Padding(2);
             this.ThreeHandsCheckBox.Name = "ThreeHandsCheckBox";

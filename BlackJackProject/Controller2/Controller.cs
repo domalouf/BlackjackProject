@@ -29,6 +29,9 @@ namespace BlackJack
         public delegate void FinishedRoundHandler();
         public event FinishedRoundHandler FinishedRound;
 
+        public delegate void ShoeShuffledHandler();
+        public event ShoeShuffledHandler ShoeShuffled;
+
         public Controller()
         {
             theTable = new Table();
@@ -66,6 +69,7 @@ namespace BlackJack
         }
 
         /// <summary>
+        /// Called by the view,
         /// Checks how many hands are being played,
         /// Calls the table to start the hand,
         /// Checks for a blackjack for player and dealer
@@ -73,6 +77,13 @@ namespace BlackJack
         /// <param name="betSize"></param>
         public void DealHands(int numHands, int betSize)
         {
+            // checks if shoe needs to be shuffled
+            // how many cards are dealt is decided here
+            if (theTable.shoe.ShoePercentage() < 0.70)
+            {
+                theTable.shoe.ShuffleShoe();
+                ShoeShuffled();
+            }
             currentHand = 1;
             currentPlayer = 1;
             chipPayout = 0;

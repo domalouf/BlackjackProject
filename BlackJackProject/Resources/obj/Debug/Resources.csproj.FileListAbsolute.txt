@@ -1,0 +1,3 @@
+C:\Users\malou\Source\Repos\BlackjackProject\BlackJackProject\Resources\obj\Debug\Resources.csproj.AssemblyReference.cache
+C:\Users\malou\Source\Repos\BlackjackProject\BlackJackProject\Resources\obj\Debug\Resources.csproj.SuggestedBindingRedirects.cache
+C:\Users\malou\Source\Repos\BlackjackProject\BlackJackProject\Resources\obj\Debug\Resources.csproj.CoreCompileInputs.cache

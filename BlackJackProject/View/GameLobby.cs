@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace BlackJack
@@ -27,6 +20,7 @@ namespace BlackJack
             theController.PlayerAction += PlayerAction;
             theController.NextHand += NextHand;
             theController.FinishedRound += FinishRound;
+            theController.ShoeShuffled += ShoeShuffled;
         }
 
         private void GameForm_FormClosed(object sender, FormClosedEventArgs e)
@@ -242,6 +236,11 @@ namespace BlackJack
         {
             OneHandCheckBox.Checked = false;
             TwoHandsCheckBox.Checked = false;
+        }
+
+        public void ShoeShuffled()
+        {
+            ResultTextBox.Text = "shoe shuffled";
         }
     }
 }

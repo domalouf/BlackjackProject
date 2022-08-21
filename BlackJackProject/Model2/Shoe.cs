@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace BlackJack
 {
@@ -21,6 +19,9 @@ namespace BlackJack
         /// </summary>
         bool[] checkShoe = new bool[numDecks * 52];
 
+        /// <summary>
+        /// number of cards taken from the shoe
+        /// </summary>
         int cardsDrawn;
 
         Random r = new Random();
@@ -35,10 +36,13 @@ namespace BlackJack
                 checkShoe[p] = true;
 
             int i = 0;
+            // decks
             for (int n = 0; n < numDecks; n++)
             {
+                // suits
                 for (int m = 0; m < 4; m++)
                 {
+                    // value
                     for (int j = 2; j < 10; j++)
                     {
                         shoe[i] = j;
@@ -93,6 +97,15 @@ namespace BlackJack
         public int ShoeCount()
         {
             return shoe.Length - cardsDrawn;
+        }
+
+        /// <summary>
+        /// Returns cards left in shoe over total cards
+        /// </summary>
+        /// <returns></returns>
+        public double ShoePercentage()
+        {
+            return (double)ShoeCount() / (double)shoe.Length;
         }
     }
 }
