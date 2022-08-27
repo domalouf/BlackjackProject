@@ -62,12 +62,13 @@ namespace BlackJack
             if (OneHandCheckBox.Checked) numHands = 1;
             if (TwoHandsCheckBox.Checked) numHands = 2;
             if (ThreeHandsCheckBox.Checked) numHands = 3;
+
             // error checking for text box
             if (int.TryParse(BetSizeTextBox.Text, out int betSize))
             {
                 // makes sure player can afford all bets
                 if ((betSize <= 0) ||
-                    (betSize * numHands > theTable.players[1].GetChips()))
+                    (betSize * numHands > theTable.player.GetChips()))
                 {
                     string message = "Please enter a valid amount of chips to bet.";
                     string caption = "Invalid Bet Size";
@@ -80,9 +81,22 @@ namespace BlackJack
                 {
                     theController.DealHands(numHands, betSize);
                     DealButton.Enabled = false;
-                    PlayerHandTextBox.Text = "" +
-                        theTable.players[theController.currentPlayer].GetHand(1).ToString();
-                    HandCountTextBox.Text = "1";
+                    Hand1TextBox.Text = "" +
+                        theTable.player.GetHand(1).ToString();
+                    Bet1TextBox.Text = "" + theTable.player.bets[1];
+                    if (numHands >= 2)
+                    {
+                        Hand2TextBox.Text = "" +
+                        theTable.player.GetHand(2).ToString();
+                        Bet2TextBox.Text = "" + theTable.player.bets[2];
+                    }
+                    if (numHands >= 3)
+                    {
+                        Hand3TextBox.Text = "" +
+                        theTable.player.GetHand(3).ToString();
+                        Bet3TextBox.Text = "" + theTable.player.bets[3];
+                    }
+                    CurrentHandTextBox.Text = "1";
                     DealerHandTextBox.Text = "" + theTable.dealer.GetFirstCard();
                     UpdateChips();
                 }
@@ -107,7 +121,6 @@ namespace BlackJack
             UpdateChips();
             DealButton.Enabled = true;
             BetSizeTextBox.Enabled = true;
-            PlayerTextBox.Text += "1";
         }
 
         /// <summary>
@@ -116,7 +129,7 @@ namespace BlackJack
         /// </summary>
         public void UpdateChips()
         {
-            chipCountTextBox.Text = "" + theTable.players[1].GetChips();
+            chipCountTextBox.Text = "" + theTable.player.GetChips();
         }
 
         /// <summary>
@@ -128,21 +141,35 @@ namespace BlackJack
         {
             HitButton.Enabled = true;
             StandButton.Enabled = true;
-            if (theTable.players[1].chips >= theTable.players[1].bet) DoubleButton.Enabled = true;
+            if (theTable.player.chips >= theTable.player.bets[theController.currentHand])
+                DoubleButton.Enabled = true;
             else DoubleButton.Enabled = false;
-            if (theTable.players[1].GetHand(theController.currentHand).pair) SplitButton.Enabled = true;
+            if (theTable.player.GetHand(theController.currentHand).pair) SplitButton.Enabled = true;
             else SplitButton.Enabled = false;
-            PlayerHandTextBox.Text = "" +
-                theTable.players[1].GetHand(theController.currentHand).ToString();
-            HandCountTextBox.Text = "" + theController.currentHand;
+            Hand1TextBox.Text = "" +
+                theTable.player.GetHand(theController.currentHand).ToString();
+            CurrentHandTextBox.Text = "" + theController.currentHand;
             DealerHandTextBox.Text = "" + theTable.dealer.GetFirstCard();
         }
 
         private void HitButton_Click(object sender, EventArgs e)
         {
             theController.HitHand();
-            PlayerHandTextBox.Text = "" +
-                theTable.players[1].GetHand(theController.currentHand).ToString();
+            if (theController.currentHand == 1)
+                Hand1TextBox.Text = "" +
+                    theTable.player.GetHand(theController.currentHand).ToString();
+            if (theController.currentHand == 2)
+                Hand2TextBox.Text = "" +
+                    theTable.player.GetHand(theController.currentHand).ToString();
+            if (theController.currentHand == 3)
+                Hand3TextBox.Text = "" +
+                    theTable.player.GetHand(theController.currentHand).ToString();
+            if (theController.currentHand == 4)
+                Hand4TextBox.Text = "" +
+                    theTable.player.GetHand(theController.currentHand).ToString();
+            if (theController.currentHand == 5)
+                Hand5TextBox.Text = "" +
+                    theTable.player.GetHand(theController.currentHand).ToString();
         }
 
         private void StandButton_Click(object sender, EventArgs e)
@@ -153,7 +180,7 @@ namespace BlackJack
         private void PlayAgainButton_Click(object sender, EventArgs e)
         {
             theController.ResetHand();
-            PlayerHandTextBox.Clear();
+            Hand1TextBox.Clear();
             DealerHandTextBox.Clear();
             ResultTextBox.Clear();
             DealButton.Enabled = true;
@@ -165,8 +192,8 @@ namespace BlackJack
         private void DoubleButton_Click(object sender, EventArgs e)
         {
             theController.DoubleHand();
-            PlayerHandTextBox.Text = "" +
-                theTable.players[1].GetHand(theController.currentHand).ToString();
+            Hand1TextBox.Text = "" +
+                theTable.player.GetHand(theController.currentHand).ToString();
         }
 
         private void SplitButton_Click(object sender, EventArgs e)
@@ -188,9 +215,6 @@ namespace BlackJack
             if (theController.currentHand < numHands)
             {
                 theController.currentHand++;
-                PlayerHandTextBox.Text = "" +
-                        theTable.players[theController.currentPlayer].
-                        GetHand(theController.currentHand).ToString();
                 PlayerAction();
             }
             // if there are no more hands

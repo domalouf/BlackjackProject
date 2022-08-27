@@ -10,14 +10,14 @@ namespace BlackJack
     public class Player
     {
         public Dictionary<int, Hand> hands;
+        public Dictionary<int, int> bets;
         public int chips;
-        public int bet;
 
         public Player(int _numChips)
         {
             chips = _numChips;
             hands = new Dictionary<int, Hand>();
-            bet = 0;
+            bets = new Dictionary<int, int>();
         }
 
         /// <summary>
@@ -48,8 +48,7 @@ namespace BlackJack
         }
 
         /// <summary>
-        /// Adds a hand to a player's list of hands,
-        /// Just one hand at the moment
+        /// Adds a hand to a player's list of hands
         /// </summary>
         /// <param name="firstCard"></param>
         /// <param name="secondCard"></param>
@@ -57,7 +56,7 @@ namespace BlackJack
         {
             hands.Add(hands.Count + 1, new Hand(firstCard, secondCard));
             hands[hands.Count].CheckHand();
-            bet = betSize;
+            bets.Add(bets.Count + 1, betSize);
         }
 
         /// <summary>

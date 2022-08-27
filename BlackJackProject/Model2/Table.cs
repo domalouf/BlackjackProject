@@ -7,13 +7,13 @@ namespace BlackJack
     public class Table
     {
         public Dealer dealer;
-        public Dictionary<int, Player> players;
+        public Player player;
         public Shoe shoe;
 
         public Table()
         {
             dealer = new Dealer();
-            players = new Dictionary<int, Player>();
+            player = null;
             shoe = new Shoe();
         }
 
@@ -24,7 +24,7 @@ namespace BlackJack
         public void AddPlayer(int numChips)
         {
             // key is 1 for player1
-            players.Add(players.Count + 1, new Player(numChips));
+            player = new Player(numChips);
         }
 
         /// <summary>
@@ -33,7 +33,7 @@ namespace BlackJack
         /// <param name="numChips"></param>
         public void GiveChips(int numChips)
         {
-            players[1].AddChips(numChips);
+            player.AddChips(numChips);
         }
 
         /// <summary>
@@ -43,11 +43,8 @@ namespace BlackJack
         public void StartHands(int numHands, int betSize)
         {
             dealer.StartHand(shoe.DrawCard(), shoe.DrawCard());
-            foreach (Player p in players.Values)
-            {
-                for (int i = 0; i < numHands; i++)
-                p.StartHand(shoe.DrawCard(), shoe.DrawCard(), betSize);
-            }
+            for (int i = 0; i < numHands; i++)
+                player.StartHand(shoe.DrawCard(), shoe.DrawCard(), betSize);
         }
 
         /// <summary>
@@ -55,7 +52,7 @@ namespace BlackJack
         /// </summary>
         public void ResetHand()
         {
-            players[1].hands.Clear();
+            player.hands.Clear();
             dealer.hand.newHand();
         }
 
@@ -64,7 +61,7 @@ namespace BlackJack
         /// </summary>
         public void HitHand(int currentHand)
         {
-            players[1].Hit(currentHand, shoe.DrawCard());
+            player.Hit(currentHand, shoe.DrawCard());
         }
 
         /// <summary>
@@ -84,16 +81,16 @@ namespace BlackJack
         /// </summary>
         public void SplitHand(int numHand)
         {
-            int temp = players[1].GetHand(numHand).cards[0];
-            players[1].hands[numHand] = new Hand(temp);
-            
+            int temp = player.GetHand(numHand).cards[0];
+            player.hands[numHand] = new Hand(temp);
+
             // moves all hands above in dictionary up one
             // done so split hands play consecutively
-            for (int i = players[1].hands.Count; i > numHand; i--)
+            for (int i = player.hands.Count; i > numHand; i--)
             {
-                players[1].hands[i + 1] = players[1].hands[i];
+                player.hands[i + 1] = player.hands[i];
             }
-            players[1].hands[numHand + 1] = new Hand(temp);
+            player.hands[numHand + 1] = new Hand(temp);
             HitHand(numHand);
             HitHand(numHand + 1);
         }
