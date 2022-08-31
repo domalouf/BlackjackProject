@@ -96,8 +96,6 @@ namespace BlackJack
                         theTable.player.GetHand(3).ToString();
                         Bet3TextBox.Text = "" + theTable.player.bets[3];
                     }
-                    CurrentHandTextBox.Text = "1";
-                    DealerHandTextBox.Text = "" + theTable.dealer.GetFirstCard();
                     UpdateChips();
                 }
             }
@@ -141,13 +139,13 @@ namespace BlackJack
         {
             HitButton.Enabled = true;
             StandButton.Enabled = true;
+            //double button
             if (theTable.player.chips >= theTable.player.bets[theController.currentHand])
                 DoubleButton.Enabled = true;
             else DoubleButton.Enabled = false;
-            if (theTable.player.GetHand(theController.currentHand).pair) SplitButton.Enabled = true;
+            //split button
+            if (theTable.player.GetHand(theController.currentHand).pair && numHands < 5) SplitButton.Enabled = true;
             else SplitButton.Enabled = false;
-            Hand1TextBox.Text = "" +
-                theTable.player.GetHand(theController.currentHand).ToString();
             CurrentHandTextBox.Text = "" + theController.currentHand;
             DealerHandTextBox.Text = "" + theTable.dealer.GetFirstCard();
         }
@@ -181,6 +179,15 @@ namespace BlackJack
         {
             theController.ResetHand();
             Hand1TextBox.Clear();
+            Hand2TextBox.Clear();
+            Hand3TextBox.Clear();
+            Hand4TextBox.Clear();
+            Hand5TextBox.Clear();
+            Bet1TextBox.Clear();
+            Bet2TextBox.Clear();
+            Bet3TextBox.Clear();
+            Bet4TextBox.Clear();
+            Bet5TextBox.Clear();
             DealerHandTextBox.Clear();
             ResultTextBox.Clear();
             DealButton.Enabled = true;
@@ -192,14 +199,78 @@ namespace BlackJack
         private void DoubleButton_Click(object sender, EventArgs e)
         {
             theController.DoubleHand();
-            Hand1TextBox.Text = "" +
-                theTable.player.GetHand(theController.currentHand).ToString();
+            switch (theController.currentHand)
+            {
+                case 1:
+                    Bet1TextBox.Text = "" + theTable.player.bets[1];
+                    break;
+                case 2:
+                    Bet2TextBox.Text = "" + theTable.player.bets[2];
+                    break;
+                case 3:
+                    Bet3TextBox.Text = "" + theTable.player.bets[3];
+                    break;
+                case 4:
+                    Bet4TextBox.Text = "" + theTable.player.bets[4];
+                    break;
+                case 5:
+                    Bet5TextBox.Text = "" + theTable.player.bets[5];
+                    break;
+            }
         }
 
         private void SplitButton_Click(object sender, EventArgs e)
         {
             theController.SplitHand();
             numHands++;
+            switch (theController.currentHand)
+            {
+                case 1:
+                    Hand1TextBox.Text = "" + theTable.player.GetHand(1);
+                    Hand2TextBox.Text = "" + theTable.player.GetHand(2);
+                    Bet1TextBox.Text = "" + theTable.player.bets[1];
+                    if (numHands >= 3)
+                    {
+                        Hand3TextBox.Text = "" + theTable.player.GetHand(3);
+                    }
+                    if (numHands >= 4)
+                    {
+                        Hand4TextBox.Text = "" + theTable.player.GetHand(4);
+                    }
+                    if (numHands >= 5)
+                    {
+                        Hand3TextBox.Text = "" + theTable.player.GetHand(5);
+                    }
+                    break;
+
+                case 2:
+                    Hand2TextBox.Text = "" + theTable.player.GetHand(2);
+                    Hand3TextBox.Text = "" + theTable.player.GetHand(3);
+                    if (numHands >= 4)
+                    {
+                        Hand4TextBox.Text = "" + theTable.player.GetHand(4);
+                    }
+                    if (numHands >= 5)
+                    {
+                        Hand3TextBox.Text = "" + theTable.player.GetHand(5);
+                    }
+                    break;
+
+                case 3:
+                    Hand3TextBox.Text = "" + theTable.player.GetHand(3);
+                    Hand4TextBox.Text = "" + theTable.player.GetHand(4);
+                    if (numHands >= 5)
+                    {
+                        Hand4TextBox.Text = "" + theTable.player.GetHand(5);
+                    }
+                    break;
+                case 4:
+                    Hand4TextBox.Text = "" + theTable.player.GetHand(4);
+                    Hand5TextBox.Text = "" + theTable.player.GetHand(5);
+                    break;
+                default:
+                    break;
+            }
         }
 
         /// <summary>

@@ -89,8 +89,10 @@ namespace BlackJack
             for (int i = player.hands.Count; i > numHand; i--)
             {
                 player.hands[i + 1] = player.hands[i];
+                player.bets[i + 1] = player.bets[i];
             }
             player.hands[numHand + 1] = new Hand(temp);
+            player.bets[numHand + 1] = player.bets[numHand];
             HitHand(numHand);
             HitHand(numHand + 1);
         }

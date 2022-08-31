@@ -44,5 +44,6 @@ If player stands the controller calls for the view to show the next hand
 Helpful Link about MVC - https://www.cs.cornell.edu/courses/cs2112/2020fa/recitations/08patterns/Recitation8.pdf
 
 TODO:
-fix problems with dealer blackjacks (or dealer w/ 11)
 Double down causes next hand to have bigger bet
+Hitting hands is weird
+pick individual bets for hands
