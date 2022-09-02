@@ -19,6 +19,9 @@ namespace BlackJack
         public delegate void AddChipsHandler();
         public event AddChipsHandler UpdateChips;
 
+        public delegate void UpdateHandHandler(int currentHand);
+        public event UpdateHandHandler UpdateHand;
+
         public delegate void PlayerActionHandler();
         public event PlayerActionHandler PlayerAction;
 
@@ -183,11 +186,9 @@ namespace BlackJack
             chipPayout -= theTable.player.bets[currentHand];
             theTable.player.bets[currentHand] *= 2;
             theTable.HitHand(currentHand);
-            if (theTable.player.GetHand(currentHand).bust)
-            {
-                NextHand("bust");
-            }
-            else NextHand("double");
+            UpdateHand(currentHand);
+            currentHand++;
+            NextHand("double");
         }
 
         /// <summary>

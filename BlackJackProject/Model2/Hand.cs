@@ -100,6 +100,8 @@ namespace BlackJack
         {
             int numCards = cards.Count;
             total = 0;
+            // soft is reset for every new check
+            soft = false;
 
             // counts each card in the hand
             foreach (int card in cards)
