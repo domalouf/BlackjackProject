@@ -53,6 +53,7 @@ namespace BlackJack
         public void ResetHand()
         {
             player.hands.Clear();
+            player.bets.Clear();
             dealer.hand.newHand();
         }
 

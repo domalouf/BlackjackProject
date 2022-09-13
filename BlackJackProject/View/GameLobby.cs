@@ -80,6 +80,7 @@ namespace BlackJack
                 // deals hands and updates view
                 else
                 {
+                    BetSizeTextBox.Enabled = false;
                     theController.DealHands(numHands, betSize);
                     DealButton.Enabled = false;
                     Hand1TextBox.Text = "" +
@@ -144,8 +145,10 @@ namespace BlackJack
             if (theTable.player.chips >= theTable.player.bets[theController.currentHand])
                 DoubleButton.Enabled = true;
             else DoubleButton.Enabled = false;
-            //split button
-            if (theTable.player.GetHand(theController.currentHand).pair && numHands < 5) SplitButton.Enabled = true;
+            //split button if pair, enough space, and affordable
+            if (theTable.player.GetHand(theController.currentHand).pair &&
+                theController.theTable.player.chips >= theController.theTable.player.bets[theController.currentHand]
+                && numHands < 5) SplitButton.Enabled = true;
             else SplitButton.Enabled = false;
             CurrentHandTextBox.Text = "" + theController.currentHand;
             DealerHandTextBox.Text = "" + theTable.dealer.GetFirstCard();
@@ -173,7 +176,12 @@ namespace BlackJack
 
         private void StandButton_Click(object sender, EventArgs e)
         {
-            NextHand("stand");
+            if (numHands == 1) NextHand("stand");
+            else
+            {
+                theController.currentHand++;
+                NextHand("stand");
+            }
         }
 
         private void PlayAgainButton_Click(object sender, EventArgs e)
@@ -191,6 +199,7 @@ namespace BlackJack
             Bet5TextBox.Clear();
             DealerHandTextBox.Clear();
             ResultTextBox.Clear();
+            BetSizeTextBox.Enabled = true;
             DealButton.Enabled = true;
             HitButton.Enabled = false;
             StandButton.Enabled = false;

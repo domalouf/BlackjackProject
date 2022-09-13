@@ -31,7 +31,7 @@ Starts By view asking for bet and number of hands
 Once deal hands button is pressed, controller is called to deal hands
 This gives all hands and dealer 2 cards and takes chips from stack
 Checks for dealer blackjack and finishes round if there is,
-Checks first hand for blackjack before letting view get more input
+Checks first hand for blackjack, if there is go to next hand (if one hand go to )
 View asks for player input
 If player hits the controller gives another card and checks for bust or 21
 If player doubles the controller takes double the bet, hits, and then moves to next hand
@@ -43,7 +43,8 @@ If player stands the controller calls for the view to show the next hand
 
 Helpful Link about MVC - https://www.cs.cornell.edu/courses/cs2112/2020fa/recitations/08patterns/Recitation8.pdf
 
-TODO:
-Double down causes next hand to have bigger bet
-Hitting hands is weird
-pick individual bets for hands
+TODO/BUGS:
+dont play 3rd hand BUG
+blackjack pays too much BUG
+multiple hands with blackjack might be strange BUG
+pick individual bets for hands TODO

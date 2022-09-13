@@ -46,9 +46,10 @@ namespace BlackJack
             // 
             // GetMoveButton
             // 
-            this.GetMoveButton.Location = new System.Drawing.Point(376, 348);
+            this.GetMoveButton.Location = new System.Drawing.Point(501, 428);
+            this.GetMoveButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.GetMoveButton.Name = "GetMoveButton";
-            this.GetMoveButton.Size = new System.Drawing.Size(246, 87);
+            this.GetMoveButton.Size = new System.Drawing.Size(328, 107);
             this.GetMoveButton.TabIndex = 0;
             this.GetMoveButton.Text = "Get Move";
             this.GetMoveButton.UseVisualStyleBackColor = true;
@@ -56,107 +57,119 @@ namespace BlackJack
             // 
             // Card1TextBox
             // 
-            this.Card1TextBox.Location = new System.Drawing.Point(15, 364);
+            this.Card1TextBox.Location = new System.Drawing.Point(20, 448);
+            this.Card1TextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Card1TextBox.Name = "Card1TextBox";
-            this.Card1TextBox.Size = new System.Drawing.Size(100, 20);
+            this.Card1TextBox.Size = new System.Drawing.Size(132, 22);
             this.Card1TextBox.TabIndex = 1;
             // 
             // DealerCardTextBox
             // 
-            this.DealerCardTextBox.Location = new System.Drawing.Point(134, 364);
+            this.DealerCardTextBox.Location = new System.Drawing.Point(179, 448);
+            this.DealerCardTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.DealerCardTextBox.Name = "DealerCardTextBox";
-            this.DealerCardTextBox.Size = new System.Drawing.Size(100, 20);
+            this.DealerCardTextBox.Size = new System.Drawing.Size(132, 22);
             this.DealerCardTextBox.TabIndex = 2;
             // 
             // Card1Label
             // 
             this.Card1Label.AutoSize = true;
-            this.Card1Label.Location = new System.Drawing.Point(12, 348);
+            this.Card1Label.Location = new System.Drawing.Point(16, 428);
+            this.Card1Label.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Card1Label.Name = "Card1Label";
-            this.Card1Label.Size = new System.Drawing.Size(51, 13);
+            this.Card1Label.Size = new System.Drawing.Size(64, 16);
             this.Card1Label.TabIndex = 3;
             this.Card1Label.Text = "First Card";
             // 
             // DealerCardLabel
             // 
             this.DealerCardLabel.AutoSize = true;
-            this.DealerCardLabel.Location = new System.Drawing.Point(134, 348);
+            this.DealerCardLabel.Location = new System.Drawing.Point(179, 428);
+            this.DealerCardLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.DealerCardLabel.Name = "DealerCardLabel";
-            this.DealerCardLabel.Size = new System.Drawing.Size(63, 13);
+            this.DealerCardLabel.Size = new System.Drawing.Size(80, 16);
             this.DealerCardLabel.TabIndex = 4;
             this.DealerCardLabel.Text = "Dealer Card";
             // 
             // Card2Label
             // 
             this.Card2Label.AutoSize = true;
-            this.Card2Label.Location = new System.Drawing.Point(12, 398);
+            this.Card2Label.Location = new System.Drawing.Point(16, 490);
+            this.Card2Label.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Card2Label.Name = "Card2Label";
-            this.Card2Label.Size = new System.Drawing.Size(69, 13);
+            this.Card2Label.Size = new System.Drawing.Size(86, 16);
             this.Card2Label.TabIndex = 5;
             this.Card2Label.Text = "Second Card";
             // 
             // Card2TextBox
             // 
-            this.Card2TextBox.Location = new System.Drawing.Point(15, 414);
+            this.Card2TextBox.Location = new System.Drawing.Point(20, 510);
+            this.Card2TextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Card2TextBox.Name = "Card2TextBox";
-            this.Card2TextBox.Size = new System.Drawing.Size(100, 20);
+            this.Card2TextBox.Size = new System.Drawing.Size(132, 22);
             this.Card2TextBox.TabIndex = 6;
             // 
             // MoveTextBox
             // 
-            this.MoveTextBox.Location = new System.Drawing.Point(628, 382);
+            this.MoveTextBox.Location = new System.Drawing.Point(837, 470);
+            this.MoveTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.MoveTextBox.Name = "MoveTextBox";
-            this.MoveTextBox.Size = new System.Drawing.Size(142, 20);
+            this.MoveTextBox.Size = new System.Drawing.Size(188, 22);
             this.MoveTextBox.TabIndex = 7;
             // 
             // HitCardTextBox
             // 
-            this.HitCardTextBox.Location = new System.Drawing.Point(260, 99);
+            this.HitCardTextBox.Location = new System.Drawing.Point(347, 122);
+            this.HitCardTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.HitCardTextBox.Name = "HitCardTextBox";
-            this.HitCardTextBox.Size = new System.Drawing.Size(100, 20);
+            this.HitCardTextBox.Size = new System.Drawing.Size(132, 22);
             this.HitCardTextBox.TabIndex = 9;
             // 
             // HitCardButton
             // 
-            this.HitCardButton.Location = new System.Drawing.Point(260, 58);
+            this.HitCardButton.Location = new System.Drawing.Point(347, 71);
+            this.HitCardButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.HitCardButton.Name = "HitCardButton";
-            this.HitCardButton.Size = new System.Drawing.Size(75, 23);
+            this.HitCardButton.Size = new System.Drawing.Size(100, 28);
             this.HitCardButton.TabIndex = 10;
-            this.HitCardButton.Text = "Hit da boof";
+            this.HitCardButton.Text = "draw card";
             this.HitCardButton.UseVisualStyleBackColor = true;
             this.HitCardButton.Click += new System.EventHandler(this.HitCardButton_Click);
             // 
             // ShuffleButton
             // 
-            this.ShuffleButton.Location = new System.Drawing.Point(260, 135);
+            this.ShuffleButton.Location = new System.Drawing.Point(347, 166);
+            this.ShuffleButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.ShuffleButton.Name = "ShuffleButton";
-            this.ShuffleButton.Size = new System.Drawing.Size(90, 23);
+            this.ShuffleButton.Size = new System.Drawing.Size(120, 28);
             this.ShuffleButton.TabIndex = 11;
-            this.ShuffleButton.Text = "shuffle da boof";
+            this.ShuffleButton.Text = "shuffle";
             this.ShuffleButton.UseVisualStyleBackColor = true;
             this.ShuffleButton.Click += new System.EventHandler(this.ShuffleButton_Click);
             // 
             // ShoeCountLabel
             // 
             this.ShoeCountLabel.AutoSize = true;
-            this.ShoeCountLabel.Location = new System.Drawing.Point(454, 68);
+            this.ShoeCountLabel.Location = new System.Drawing.Point(612, 83);
+            this.ShoeCountLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.ShoeCountLabel.Name = "ShoeCountLabel";
-            this.ShoeCountLabel.Size = new System.Drawing.Size(95, 13);
+            this.ShoeCountLabel.Size = new System.Drawing.Size(115, 16);
             this.ShoeCountLabel.TabIndex = 12;
             this.ShoeCountLabel.Text = "Cards Left In Shoe";
             // 
             // ShoeCountTextBox
             // 
-            this.ShoeCountTextBox.Location = new System.Drawing.Point(461, 101);
+            this.ShoeCountTextBox.Location = new System.Drawing.Point(615, 124);
+            this.ShoeCountTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.ShoeCountTextBox.Name = "ShoeCountTextBox";
-            this.ShoeCountTextBox.Size = new System.Drawing.Size(96, 20);
+            this.ShoeCountTextBox.Size = new System.Drawing.Size(127, 22);
             this.ShoeCountTextBox.TabIndex = 13;
             // 
             // TestForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(813, 465);
+            this.ClientSize = new System.Drawing.Size(1084, 572);
             this.Controls.Add(this.ShoeCountTextBox);
             this.Controls.Add(this.ShoeCountLabel);
             this.Controls.Add(this.ShuffleButton);
@@ -170,6 +183,7 @@ namespace BlackJack
             this.Controls.Add(this.DealerCardTextBox);
             this.Controls.Add(this.Card1TextBox);
             this.Controls.Add(this.GetMoveButton);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "TestForm";
             this.Text = "Test Form";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.TestForm_FormClosed);

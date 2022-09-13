@@ -29,7 +29,6 @@ namespace BlackJack
         /// </summary>
         private void InitializeComponent()
         {
-            this.WelcomeLabel = new System.Windows.Forms.Label();
             this.HelperLabel = new System.Windows.Forms.Label();
             this.PlayLabel = new System.Windows.Forms.Label();
             this.HelperButton = new System.Windows.Forms.Button();
@@ -38,38 +37,32 @@ namespace BlackJack
             this.TestFormButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // WelcomeLabel
-            // 
-            this.WelcomeLabel.AutoSize = true;
-            this.WelcomeLabel.Location = new System.Drawing.Point(242, 46);
-            this.WelcomeLabel.Name = "WelcomeLabel";
-            this.WelcomeLabel.Size = new System.Drawing.Size(287, 13);
-            this.WelcomeLabel.TabIndex = 0;
-            this.WelcomeLabel.Text = "Welcome to the Motherfuckin Blackjack Program Fuckface";
-            // 
             // HelperLabel
             // 
             this.HelperLabel.AutoSize = true;
-            this.HelperLabel.Location = new System.Drawing.Point(55, 186);
+            this.HelperLabel.Location = new System.Drawing.Point(73, 229);
+            this.HelperLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.HelperLabel.Name = "HelperLabel";
-            this.HelperLabel.Size = new System.Drawing.Size(158, 13);
+            this.HelperLabel.Size = new System.Drawing.Size(197, 16);
             this.HelperLabel.TabIndex = 1;
             this.HelperLabel.Text = "Click Here for BlackJack Helper";
             // 
             // PlayLabel
             // 
             this.PlayLabel.AutoSize = true;
-            this.PlayLabel.Location = new System.Drawing.Point(562, 186);
+            this.PlayLabel.Location = new System.Drawing.Point(749, 229);
+            this.PlayLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.PlayLabel.Name = "PlayLabel";
-            this.PlayLabel.Size = new System.Drawing.Size(144, 13);
+            this.PlayLabel.Size = new System.Drawing.Size(179, 16);
             this.PlayLabel.TabIndex = 2;
             this.PlayLabel.Text = "Click Here to Play BlackJack";
             // 
             // HelperButton
             // 
-            this.HelperButton.Location = new System.Drawing.Point(73, 224);
+            this.HelperButton.Location = new System.Drawing.Point(97, 276);
+            this.HelperButton.Margin = new System.Windows.Forms.Padding(4);
             this.HelperButton.Name = "HelperButton";
-            this.HelperButton.Size = new System.Drawing.Size(119, 23);
+            this.HelperButton.Size = new System.Drawing.Size(159, 28);
             this.HelperButton.TabIndex = 3;
             this.HelperButton.Text = "BlackJack Helper";
             this.HelperButton.UseVisualStyleBackColor = true;
@@ -77,9 +70,10 @@ namespace BlackJack
             // 
             // StartButton
             // 
-            this.StartButton.Location = new System.Drawing.Point(584, 224);
+            this.StartButton.Location = new System.Drawing.Point(779, 276);
+            this.StartButton.Margin = new System.Windows.Forms.Padding(4);
             this.StartButton.Name = "StartButton";
-            this.StartButton.Size = new System.Drawing.Size(100, 23);
+            this.StartButton.Size = new System.Drawing.Size(133, 28);
             this.StartButton.TabIndex = 4;
             this.StartButton.Text = "Start Game";
             this.StartButton.UseVisualStyleBackColor = true;
@@ -88,34 +82,36 @@ namespace BlackJack
             // TestFormLabel
             // 
             this.TestFormLabel.AutoSize = true;
-            this.TestFormLabel.Location = new System.Drawing.Point(702, 392);
+            this.TestFormLabel.Location = new System.Drawing.Point(936, 482);
+            this.TestFormLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.TestFormLabel.Name = "TestFormLabel";
-            this.TestFormLabel.Size = new System.Drawing.Size(69, 13);
+            this.TestFormLabel.Size = new System.Drawing.Size(97, 16);
             this.TestFormLabel.TabIndex = 5;
-            this.TestFormLabel.Text = "Woah Kenny";
+            this.TestFormLabel.Text = "secret test form";
             // 
             // TestFormButton
             // 
-            this.TestFormButton.Location = new System.Drawing.Point(696, 415);
+            this.TestFormButton.Location = new System.Drawing.Point(954, 502);
+            this.TestFormButton.Margin = new System.Windows.Forms.Padding(4);
             this.TestFormButton.Name = "TestFormButton";
-            this.TestFormButton.Size = new System.Drawing.Size(75, 23);
+            this.TestFormButton.Size = new System.Drawing.Size(100, 28);
             this.TestFormButton.TabIndex = 6;
-            this.TestFormButton.Text = "Penis Butt";
+            this.TestFormButton.Text = "test form";
             this.TestFormButton.UseVisualStyleBackColor = true;
             this.TestFormButton.Click += new System.EventHandler(this.TestFormButton_Click);
             // 
             // MainMenu
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1067, 554);
             this.Controls.Add(this.TestFormButton);
             this.Controls.Add(this.TestFormLabel);
             this.Controls.Add(this.StartButton);
             this.Controls.Add(this.HelperButton);
             this.Controls.Add(this.PlayLabel);
             this.Controls.Add(this.HelperLabel);
-            this.Controls.Add(this.WelcomeLabel);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "MainMenu";
             this.Text = "Main Menu";
             this.ResumeLayout(false);
@@ -124,8 +120,6 @@ namespace BlackJack
         }
 
         #endregion
-
-        private System.Windows.Forms.Label WelcomeLabel;
         private System.Windows.Forms.Label HelperLabel;
         private System.Windows.Forms.Label PlayLabel;
         private System.Windows.Forms.Button HelperButton;

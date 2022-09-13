@@ -62,9 +62,10 @@ namespace BlackJack
         /// <summary>
         /// adds a card to a player's stack, checks for bust
         /// </summary>
-        public void Hit(int activeHand, int hitCard)
+        public void Hit(int numHand, int hitCard)
         {
-            hands[activeHand].Hit(hitCard);
+            hands[numHand].Hit(hitCard);
+            hands[numHand].CheckHand();
         }
 
         /// <summary>
