@@ -55,7 +55,6 @@ namespace BlackJack
         public void StartHand(int firstCard, int secondCard, int betSize)
         {
             hands.Add(hands.Count + 1, new Hand(firstCard, secondCard));
-            hands[hands.Count].CheckHand();
             bets.Add(bets.Count + 1, betSize);
         }
 

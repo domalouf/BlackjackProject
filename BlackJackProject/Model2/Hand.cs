@@ -64,6 +64,7 @@ namespace BlackJack
             cards = new List<int>();
             cards.Add(firstCard);
             cards.Add(secondCard);
+            CheckHand();
         }
 
         /// <summary>

@@ -81,24 +81,18 @@ namespace BlackJack
                 else
                 {
                     BetSizeTextBox.Enabled = false;
-                    theController.DealHands(numHands, betSize);
                     DealButton.Enabled = false;
-                    Hand1TextBox.Text = "" +
-                        theTable.player.GetHand(1).ToString();
-                    Bet1TextBox.Text = "" + theTable.player.bets[1];
+                    Bet1TextBox.Text = "" + betSize;
                     if (numHands >= 2)
                     {
-                        Hand2TextBox.Text = "" +
-                        theTable.player.GetHand(2).ToString();
-                        Bet2TextBox.Text = "" + theTable.player.bets[2];
+                        Bet2TextBox.Text = "" + betSize;
                     }
-                    if (numHands >= 3)
+                    if (numHands == 3)
                     {
-                        Hand3TextBox.Text = "" +
-                        theTable.player.GetHand(3).ToString();
-                        Bet3TextBox.Text = "" + theTable.player.bets[3];
+                        Bet3TextBox.Text = "" + betSize;
                     }
-                    UpdateChips();
+
+                    theController.DealHands(numHands, betSize);
                 }
             }
             // error checking for bet size
@@ -157,31 +151,12 @@ namespace BlackJack
         private void HitButton_Click(object sender, EventArgs e)
         {
             theController.HitHand();
-            if (theController.currentHand == 1)
-                Hand1TextBox.Text = "" +
-                    theTable.player.GetHand(theController.currentHand).ToString();
-            if (theController.currentHand == 2)
-                Hand2TextBox.Text = "" +
-                    theTable.player.GetHand(theController.currentHand).ToString();
-            if (theController.currentHand == 3)
-                Hand3TextBox.Text = "" +
-                    theTable.player.GetHand(theController.currentHand).ToString();
-            if (theController.currentHand == 4)
-                Hand4TextBox.Text = "" +
-                    theTable.player.GetHand(theController.currentHand).ToString();
-            if (theController.currentHand == 5)
-                Hand5TextBox.Text = "" +
-                    theTable.player.GetHand(theController.currentHand).ToString();
         }
 
         private void StandButton_Click(object sender, EventArgs e)
         {
-            if (numHands == 1) NextHand("stand");
-            else
-            {
-                theController.currentHand++;
-                NextHand("stand");
-            }
+            theController.currentHand++;
+            NextHand();
         }
 
         private void PlayAgainButton_Click(object sender, EventArgs e)
@@ -303,12 +278,18 @@ namespace BlackJack
         /// if all hands are done shows net loss/gain,
         /// play again starts new loop
         /// </summary>
-        public void NextHand(string result)
+        public void NextHand()
         {
             // if there are more hands to play
-            if (theController.currentHand < numHands)
+            if (theController.currentHand <= numHands)
             {
-                PlayerAction();
+                // moves to next hand if hand has a blackjack
+                if (theController.theTable.player.hands[theController.currentHand].blackjack)
+                {
+                    theController.currentHand++;
+                    NextHand();
+                }
+                else PlayerAction();
             }
             // if there are no more hands
             else
@@ -324,6 +305,7 @@ namespace BlackJack
         /// </summary>
         public void FinishRound()
         {
+
             DealerHandTextBox.Text = "" + theTable.dealer.GetHand().ToString();
             if (theController.chipPayout >= 0)
                 ResultTextBox.Text = "You Won" + theController.chipPayout + " Chips!";
@@ -337,9 +319,9 @@ namespace BlackJack
             SplitButton.Enabled = false;
         }
 
-        public void UpdateHand(int currentHand)
+        public void UpdateHand(int hand)
         {
-            switch(currentHand)
+            switch(hand)
             {
                 case 1:
                     Hand1TextBox.Text = "" + theTable.player.GetHand(1);

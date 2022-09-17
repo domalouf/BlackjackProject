@@ -19,7 +19,6 @@ namespace BlackJack
         public void StartHand(int firstCard, int secondCard)
         {
             hand = new Hand(firstCard, secondCard);
-            hand.CheckHand();
         }
 
         /// <summary>
