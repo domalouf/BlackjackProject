@@ -60,9 +60,9 @@ namespace BlackJack
         /// <param name="e"></param>
         private void DealButton_Click(object sender, EventArgs e)
         {
-            if (OneHandCheckBox.Checked) numHands = 1;
-            if (TwoHandsCheckBox.Checked) numHands = 2;
-            if (ThreeHandsCheckBox.Checked) numHands = 3;
+            if (OneHandRadioButton.Checked) numHands = 1;
+            if (TwoHandsRadioButton.Checked) numHands = 2;
+            if (ThreeHandsRadioButton.Checked) numHands = 3;
 
             // error checking for text box
             if (int.TryParse(BetSizeTextBox.Text, out int betSize))
@@ -339,24 +339,6 @@ namespace BlackJack
                     Hand5TextBox.Text = "" + theTable.player.GetHand(5);
                     break;
             }
-        }
-
-        private void OnePlayerCheckBox_CheckedChanged(object sender, EventArgs e)
-        {
-            TwoHandsCheckBox.Checked = false;
-            ThreeHandsCheckBox.Checked = false;
-        }
-
-        private void TwoPlayerCheckBox_CheckedChanged(object sender, EventArgs e)
-        {
-            OneHandCheckBox.Checked = false;
-            ThreeHandsCheckBox.Checked = false;
-        }
-
-        private void ThreePlayersCheckBox_CheckedChanged(object sender, EventArgs e)
-        {
-            OneHandCheckBox.Checked = false;
-            TwoHandsCheckBox.Checked = false;
         }
 
         public void ShoeShuffled()

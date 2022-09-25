@@ -40,6 +40,16 @@
             this.BetLabel = new System.Windows.Forms.Label();
             this.BetSizeTextBox = new System.Windows.Forms.TextBox();
             this.GamePanel = new System.Windows.Forms.Panel();
+            this.Bet5TextBox = new System.Windows.Forms.TextBox();
+            this.Bet4TextBox = new System.Windows.Forms.TextBox();
+            this.Bet3TextBox = new System.Windows.Forms.TextBox();
+            this.Bet2TextBox = new System.Windows.Forms.TextBox();
+            this.Bet1TextBox = new System.Windows.Forms.TextBox();
+            this.PlayerBetsLabel = new System.Windows.Forms.Label();
+            this.Hand5TextBox = new System.Windows.Forms.TextBox();
+            this.Hand4TextBox = new System.Windows.Forms.TextBox();
+            this.Hand3TextBox = new System.Windows.Forms.TextBox();
+            this.Hand2TextBox = new System.Windows.Forms.TextBox();
             this.SplitButton = new System.Windows.Forms.Button();
             this.DoubleButton = new System.Windows.Forms.Button();
             this.HandLabel = new System.Windows.Forms.Label();
@@ -52,67 +62,53 @@
             this.Hand1TextBox = new System.Windows.Forms.TextBox();
             this.DealerHandLabel = new System.Windows.Forms.Label();
             this.PlayerHandLabel = new System.Windows.Forms.Label();
-            this.PlayerNumberLabel = new System.Windows.Forms.Label();
-            this.OneHandCheckBox = new System.Windows.Forms.CheckBox();
-            this.TwoHandsCheckBox = new System.Windows.Forms.CheckBox();
-            this.ThreeHandsCheckBox = new System.Windows.Forms.CheckBox();
-            this.Hand2TextBox = new System.Windows.Forms.TextBox();
-            this.Hand3TextBox = new System.Windows.Forms.TextBox();
-            this.Hand4TextBox = new System.Windows.Forms.TextBox();
-            this.Hand5TextBox = new System.Windows.Forms.TextBox();
-            this.PlayerBetsLabel = new System.Windows.Forms.Label();
-            this.Bet1TextBox = new System.Windows.Forms.TextBox();
-            this.Bet2TextBox = new System.Windows.Forms.TextBox();
-            this.Bet3TextBox = new System.Windows.Forms.TextBox();
-            this.Bet4TextBox = new System.Windows.Forms.TextBox();
-            this.Bet5TextBox = new System.Windows.Forms.TextBox();
+            this.OneHandRadioButton = new System.Windows.Forms.RadioButton();
+            this.TwoHandsRadioButton = new System.Windows.Forms.RadioButton();
+            this.ThreeHandsRadioButton = new System.Windows.Forms.RadioButton();
+            this.HandsNumberGroupBox = new System.Windows.Forms.GroupBox();
             this.GamePanel.SuspendLayout();
+            this.HandsNumberGroupBox.SuspendLayout();
             this.SuspendLayout();
             // 
             // WelcomeLabel
             // 
             this.WelcomeLabel.AutoSize = true;
-            this.WelcomeLabel.Location = new System.Drawing.Point(477, 25);
-            this.WelcomeLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.WelcomeLabel.Location = new System.Drawing.Point(358, 20);
             this.WelcomeLabel.Name = "WelcomeLabel";
-            this.WelcomeLabel.Size = new System.Drawing.Size(192, 16);
+            this.WelcomeLabel.Size = new System.Drawing.Size(153, 13);
             this.WelcomeLabel.TabIndex = 0;
             this.WelcomeLabel.Text = "Welcome to the Casino Homes";
             // 
             // cashierLabel
             // 
             this.cashierLabel.AutoSize = true;
-            this.cashierLabel.Location = new System.Drawing.Point(147, 22);
-            this.cashierLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.cashierLabel.Location = new System.Drawing.Point(110, 18);
             this.cashierLabel.Name = "cashierLabel";
-            this.cashierLabel.Size = new System.Drawing.Size(53, 16);
+            this.cashierLabel.Size = new System.Drawing.Size(42, 13);
             this.cashierLabel.TabIndex = 1;
             this.cashierLabel.Text = "Cashier";
             // 
             // buyChipsLabel
             // 
             this.buyChipsLabel.AutoSize = true;
-            this.buyChipsLabel.Location = new System.Drawing.Point(63, 70);
-            this.buyChipsLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.buyChipsLabel.Location = new System.Drawing.Point(47, 57);
             this.buyChipsLabel.Name = "buyChipsLabel";
-            this.buyChipsLabel.Size = new System.Drawing.Size(238, 16);
+            this.buyChipsLabel.Size = new System.Drawing.Size(193, 13);
             this.buyChipsLabel.TabIndex = 2;
             this.buyChipsLabel.Text = "How many chips would you like to buy?";
             // 
             // buyChipsTextBox
             // 
-            this.buyChipsTextBox.Location = new System.Drawing.Point(66, 104);
-            this.buyChipsTextBox.Margin = new System.Windows.Forms.Padding(4);
+            this.buyChipsTextBox.Location = new System.Drawing.Point(50, 84);
             this.buyChipsTextBox.Name = "buyChipsTextBox";
-            this.buyChipsTextBox.Size = new System.Drawing.Size(145, 22);
+            this.buyChipsTextBox.Size = new System.Drawing.Size(110, 20);
             this.buyChipsTextBox.TabIndex = 3;
             // 
             // buyButton
             // 
-            this.buyButton.Location = new System.Drawing.Point(248, 104);
-            this.buyButton.Margin = new System.Windows.Forms.Padding(4);
+            this.buyButton.Location = new System.Drawing.Point(186, 84);
             this.buyButton.Name = "buyButton";
-            this.buyButton.Size = new System.Drawing.Size(69, 28);
+            this.buyButton.Size = new System.Drawing.Size(52, 23);
             this.buyButton.TabIndex = 4;
             this.buyButton.Text = "Buy";
             this.buyButton.UseVisualStyleBackColor = true;
@@ -121,39 +117,35 @@
             // playerInfoLabel
             // 
             this.playerInfoLabel.AutoSize = true;
-            this.playerInfoLabel.Location = new System.Drawing.Point(891, 43);
-            this.playerInfoLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.playerInfoLabel.Location = new System.Drawing.Point(668, 35);
             this.playerInfoLabel.Name = "playerInfoLabel";
-            this.playerInfoLabel.Size = new System.Drawing.Size(70, 16);
+            this.playerInfoLabel.Size = new System.Drawing.Size(57, 13);
             this.playerInfoLabel.TabIndex = 5;
             this.playerInfoLabel.Text = "Player Info";
             // 
             // chipCountLabel
             // 
             this.chipCountLabel.AutoSize = true;
-            this.chipCountLabel.Location = new System.Drawing.Point(861, 89);
-            this.chipCountLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.chipCountLabel.Location = new System.Drawing.Point(646, 72);
             this.chipCountLabel.Name = "chipCountLabel";
-            this.chipCountLabel.Size = new System.Drawing.Size(74, 16);
+            this.chipCountLabel.Size = new System.Drawing.Size(62, 13);
             this.chipCountLabel.TabIndex = 6;
             this.chipCountLabel.Text = "Chip Count:";
             // 
             // chipCountTextBox
             // 
             this.chipCountTextBox.Enabled = false;
-            this.chipCountTextBox.Location = new System.Drawing.Point(952, 85);
-            this.chipCountTextBox.Margin = new System.Windows.Forms.Padding(4);
+            this.chipCountTextBox.Location = new System.Drawing.Point(714, 69);
             this.chipCountTextBox.Name = "chipCountTextBox";
-            this.chipCountTextBox.Size = new System.Drawing.Size(132, 22);
+            this.chipCountTextBox.Size = new System.Drawing.Size(100, 20);
             this.chipCountTextBox.TabIndex = 7;
             // 
             // DealButton
             // 
             this.DealButton.Enabled = false;
-            this.DealButton.Location = new System.Drawing.Point(281, 330);
-            this.DealButton.Margin = new System.Windows.Forms.Padding(4);
+            this.DealButton.Location = new System.Drawing.Point(211, 268);
             this.DealButton.Name = "DealButton";
-            this.DealButton.Size = new System.Drawing.Size(100, 63);
+            this.DealButton.Size = new System.Drawing.Size(75, 51);
             this.DealButton.TabIndex = 12;
             this.DealButton.Text = "Deal Cards";
             this.DealButton.UseVisualStyleBackColor = true;
@@ -162,20 +154,18 @@
             // BetLabel
             // 
             this.BetLabel.AutoSize = true;
-            this.BetLabel.Location = new System.Drawing.Point(160, 330);
-            this.BetLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.BetLabel.Location = new System.Drawing.Point(120, 268);
             this.BetLabel.Name = "BetLabel";
-            this.BetLabel.Size = new System.Drawing.Size(56, 16);
+            this.BetLabel.Size = new System.Drawing.Size(46, 13);
             this.BetLabel.TabIndex = 13;
             this.BetLabel.Text = "Bet Size";
             // 
             // BetSizeTextBox
             // 
             this.BetSizeTextBox.Enabled = false;
-            this.BetSizeTextBox.Location = new System.Drawing.Point(133, 350);
-            this.BetSizeTextBox.Margin = new System.Windows.Forms.Padding(4);
+            this.BetSizeTextBox.Location = new System.Drawing.Point(100, 284);
             this.BetSizeTextBox.Name = "BetSizeTextBox";
-            this.BetSizeTextBox.Size = new System.Drawing.Size(132, 22);
+            this.BetSizeTextBox.Size = new System.Drawing.Size(100, 20);
             this.BetSizeTextBox.TabIndex = 14;
             // 
             // GamePanel
@@ -205,19 +195,110 @@
             this.GamePanel.Controls.Add(this.BetSizeTextBox);
             this.GamePanel.Controls.Add(this.DealButton);
             this.GamePanel.Controls.Add(this.BetLabel);
-            this.GamePanel.Location = new System.Drawing.Point(337, 135);
-            this.GamePanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.GamePanel.Location = new System.Drawing.Point(253, 110);
+            this.GamePanel.Margin = new System.Windows.Forms.Padding(2);
             this.GamePanel.Name = "GamePanel";
-            this.GamePanel.Size = new System.Drawing.Size(587, 405);
+            this.GamePanel.Size = new System.Drawing.Size(440, 329);
             this.GamePanel.TabIndex = 15;
+            // 
+            // Bet5TextBox
+            // 
+            this.Bet5TextBox.Enabled = false;
+            this.Bet5TextBox.Location = new System.Drawing.Point(333, 133);
+            this.Bet5TextBox.Margin = new System.Windows.Forms.Padding(2);
+            this.Bet5TextBox.Name = "Bet5TextBox";
+            this.Bet5TextBox.Size = new System.Drawing.Size(76, 20);
+            this.Bet5TextBox.TabIndex = 38;
+            // 
+            // Bet4TextBox
+            // 
+            this.Bet4TextBox.Enabled = false;
+            this.Bet4TextBox.Location = new System.Drawing.Point(254, 133);
+            this.Bet4TextBox.Margin = new System.Windows.Forms.Padding(2);
+            this.Bet4TextBox.Name = "Bet4TextBox";
+            this.Bet4TextBox.Size = new System.Drawing.Size(76, 20);
+            this.Bet4TextBox.TabIndex = 37;
+            // 
+            // Bet3TextBox
+            // 
+            this.Bet3TextBox.Enabled = false;
+            this.Bet3TextBox.Location = new System.Drawing.Point(174, 133);
+            this.Bet3TextBox.Margin = new System.Windows.Forms.Padding(2);
+            this.Bet3TextBox.Name = "Bet3TextBox";
+            this.Bet3TextBox.Size = new System.Drawing.Size(76, 20);
+            this.Bet3TextBox.TabIndex = 36;
+            // 
+            // Bet2TextBox
+            // 
+            this.Bet2TextBox.Enabled = false;
+            this.Bet2TextBox.Location = new System.Drawing.Point(94, 133);
+            this.Bet2TextBox.Margin = new System.Windows.Forms.Padding(2);
+            this.Bet2TextBox.Name = "Bet2TextBox";
+            this.Bet2TextBox.Size = new System.Drawing.Size(76, 20);
+            this.Bet2TextBox.TabIndex = 35;
+            // 
+            // Bet1TextBox
+            // 
+            this.Bet1TextBox.Enabled = false;
+            this.Bet1TextBox.Location = new System.Drawing.Point(12, 133);
+            this.Bet1TextBox.Margin = new System.Windows.Forms.Padding(2);
+            this.Bet1TextBox.Name = "Bet1TextBox";
+            this.Bet1TextBox.Size = new System.Drawing.Size(76, 20);
+            this.Bet1TextBox.TabIndex = 34;
+            // 
+            // PlayerBetsLabel
+            // 
+            this.PlayerBetsLabel.AutoSize = true;
+            this.PlayerBetsLabel.Location = new System.Drawing.Point(16, 118);
+            this.PlayerBetsLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.PlayerBetsLabel.Name = "PlayerBetsLabel";
+            this.PlayerBetsLabel.Size = new System.Drawing.Size(67, 13);
+            this.PlayerBetsLabel.TabIndex = 33;
+            this.PlayerBetsLabel.Text = "Player\'s Bets";
+            // 
+            // Hand5TextBox
+            // 
+            this.Hand5TextBox.Enabled = false;
+            this.Hand5TextBox.Location = new System.Drawing.Point(333, 81);
+            this.Hand5TextBox.Margin = new System.Windows.Forms.Padding(2);
+            this.Hand5TextBox.Name = "Hand5TextBox";
+            this.Hand5TextBox.Size = new System.Drawing.Size(76, 20);
+            this.Hand5TextBox.TabIndex = 32;
+            // 
+            // Hand4TextBox
+            // 
+            this.Hand4TextBox.Enabled = false;
+            this.Hand4TextBox.Location = new System.Drawing.Point(254, 81);
+            this.Hand4TextBox.Margin = new System.Windows.Forms.Padding(2);
+            this.Hand4TextBox.Name = "Hand4TextBox";
+            this.Hand4TextBox.Size = new System.Drawing.Size(76, 20);
+            this.Hand4TextBox.TabIndex = 31;
+            // 
+            // Hand3TextBox
+            // 
+            this.Hand3TextBox.Enabled = false;
+            this.Hand3TextBox.Location = new System.Drawing.Point(174, 81);
+            this.Hand3TextBox.Margin = new System.Windows.Forms.Padding(2);
+            this.Hand3TextBox.Name = "Hand3TextBox";
+            this.Hand3TextBox.Size = new System.Drawing.Size(76, 20);
+            this.Hand3TextBox.TabIndex = 30;
+            // 
+            // Hand2TextBox
+            // 
+            this.Hand2TextBox.Enabled = false;
+            this.Hand2TextBox.Location = new System.Drawing.Point(94, 81);
+            this.Hand2TextBox.Margin = new System.Windows.Forms.Padding(2);
+            this.Hand2TextBox.Name = "Hand2TextBox";
+            this.Hand2TextBox.Size = new System.Drawing.Size(76, 20);
+            this.Hand2TextBox.TabIndex = 29;
             // 
             // SplitButton
             // 
             this.SplitButton.Enabled = false;
-            this.SplitButton.Location = new System.Drawing.Point(408, 239);
-            this.SplitButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.SplitButton.Location = new System.Drawing.Point(306, 194);
+            this.SplitButton.Margin = new System.Windows.Forms.Padding(2);
             this.SplitButton.Name = "SplitButton";
-            this.SplitButton.Size = new System.Drawing.Size(75, 43);
+            this.SplitButton.Size = new System.Drawing.Size(56, 35);
             this.SplitButton.TabIndex = 28;
             this.SplitButton.Text = "Split";
             this.SplitButton.UseVisualStyleBackColor = true;
@@ -226,10 +307,10 @@
             // DoubleButton
             // 
             this.DoubleButton.Enabled = false;
-            this.DoubleButton.Location = new System.Drawing.Point(307, 239);
-            this.DoubleButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.DoubleButton.Location = new System.Drawing.Point(230, 194);
+            this.DoubleButton.Margin = new System.Windows.Forms.Padding(2);
             this.DoubleButton.Name = "DoubleButton";
-            this.DoubleButton.Size = new System.Drawing.Size(75, 49);
+            this.DoubleButton.Size = new System.Drawing.Size(56, 40);
             this.DoubleButton.TabIndex = 27;
             this.DoubleButton.Text = "Double Down";
             this.DoubleButton.UseVisualStyleBackColor = true;
@@ -238,28 +319,29 @@
             // HandLabel
             // 
             this.HandLabel.AutoSize = true;
-            this.HandLabel.Location = new System.Drawing.Point(21, 9);
+            this.HandLabel.Location = new System.Drawing.Point(16, 7);
+            this.HandLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.HandLabel.Name = "HandLabel";
-            this.HandLabel.Size = new System.Drawing.Size(85, 16);
+            this.HandLabel.Size = new System.Drawing.Size(70, 13);
             this.HandLabel.TabIndex = 25;
             this.HandLabel.Text = "Current Hand";
             // 
             // CurrentHandTextBox
             // 
             this.CurrentHandTextBox.Enabled = false;
-            this.CurrentHandTextBox.Location = new System.Drawing.Point(16, 27);
-            this.CurrentHandTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.CurrentHandTextBox.Location = new System.Drawing.Point(12, 22);
+            this.CurrentHandTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.CurrentHandTextBox.Name = "CurrentHandTextBox";
-            this.CurrentHandTextBox.Size = new System.Drawing.Size(100, 22);
+            this.CurrentHandTextBox.Size = new System.Drawing.Size(76, 20);
             this.CurrentHandTextBox.TabIndex = 24;
             // 
             // PlayAgainButton
             // 
             this.PlayAgainButton.Enabled = false;
-            this.PlayAgainButton.Location = new System.Drawing.Point(421, 340);
-            this.PlayAgainButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.PlayAgainButton.Location = new System.Drawing.Point(316, 276);
+            this.PlayAgainButton.Margin = new System.Windows.Forms.Padding(2);
             this.PlayAgainButton.Name = "PlayAgainButton";
-            this.PlayAgainButton.Size = new System.Drawing.Size(75, 49);
+            this.PlayAgainButton.Size = new System.Drawing.Size(56, 40);
             this.PlayAgainButton.TabIndex = 22;
             this.PlayAgainButton.Text = "Play Again";
             this.PlayAgainButton.UseVisualStyleBackColor = true;
@@ -268,19 +350,19 @@
             // ResultTextBox
             // 
             this.ResultTextBox.Enabled = false;
-            this.ResultTextBox.Location = new System.Drawing.Point(247, 213);
-            this.ResultTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.ResultTextBox.Location = new System.Drawing.Point(185, 173);
+            this.ResultTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.ResultTextBox.Name = "ResultTextBox";
-            this.ResultTextBox.Size = new System.Drawing.Size(100, 22);
+            this.ResultTextBox.Size = new System.Drawing.Size(76, 20);
             this.ResultTextBox.TabIndex = 21;
             // 
             // StandButton
             // 
             this.StandButton.Enabled = false;
-            this.StandButton.Location = new System.Drawing.Point(208, 239);
-            this.StandButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.StandButton.Location = new System.Drawing.Point(156, 194);
+            this.StandButton.Margin = new System.Windows.Forms.Padding(2);
             this.StandButton.Name = "StandButton";
-            this.StandButton.Size = new System.Drawing.Size(75, 43);
+            this.StandButton.Size = new System.Drawing.Size(56, 35);
             this.StandButton.TabIndex = 20;
             this.StandButton.Text = "Stand";
             this.StandButton.UseVisualStyleBackColor = true;
@@ -289,10 +371,10 @@
             // HitButton
             // 
             this.HitButton.Enabled = false;
-            this.HitButton.Location = new System.Drawing.Point(115, 239);
-            this.HitButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.HitButton.Location = new System.Drawing.Point(86, 194);
+            this.HitButton.Margin = new System.Windows.Forms.Padding(2);
             this.HitButton.Name = "HitButton";
-            this.HitButton.Size = new System.Drawing.Size(75, 41);
+            this.HitButton.Size = new System.Drawing.Size(56, 33);
             this.HitButton.TabIndex = 19;
             this.HitButton.Text = "Hit";
             this.HitButton.UseVisualStyleBackColor = true;
@@ -301,176 +383,91 @@
             // DealerHandTextBox
             // 
             this.DealerHandTextBox.Enabled = false;
-            this.DealerHandTextBox.Location = new System.Drawing.Point(250, 26);
-            this.DealerHandTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.DealerHandTextBox.Location = new System.Drawing.Point(188, 21);
+            this.DealerHandTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.DealerHandTextBox.Name = "DealerHandTextBox";
-            this.DealerHandTextBox.Size = new System.Drawing.Size(100, 22);
+            this.DealerHandTextBox.Size = new System.Drawing.Size(76, 20);
             this.DealerHandTextBox.TabIndex = 18;
             // 
             // Hand1TextBox
             // 
             this.Hand1TextBox.Enabled = false;
-            this.Hand1TextBox.Location = new System.Drawing.Point(16, 100);
-            this.Hand1TextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Hand1TextBox.Location = new System.Drawing.Point(12, 81);
+            this.Hand1TextBox.Margin = new System.Windows.Forms.Padding(2);
             this.Hand1TextBox.Name = "Hand1TextBox";
-            this.Hand1TextBox.Size = new System.Drawing.Size(100, 22);
+            this.Hand1TextBox.Size = new System.Drawing.Size(76, 20);
             this.Hand1TextBox.TabIndex = 17;
             // 
             // DealerHandLabel
             // 
             this.DealerHandLabel.AutoSize = true;
-            this.DealerHandLabel.Location = new System.Drawing.Point(253, 9);
+            this.DealerHandLabel.Location = new System.Drawing.Point(190, 7);
+            this.DealerHandLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.DealerHandLabel.Name = "DealerHandLabel";
-            this.DealerHandLabel.Size = new System.Drawing.Size(94, 16);
+            this.DealerHandLabel.Size = new System.Drawing.Size(74, 13);
             this.DealerHandLabel.TabIndex = 16;
             this.DealerHandLabel.Text = "Dealer\'s Hand";
             // 
             // PlayerHandLabel
             // 
             this.PlayerHandLabel.AutoSize = true;
-            this.PlayerHandLabel.Location = new System.Drawing.Point(17, 82);
+            this.PlayerHandLabel.Location = new System.Drawing.Point(13, 67);
+            this.PlayerHandLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.PlayerHandLabel.Name = "PlayerHandLabel";
-            this.PlayerHandLabel.Size = new System.Drawing.Size(99, 16);
+            this.PlayerHandLabel.Size = new System.Drawing.Size(77, 13);
             this.PlayerHandLabel.TabIndex = 15;
             this.PlayerHandLabel.Text = "Player\'s Hands";
             // 
-            // PlayerNumberLabel
+            // OneHandRadioButton
             // 
-            this.PlayerNumberLabel.AutoSize = true;
-            this.PlayerNumberLabel.Location = new System.Drawing.Point(77, 375);
-            this.PlayerNumberLabel.Name = "PlayerNumberLabel";
-            this.PlayerNumberLabel.Size = new System.Drawing.Size(113, 16);
-            this.PlayerNumberLabel.TabIndex = 16;
-            this.PlayerNumberLabel.Text = "How Many Hands";
+            this.OneHandRadioButton.AutoSize = true;
+            this.OneHandRadioButton.Checked = true;
+            this.OneHandRadioButton.Location = new System.Drawing.Point(25, 33);
+            this.OneHandRadioButton.Name = "OneHandRadioButton";
+            this.OneHandRadioButton.Size = new System.Drawing.Size(31, 17);
+            this.OneHandRadioButton.TabIndex = 20;
+            this.OneHandRadioButton.TabStop = true;
+            this.OneHandRadioButton.Text = "1";
+            this.OneHandRadioButton.UseVisualStyleBackColor = true;
             // 
-            // OneHandCheckBox
+            // TwoHandsRadioButton
             // 
-            this.OneHandCheckBox.AutoSize = true;
-            this.OneHandCheckBox.Checked = true;
-            this.OneHandCheckBox.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.OneHandCheckBox.Location = new System.Drawing.Point(125, 406);
-            this.OneHandCheckBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.OneHandCheckBox.Name = "OneHandCheckBox";
-            this.OneHandCheckBox.Size = new System.Drawing.Size(36, 20);
-            this.OneHandCheckBox.TabIndex = 17;
-            this.OneHandCheckBox.Text = "1";
-            this.OneHandCheckBox.UseVisualStyleBackColor = true;
-            this.OneHandCheckBox.CheckedChanged += new System.EventHandler(this.OnePlayerCheckBox_CheckedChanged);
+            this.TwoHandsRadioButton.AutoSize = true;
+            this.TwoHandsRadioButton.Location = new System.Drawing.Point(25, 56);
+            this.TwoHandsRadioButton.Name = "TwoHandsRadioButton";
+            this.TwoHandsRadioButton.Size = new System.Drawing.Size(31, 17);
+            this.TwoHandsRadioButton.TabIndex = 21;
+            this.TwoHandsRadioButton.Text = "2";
+            this.TwoHandsRadioButton.UseVisualStyleBackColor = true;
             // 
-            // TwoHandsCheckBox
+            // ThreeHandsRadioButton
             // 
-            this.TwoHandsCheckBox.AutoSize = true;
-            this.TwoHandsCheckBox.Location = new System.Drawing.Point(125, 432);
-            this.TwoHandsCheckBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.TwoHandsCheckBox.Name = "TwoHandsCheckBox";
-            this.TwoHandsCheckBox.Size = new System.Drawing.Size(36, 20);
-            this.TwoHandsCheckBox.TabIndex = 18;
-            this.TwoHandsCheckBox.Text = "2";
-            this.TwoHandsCheckBox.UseVisualStyleBackColor = true;
-            this.TwoHandsCheckBox.CheckedChanged += new System.EventHandler(this.TwoPlayerCheckBox_CheckedChanged);
+            this.ThreeHandsRadioButton.AutoSize = true;
+            this.ThreeHandsRadioButton.Location = new System.Drawing.Point(25, 79);
+            this.ThreeHandsRadioButton.Name = "ThreeHandsRadioButton";
+            this.ThreeHandsRadioButton.Size = new System.Drawing.Size(31, 17);
+            this.ThreeHandsRadioButton.TabIndex = 22;
+            this.ThreeHandsRadioButton.Text = "3";
+            this.ThreeHandsRadioButton.UseVisualStyleBackColor = true;
             // 
-            // ThreeHandsCheckBox
+            // HandsNumberGroupBox
             // 
-            this.ThreeHandsCheckBox.AutoSize = true;
-            this.ThreeHandsCheckBox.Location = new System.Drawing.Point(125, 458);
-            this.ThreeHandsCheckBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.ThreeHandsCheckBox.Name = "ThreeHandsCheckBox";
-            this.ThreeHandsCheckBox.Size = new System.Drawing.Size(36, 20);
-            this.ThreeHandsCheckBox.TabIndex = 19;
-            this.ThreeHandsCheckBox.Text = "3";
-            this.ThreeHandsCheckBox.UseVisualStyleBackColor = true;
-            this.ThreeHandsCheckBox.CheckedChanged += new System.EventHandler(this.ThreePlayersCheckBox_CheckedChanged);
-            // 
-            // Hand2TextBox
-            // 
-            this.Hand2TextBox.Enabled = false;
-            this.Hand2TextBox.Location = new System.Drawing.Point(126, 100);
-            this.Hand2TextBox.Name = "Hand2TextBox";
-            this.Hand2TextBox.Size = new System.Drawing.Size(100, 22);
-            this.Hand2TextBox.TabIndex = 29;
-            // 
-            // Hand3TextBox
-            // 
-            this.Hand3TextBox.Enabled = false;
-            this.Hand3TextBox.Location = new System.Drawing.Point(232, 100);
-            this.Hand3TextBox.Name = "Hand3TextBox";
-            this.Hand3TextBox.Size = new System.Drawing.Size(100, 22);
-            this.Hand3TextBox.TabIndex = 30;
-            // 
-            // Hand4TextBox
-            // 
-            this.Hand4TextBox.Enabled = false;
-            this.Hand4TextBox.Location = new System.Drawing.Point(338, 100);
-            this.Hand4TextBox.Name = "Hand4TextBox";
-            this.Hand4TextBox.Size = new System.Drawing.Size(100, 22);
-            this.Hand4TextBox.TabIndex = 31;
-            // 
-            // Hand5TextBox
-            // 
-            this.Hand5TextBox.Enabled = false;
-            this.Hand5TextBox.Location = new System.Drawing.Point(444, 100);
-            this.Hand5TextBox.Name = "Hand5TextBox";
-            this.Hand5TextBox.Size = new System.Drawing.Size(100, 22);
-            this.Hand5TextBox.TabIndex = 32;
-            // 
-            // PlayerBetsLabel
-            // 
-            this.PlayerBetsLabel.AutoSize = true;
-            this.PlayerBetsLabel.Location = new System.Drawing.Point(22, 145);
-            this.PlayerBetsLabel.Name = "PlayerBetsLabel";
-            this.PlayerBetsLabel.Size = new System.Drawing.Size(86, 16);
-            this.PlayerBetsLabel.TabIndex = 33;
-            this.PlayerBetsLabel.Text = "Player\'s Bets";
-            // 
-            // Bet1TextBox
-            // 
-            this.Bet1TextBox.Enabled = false;
-            this.Bet1TextBox.Location = new System.Drawing.Point(16, 164);
-            this.Bet1TextBox.Name = "Bet1TextBox";
-            this.Bet1TextBox.Size = new System.Drawing.Size(100, 22);
-            this.Bet1TextBox.TabIndex = 34;
-            // 
-            // Bet2TextBox
-            // 
-            this.Bet2TextBox.Enabled = false;
-            this.Bet2TextBox.Location = new System.Drawing.Point(126, 164);
-            this.Bet2TextBox.Name = "Bet2TextBox";
-            this.Bet2TextBox.Size = new System.Drawing.Size(100, 22);
-            this.Bet2TextBox.TabIndex = 35;
-            // 
-            // Bet3TextBox
-            // 
-            this.Bet3TextBox.Enabled = false;
-            this.Bet3TextBox.Location = new System.Drawing.Point(232, 164);
-            this.Bet3TextBox.Name = "Bet3TextBox";
-            this.Bet3TextBox.Size = new System.Drawing.Size(100, 22);
-            this.Bet3TextBox.TabIndex = 36;
-            // 
-            // Bet4TextBox
-            // 
-            this.Bet4TextBox.Enabled = false;
-            this.Bet4TextBox.Location = new System.Drawing.Point(338, 164);
-            this.Bet4TextBox.Name = "Bet4TextBox";
-            this.Bet4TextBox.Size = new System.Drawing.Size(100, 22);
-            this.Bet4TextBox.TabIndex = 37;
-            // 
-            // Bet5TextBox
-            // 
-            this.Bet5TextBox.Enabled = false;
-            this.Bet5TextBox.Location = new System.Drawing.Point(444, 164);
-            this.Bet5TextBox.Name = "Bet5TextBox";
-            this.Bet5TextBox.Size = new System.Drawing.Size(100, 22);
-            this.Bet5TextBox.TabIndex = 38;
+            this.HandsNumberGroupBox.Controls.Add(this.OneHandRadioButton);
+            this.HandsNumberGroupBox.Controls.Add(this.ThreeHandsRadioButton);
+            this.HandsNumberGroupBox.Controls.Add(this.TwoHandsRadioButton);
+            this.HandsNumberGroupBox.Location = new System.Drawing.Point(66, 291);
+            this.HandsNumberGroupBox.Name = "HandsNumberGroupBox";
+            this.HandsNumberGroupBox.Size = new System.Drawing.Size(112, 100);
+            this.HandsNumberGroupBox.TabIndex = 23;
+            this.HandsNumberGroupBox.TabStop = false;
+            this.HandsNumberGroupBox.Text = "How Many Hands?";
             // 
             // GameLobby
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1128, 622);
-            this.Controls.Add(this.ThreeHandsCheckBox);
-            this.Controls.Add(this.TwoHandsCheckBox);
-            this.Controls.Add(this.OneHandCheckBox);
-            this.Controls.Add(this.PlayerNumberLabel);
+            this.ClientSize = new System.Drawing.Size(846, 505);
+            this.Controls.Add(this.HandsNumberGroupBox);
             this.Controls.Add(this.GamePanel);
             this.Controls.Add(this.chipCountTextBox);
             this.Controls.Add(this.chipCountLabel);
@@ -480,12 +477,13 @@
             this.Controls.Add(this.buyChipsLabel);
             this.Controls.Add(this.cashierLabel);
             this.Controls.Add(this.WelcomeLabel);
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "GameLobby";
             this.Text = "BlackJack Lobby";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.GameForm_FormClosed);
             this.GamePanel.ResumeLayout(false);
             this.GamePanel.PerformLayout();
+            this.HandsNumberGroupBox.ResumeLayout(false);
+            this.HandsNumberGroupBox.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -515,10 +513,6 @@
         private System.Windows.Forms.Button PlayAgainButton;
         private System.Windows.Forms.Label HandLabel;
         private System.Windows.Forms.TextBox CurrentHandTextBox;
-        private System.Windows.Forms.Label PlayerNumberLabel;
-        private System.Windows.Forms.CheckBox OneHandCheckBox;
-        private System.Windows.Forms.CheckBox TwoHandsCheckBox;
-        private System.Windows.Forms.CheckBox ThreeHandsCheckBox;
         private System.Windows.Forms.Button DoubleButton;
         private System.Windows.Forms.Button SplitButton;
         private System.Windows.Forms.TextBox Hand2TextBox;
@@ -531,5 +525,9 @@
         private System.Windows.Forms.TextBox Bet2TextBox;
         private System.Windows.Forms.TextBox Bet1TextBox;
         private System.Windows.Forms.Label PlayerBetsLabel;
+        private System.Windows.Forms.RadioButton OneHandRadioButton;
+        private System.Windows.Forms.RadioButton TwoHandsRadioButton;
+        private System.Windows.Forms.RadioButton ThreeHandsRadioButton;
+        private System.Windows.Forms.GroupBox HandsNumberGroupBox;
     }
 }

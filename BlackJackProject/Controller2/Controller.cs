@@ -109,7 +109,7 @@ namespace BlackJack
                     }
                 FinishedRound();
             }
-            // if no dealer blackjack, checks all of players hands for blackjack
+            // if no dealer blackjack, checks players first hand for blackjack
             else if (theTable.player.hands[currentHand].blackjack)
             {
                 currentHand++;
@@ -203,7 +203,7 @@ namespace BlackJack
                     chipPayout += theTable.player.bets[i] * 5/2;
                 }
                 // dealer busts and player doesn't
-                if (theTable.dealer.GetHand().bust &&
+                else if (theTable.dealer.GetHand().bust &&
                     !theTable.player.GetHand(i).bust)
                 {
                     theTable.GiveChips(theTable.player.bets[i] * 2);

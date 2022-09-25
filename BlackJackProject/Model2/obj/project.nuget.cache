@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "sDNJqsHtwymqortyWbPMWo7uNNiI7NI8GpZS1/XCvJlt+D93RIUQ1igaCJK8rtAD9dNzvmrkD2hKb+BhsVnvYA==",
+  "dgSpecHash": "MXB3eZIC028k/nKPLYwncYn5PjNQqasrxaVoIHx9MYfeGjaxGK4hpeeq0LGJOFwccDIGeTp/QraXOsmZaACsBQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\malou\\Source\\Repos\\BlackjackProject\\BlackJackProject\\Model2\\Model.csproj",
+  "projectFilePath": "C:\\Users\\malou\\source\\repos\\BlackjackProject\\BlackJackProject\\Model2\\Model.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\malou\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "C:\\Users\\malou\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
