@@ -18,3 +18,13 @@ C:\Users\malou\Source\Repos\BlackjackProject\BlackJackProject\Model2\obj\Debug\n
 C:\Users\malou\Source\Repos\BlackjackProject\BlackJackProject\Model2\obj\Debug\netstandard2.0\Model.csproj.CoreCompileInputs.cache
 C:\Users\malou\Source\Repos\BlackjackProject\BlackJackProject\Model2\obj\Debug\netstandard2.0\Model.dll
 C:\Users\malou\Source\Repos\BlackjackProject\BlackJackProject\Model2\obj\Debug\netstandard2.0\Model.pdb
+C:\Users\malou\OneDrive\Desktop\Git Repositories\BlackjackProject\BlackJackProject\Model2\bin\Debug\netstandard2.0\Model.deps.json
+C:\Users\malou\OneDrive\Desktop\Git Repositories\BlackjackProject\BlackJackProject\Model2\bin\Debug\netstandard2.0\Model.dll
+C:\Users\malou\OneDrive\Desktop\Git Repositories\BlackjackProject\BlackJackProject\Model2\bin\Debug\netstandard2.0\Model.pdb
+C:\Users\malou\OneDrive\Desktop\Git Repositories\BlackjackProject\BlackJackProject\Model2\obj\Debug\netstandard2.0\Model.csproj.AssemblyReference.cache
+C:\Users\malou\OneDrive\Desktop\Git Repositories\BlackjackProject\BlackJackProject\Model2\obj\Debug\netstandard2.0\Model.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\malou\OneDrive\Desktop\Git Repositories\BlackjackProject\BlackJackProject\Model2\obj\Debug\netstandard2.0\Model.AssemblyInfoInputs.cache
+C:\Users\malou\OneDrive\Desktop\Git Repositories\BlackjackProject\BlackJackProject\Model2\obj\Debug\netstandard2.0\Model.AssemblyInfo.cs
+C:\Users\malou\OneDrive\Desktop\Git Repositories\BlackjackProject\BlackJackProject\Model2\obj\Debug\netstandard2.0\Model.csproj.CoreCompileInputs.cache
+C:\Users\malou\OneDrive\Desktop\Git Repositories\BlackjackProject\BlackJackProject\Model2\obj\Debug\netstandard2.0\Model.dll
+C:\Users\malou\OneDrive\Desktop\Git Repositories\BlackjackProject\BlackJackProject\Model2\obj\Debug\netstandard2.0\Model.pdb

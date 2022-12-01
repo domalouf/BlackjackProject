@@ -201,11 +201,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\malou\\source\\repos\\BlackjackProject\\BlackJackProject\\Controller2\\Controller.csproj",
+      "projectUniqueName": "C:\\Users\\malou\\OneDrive\\Desktop\\Git Repositories\\BlackjackProject\\BlackJackProject\\Controller2\\Controller.csproj",
       "projectName": "Controller",
-      "projectPath": "C:\\Users\\malou\\source\\repos\\BlackjackProject\\BlackJackProject\\Controller2\\Controller.csproj",
+      "projectPath": "C:\\Users\\malou\\OneDrive\\Desktop\\Git Repositories\\BlackjackProject\\BlackJackProject\\Controller2\\Controller.csproj",
       "packagesPath": "C:\\Users\\malou\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\malou\\source\\repos\\BlackjackProject\\BlackJackProject\\Controller2\\obj\\",
+      "outputPath": "C:\\Users\\malou\\OneDrive\\Desktop\\Git Repositories\\BlackjackProject\\BlackJackProject\\Controller2\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\malou\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -222,8 +222,8 @@
         "netstandard2.0": {
           "targetAlias": "netstandard2.0",
           "projectReferences": {
-            "C:\\Users\\malou\\source\\repos\\BlackjackProject\\BlackJackProject\\Model2\\Model.csproj": {
-              "projectPath": "C:\\Users\\malou\\source\\repos\\BlackjackProject\\BlackJackProject\\Model2\\Model.csproj"
+            "C:\\Users\\malou\\OneDrive\\Desktop\\Git Repositories\\BlackjackProject\\BlackJackProject\\Model2\\Model.csproj": {
+              "projectPath": "C:\\Users\\malou\\OneDrive\\Desktop\\Git Repositories\\BlackjackProject\\BlackJackProject\\Model2\\Model.csproj"
             }
           }
         }
