@@ -68,6 +68,7 @@
             this.HandsNumberGroupBox = new System.Windows.Forms.GroupBox();
             this.label1 = new System.Windows.Forms.Label();
             this.runningCountLabel = new System.Windows.Forms.Label();
+            this.RunningCountTextBox = new System.Windows.Forms.TextBox();
             this.GamePanel.SuspendLayout();
             this.HandsNumberGroupBox.SuspendLayout();
             this.SuspendLayout();
@@ -114,7 +115,7 @@
             this.BuyButton.TabIndex = 4;
             this.BuyButton.Text = "Buy";
             this.BuyButton.UseVisualStyleBackColor = true;
-            this.BuyButton.Click += new System.EventHandler(this.buyButton_Click);
+            this.BuyButton.Click += new System.EventHandler(this.BuyButton_Click);
             // 
             // playerInfoLabel
             // 
@@ -476,15 +477,24 @@
             this.runningCountLabel.AutoSize = true;
             this.runningCountLabel.Location = new System.Drawing.Point(646, 132);
             this.runningCountLabel.Name = "runningCountLabel";
-            this.runningCountLabel.Size = new System.Drawing.Size(78, 13);
+            this.runningCountLabel.Size = new System.Drawing.Size(81, 13);
             this.runningCountLabel.TabIndex = 24;
-            this.runningCountLabel.Text = "Running Count";
+            this.runningCountLabel.Text = "Running Count:";
+            // 
+            // RunningCountTextBox
+            // 
+            this.RunningCountTextBox.Enabled = false;
+            this.RunningCountTextBox.Location = new System.Drawing.Point(733, 129);
+            this.RunningCountTextBox.Name = "RunningCountTextBox";
+            this.RunningCountTextBox.Size = new System.Drawing.Size(100, 20);
+            this.RunningCountTextBox.TabIndex = 25;
             // 
             // GameLobby
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(846, 505);
+            this.Controls.Add(this.RunningCountTextBox);
             this.Controls.Add(this.runningCountLabel);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.HandsNumberGroupBox);
@@ -551,5 +561,6 @@
         private System.Windows.Forms.GroupBox HandsNumberGroupBox;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label runningCountLabel;
+        private System.Windows.Forms.TextBox RunningCountTextBox;
     }
 }

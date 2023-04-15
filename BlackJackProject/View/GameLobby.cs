@@ -339,6 +339,7 @@ namespace BlackJack
                     Hand5TextBox.Text = "" + theTable.player.GetHand(5);
                     break;
             }
+            RunningCountTextBox.Text = theTable.shoe.runningCount.ToString();
         }
 
         public void ShoeShuffled()

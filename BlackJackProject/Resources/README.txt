@@ -44,4 +44,6 @@ If player stands the controller calls for the view to show the next hand
 Helpful Link about MVC - https://www.cs.cornell.edu/courses/cs2112/2020fa/recitations/08patterns/Recitation8.pdf
 
 TODO/BUGS:
+fix running count BUG
 pick individual bets for hands TODO
+dealer continues to hit when player gets a blackjack BUG

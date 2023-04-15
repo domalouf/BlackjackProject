@@ -24,6 +24,11 @@ namespace BlackJack
         /// </summary>
         int cardsDrawn;
 
+        /// <summary>
+        /// running count of shoe
+        /// </summary>
+        public int runningCount = 0;
+
         Random r = new Random();
 
         /// <summary>
@@ -67,10 +72,12 @@ namespace BlackJack
             cardsDrawn = 0;
             for (int p = 0; p < checkShoe.Length; p++)
                 checkShoe[p] = true;
+            runningCount = 0;
         }
 
         /// <summary>
         /// Draws a random card still in the shoe
+        /// Updates the shoe count
         /// returns a 0 if there are no cards left in the shoe
         /// </summary>
         /// <returns></returns>
@@ -84,6 +91,14 @@ namespace BlackJack
             {
                 cardsDrawn++;
                 checkShoe[rInt] = false;
+                if (shoe[rInt] >= 2 && shoe[rInt] <= 6)
+                {
+                    runningCount++;
+                }
+                else if (shoe[rInt] >= 10)
+                {
+                    runningCount--;
+                }
                 return shoe[rInt];
             }
             else
