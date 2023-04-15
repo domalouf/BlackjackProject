@@ -35,7 +35,7 @@ namespace BlackJack
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void buyButton_Click(object sender, EventArgs e)
+        private void BuyButton_Click(object sender, EventArgs e)
         {
             if (int.TryParse(buyChipsTextBox.Text, out int numChips))
             {

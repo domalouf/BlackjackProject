@@ -32,7 +32,7 @@
             this.cashierLabel = new System.Windows.Forms.Label();
             this.buyChipsLabel = new System.Windows.Forms.Label();
             this.buyChipsTextBox = new System.Windows.Forms.TextBox();
-            this.buyButton = new System.Windows.Forms.Button();
+            this.BuyButton = new System.Windows.Forms.Button();
             this.playerInfoLabel = new System.Windows.Forms.Label();
             this.chipCountLabel = new System.Windows.Forms.Label();
             this.chipCountTextBox = new System.Windows.Forms.TextBox();
@@ -66,6 +66,8 @@
             this.TwoHandsRadioButton = new System.Windows.Forms.RadioButton();
             this.ThreeHandsRadioButton = new System.Windows.Forms.RadioButton();
             this.HandsNumberGroupBox = new System.Windows.Forms.GroupBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.runningCountLabel = new System.Windows.Forms.Label();
             this.GamePanel.SuspendLayout();
             this.HandsNumberGroupBox.SuspendLayout();
             this.SuspendLayout();
@@ -104,15 +106,15 @@
             this.buyChipsTextBox.Size = new System.Drawing.Size(110, 20);
             this.buyChipsTextBox.TabIndex = 3;
             // 
-            // buyButton
+            // BuyButton
             // 
-            this.buyButton.Location = new System.Drawing.Point(186, 84);
-            this.buyButton.Name = "buyButton";
-            this.buyButton.Size = new System.Drawing.Size(52, 23);
-            this.buyButton.TabIndex = 4;
-            this.buyButton.Text = "Buy";
-            this.buyButton.UseVisualStyleBackColor = true;
-            this.buyButton.Click += new System.EventHandler(this.buyButton_Click);
+            this.BuyButton.Location = new System.Drawing.Point(186, 84);
+            this.BuyButton.Name = "BuyButton";
+            this.BuyButton.Size = new System.Drawing.Size(52, 23);
+            this.BuyButton.TabIndex = 4;
+            this.BuyButton.Text = "Buy";
+            this.BuyButton.UseVisualStyleBackColor = true;
+            this.BuyButton.Click += new System.EventHandler(this.buyButton_Click);
             // 
             // playerInfoLabel
             // 
@@ -195,7 +197,7 @@
             this.GamePanel.Controls.Add(this.BetSizeTextBox);
             this.GamePanel.Controls.Add(this.DealButton);
             this.GamePanel.Controls.Add(this.BetLabel);
-            this.GamePanel.Location = new System.Drawing.Point(253, 110);
+            this.GamePanel.Location = new System.Drawing.Point(186, 132);
             this.GamePanel.Margin = new System.Windows.Forms.Padding(2);
             this.GamePanel.Name = "GamePanel";
             this.GamePanel.Size = new System.Drawing.Size(440, 329);
@@ -462,17 +464,35 @@
             this.HandsNumberGroupBox.TabStop = false;
             this.HandsNumberGroupBox.Text = "How Many Hands?";
             // 
+            // label1
+            // 
+            this.label1.Location = new System.Drawing.Point(0, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(100, 23);
+            this.label1.TabIndex = 0;
+            // 
+            // runningCountLabel
+            // 
+            this.runningCountLabel.AutoSize = true;
+            this.runningCountLabel.Location = new System.Drawing.Point(646, 132);
+            this.runningCountLabel.Name = "runningCountLabel";
+            this.runningCountLabel.Size = new System.Drawing.Size(78, 13);
+            this.runningCountLabel.TabIndex = 24;
+            this.runningCountLabel.Text = "Running Count";
+            // 
             // GameLobby
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(846, 505);
+            this.Controls.Add(this.runningCountLabel);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.HandsNumberGroupBox);
             this.Controls.Add(this.GamePanel);
             this.Controls.Add(this.chipCountTextBox);
             this.Controls.Add(this.chipCountLabel);
             this.Controls.Add(this.playerInfoLabel);
-            this.Controls.Add(this.buyButton);
+            this.Controls.Add(this.BuyButton);
             this.Controls.Add(this.buyChipsTextBox);
             this.Controls.Add(this.buyChipsLabel);
             this.Controls.Add(this.cashierLabel);
@@ -495,7 +515,7 @@
         private System.Windows.Forms.Label cashierLabel;
         private System.Windows.Forms.Label buyChipsLabel;
         private System.Windows.Forms.TextBox buyChipsTextBox;
-        private System.Windows.Forms.Button buyButton;
+        private System.Windows.Forms.Button BuyButton;
         private System.Windows.Forms.Label playerInfoLabel;
         private System.Windows.Forms.Label chipCountLabel;
         private System.Windows.Forms.TextBox chipCountTextBox;
@@ -529,5 +549,7 @@
         private System.Windows.Forms.RadioButton TwoHandsRadioButton;
         private System.Windows.Forms.RadioButton ThreeHandsRadioButton;
         private System.Windows.Forms.GroupBox HandsNumberGroupBox;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label runningCountLabel;
     }
 }
